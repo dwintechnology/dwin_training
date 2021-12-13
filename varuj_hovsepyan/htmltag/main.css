@@ -1,4 +1,9 @@
-
+*{
+    margin-top: 50px;
+    margin-right: 50px;
+   color: white;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.418) 0%, rgb(0, 195, 255) 35%, rgba(0,212,255,1) 100%);
+}
 .myh1tag{
     display: inline-block;
     padding-left: 15px;
@@ -90,4 +95,61 @@
 .my-ul:hover + .ul-li-hover{
     display: inline-block;
     cursor: pointer;
+}
+button{
+    display: inline-block;
+}
+button:hover{
+    color: blue;
+}
+.button-hover{
+    display: none;
+}
+button:hover + .button-hover{
+    display: inline-block;
+}
+table{
+    display: inline-block;
+}
+table:hover + .table-code{
+    display: block;
+}
+.table-code {
+    display: none;
+}
+textarea{
+    display: inline-block;
+}
+.area-hover{
+    display: none;
+}
+textarea:hover + .area-hover{
+    display: inline-block;
+}
+img{
+    display: inline-block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+img:hover + .img-hover{
+    display: inline-block;
+}
+.img-hover{
+    display: none;
+}
+.select-hover{
+    display: none;
+}
+option:active .select-hover{
+    display: block;
+}
+footer h2 {
+    text-align: center;
+}
+.footer-hover{
+    display: none;
+}
+footer h2:hover + .footer-hover{
+    display: inline-block;
 }
