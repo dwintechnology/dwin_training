@@ -1,0 +1,26 @@
+@media only screen and (max-width: 820px){
+    .input-style{
+        padding: 14px 80px 14px 19px;
+    }
+    .input-style1{
+        padding: 14px 210px 14px 19px;
+    }
+    select{
+        padding: 14px 180px 14px 19px;
+    }
+}
+@media only screen and (max-width: 590px){
+    .logo-div {
+        display: inline-block;
+    }
+    .section-1{
+        display: block;
+    }
+    .flex{
+        display: block;
+    }
+    .section-2 {
+        margin: 0;
+        margin-top: 50px;
+    }
+}

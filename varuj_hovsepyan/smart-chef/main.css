@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+h2{
+    font-size: 10px;
+line-height: 14px;
+text-transform: uppercase;
+font-family: Open Sans;
+}
+.logo-div{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.input-style{
+    padding: 14px 180px 14px 19px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #C7C7CC;
+    border: 1px solid #E5E5EA;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.input-style1{
+    padding: 14px 310px 14px 19px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #C7C7CC;
+    border: 1px solid #E5E5EA;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+select{
+    padding: 14px 280px 14px 19px;
+    border: 1px solid #E5E5EA;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: transparent;
+}
+.section-1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 37px;
+}
+.section-2{
+    margin: auto;
+    width: 218px;
+    margin-top: 35px;
+}
+.button{
+    padding: 15px 80px;
+    background-color: #FF2D55;
+    
+    border-radius: 5%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+}
+.section-2 h3{ 
+    color: #8E8E93;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.section-2 h4{
+    color: #FF2D55;
+    font-size: 13px;
+    line-height: 16px;
+    display: inline-block;
+    margin-left: 45px;
+
+}
