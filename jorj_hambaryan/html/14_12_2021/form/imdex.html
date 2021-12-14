@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>form</title>
+</head>
+<body>
+    <form class="form" action="form.php">
+        <div class="pre_imge">
+            <div class="image">
+                <input class="image_input" src="https://www.pngfind.com/pngs/m/676-6764065_default-profile-picture-transparent-hd-png-download.png" type="image">
+            </div>
+        </div>    
+        <div class="dates">
+            <input type="text" placeholder="name" class="name" maxlength="20">
+            <input type="text" placeholder="surname" class="surname" maxlength="30">
+            <div class="checkboxs">
+                <div class="female">
+                    <input type="radio" name="male">
+                    <p>female</p>
+                </div>
+                <div class="male">
+                    <input type="radio" name="male">
+                    <p>male</p>
+                </div>
+            </div>
+            <div class="age_caout">
+                <input type="number" min=0 max=100>
+                <select name="Kanada">
+                    <option value="Armenia">Armenia</option>
+                    <option value="RUS">RUS</option>
+                    <option value="Afrika">Afrika</option>
+                  </select>
+            </div>
+            <input type="email">
+            <input type="password"  min=5 max=20>
+            <button class="login_button">
+                    Log in!
+            </button>
+        </div>
+        
+    </form>
+</body>
+</html>
