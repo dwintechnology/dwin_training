@@ -12,6 +12,7 @@
     body{
         font-family: 'Readex Pro', sans-serif;
     }
+ 
      .logo{
          display:flex;
          justify-content: center;
@@ -34,6 +35,17 @@
    }
    input:hover{
 	border-color: rgb(235, 235, 224);
+    color:rgb(51, 102, 204);
+   }
+
+   .select{
+    width: 560px;
+       padding-left:5px;
+       height:8vh;
+   }
+
+   .select:hover{
+    border-color: rgb(235, 235, 224);
     color:rgb(51, 102, 204);
    }
    .sign_div{
@@ -91,7 +103,12 @@
        <p> FIRST NAME</p>
         <input type="text" id="fname" name="fname" placeholder="Enter name"   minlength="3" maxlength="19"required>
         <p> COUNTRY </p>
-        <input type="text" id="country" name="country"  placeholder="Enter Country" required>
+        <select class="select" name="country" required>
+            <option value="-"></option>
+            <option value="Armenia">Armenia</option>
+            <option value="USA">USA</option>
+            <option value="Russia">Russia</option>
+        </select>
         <p>NAME RESTAURANT</p>
         <input type="text"  name="restaurant" placeholder="Enter restaurant name" required>
         <p> PASSWORD </p>
@@ -103,9 +120,14 @@
         <p>LAST NAME</p>
         <input type="text" minlength="30" placeholder="Enter name"  minlength="3" maxlength="29" required>
         <p> CITY </p>
-        <input type="text" id="city" name="city" placeholder="Enter city" required>
+        <select class="select" name="city" required>
+            <option value="-"></option>
+            <option value="Vanadzor">Vanadzor</option>
+            <option value="Moscow">Moscow</option>
+            <option value="New York">New York</option>
+        </select>
         <p>EMAIL</p>
-        <input type="email" placeholder="enter your email" required>
+        <input type="Email" id="kname" name="email" placeholder="Enter your email" >
         <p> CONFIRM PASSWORD </p>
         <input type="password" placeholder="password" id="pass" name="password"
            maxlength="10" minlength="5" required> 
@@ -121,3 +143,5 @@
        <span class="span"> LOG IN </span>
        
     </div>
+</body>
+</html>
