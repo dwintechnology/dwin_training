@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form" action="form.php">
+        <div class="preimage">
+            <div class="image">
+                <input class="imginp" type="image" src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"alt="default" >
+            </div>
+        </div>
+    <div class="datas">
+        <input type="text" class="name"placeholder="Name" maxlength="20"required>
+        <input type="text"class="surname"placeholder="Surname" maxlength="30"required>
+        <div class="chechboxes">
+            <div class="male">
+                <input type="radio"name="male"value="Male" required>
+                <p>Male</p>
+            </div>
+                <div class="female" value="Female">
+                <input type="radio" name="male"required>
+                <p>Female</p>
+            </div>
+        </div>
+        <div class="ageandcountry">
+            <input type="number" placeholder="Age"min=0 max=100 required>
+            <select name="country"required >
+                <option value="Armenia">Armenia</option>
+                <option value="Russia">Russia</option>
+                <option value="USA">USA</option>             
+            </select>
+        </div>
+        <input type="email" placeholder="Email"required>
+        <input type="password"placeholder="Password" minlength="5" maxlength="10"required>
+        <input type="submit" value="Submit"required>
+    </div>
+    
+
+
+    </form>
+    
+</body>
+</html>
