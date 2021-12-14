@@ -6,6 +6,7 @@
     width: 500px;
     margin-top: 100px;
     display: flex;
+    
 
 }
 .div2 {
@@ -32,7 +33,9 @@
         flex-direction:column; 
         height: 700px;
         background-color: rgb(2, 83, 33);
-        margin-left: auto;
-        margin-top: auto;
     }
   }
+  /* @media screen and (max-width:700px) {
+      
+      
+  } */
