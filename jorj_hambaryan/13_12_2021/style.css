@@ -23,6 +23,10 @@ tr {
     border: 1px solid black;
 }
 
+tr:nth-child(odd) {
+    background: #86737360;
+} 
+
 
 .flex_center {
     display: flex;
