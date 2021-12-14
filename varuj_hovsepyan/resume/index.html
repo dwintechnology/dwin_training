@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">
+
+        <form autocomplete="on" action="#">
+            <input class="img-file" type="file"  alt="Submit" >
+            <input class="input-style" name="name" type="text" value="name" maxlength="15" required>
+            <input class="input-style" name="lastname" type="text" value="surname" maxlength="15" required>
+            <input class="input-style1" name="check" type="radio" name="button" required>
+            <label for="">male</label>
+            <input class="input-style1"  type="radio"  name="button">
+            <label for="">female</label><br>
+            <input class="number-style" name="age" placeholder="age" type="number" required max="100" min="0" value="age">
+            <select name="select" id="">
+                <option value="">armenia</option>
+                <option value="">russia</option>
+            </select>
+            <input class="input-style" type="email" required name="mail" value="email">
+            <input class="input-style"  type="password" name="pass" minlength="5" maxlength="20" required>
+            <input type="submit" class="button">
+        </form>
+    </div>
+</body>
+</html>
