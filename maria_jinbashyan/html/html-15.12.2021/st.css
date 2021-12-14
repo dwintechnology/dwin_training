@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(204, 199, 199);
+    min-width: 100%;
+    min-height: 100vh;
+}
+.box {margin-top: 50px;
+display: flex;
+justify-content: center;
+}
