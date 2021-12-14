@@ -1,0 +1,124 @@
+body {
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+    background-color:darkgray;
+    
+}
+.chief {
+   
+   
+    background: #FFFFFF;
+    border-radius:6px;
+   
+   
+    
+    
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.container {
+   width: 60%;
+   height: 70%;
+   background-color:#FFFFFF;
+   padding:0 61px 0 61px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.name {
+    width:360px;
+    height:48px;
+    margin-bottom:30px;
+}
+.country {
+    width:360px;
+    height:48px;
+    margin-bottom:30px;
+}
+.restname {
+    width:360px;
+    height:48px;
+    margin-bottom:30px;
+
+}
+.pass {
+    width:360px;
+    height:48px;
+    margin-bottom:30px;
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+}
+.lname {
+    width:360px;
+    height:48px;
+    margin-bottom:30px;
+}
+.city {
+    width:360px;
+    height:48px;
+    margin-bottom:30px;
+}
+.email {
+    width:360px;
+    height:48px;
+    margin-bottom:30px;
+
+}
+.cpass {
+    width:360px;
+    height:48px;
+    margin-bottom:30px;
+}
+.button{
+    background: #FF2D55;
+    color:darkgray;
+    width: 218px;
+    height: 48px;
+    border-radius: 50px;
+    border:none;
+
+
+}
+.submit{
+    display: flex;
+    justify-content: center;
+}
+.written{
+    border:1px solid white;
+    display:flex;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.written >h6{
+    background:#FFFFFF;
+    color:grey;
+    width: 100px;
+    height: 16px;
+   
+}
+.written >a {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color:#FF2D55;
+    border:none;
+}
+
+
