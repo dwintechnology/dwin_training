@@ -17,3 +17,22 @@
 .form_div {
     margin-left: 50px;
 }
+.form{
+    flex-direction: column;
+}
+.form >input, select, label {
+    flex:1;   
+    display:flex;
+    flex-direction:column; 
+    margin: 3px 5px;
+
+}
+@media screen and (max-width: 700px) {
+    .registr_form {
+        flex-direction:column; 
+        height: 700px;
+        background-color: rgb(2, 83, 33);
+        margin-left: auto;
+        margin-top: auto;
+    }
+  }
