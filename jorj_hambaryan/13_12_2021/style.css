@@ -1,0 +1,51 @@
+body {
+    background-image: url(img/notbook); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, a, p, q {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+tr {
+    border: 1px solid black;
+}
+
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover_effect:hover {
+    transform: scale(1.1);
+    transition: 0.5s all ease;
+}
+
+.div_rectangle {
+    width: 100px;
+    height: 60px;
+    background-color: red;
+}
+
+.photo_hacker {
+    height: 100px;
+}
+
+.video {
+    height: 360px;
+    width: 640px;
+}
