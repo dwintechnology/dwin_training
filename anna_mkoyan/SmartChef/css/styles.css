@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E5E5EA;
+}
+
+.app {
+    width: 100%;
+    max-width: 767px;
+    margin: 85px auto;
+    background: #FFFFFF;
+    box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 50px 60px 23px 60px;
+}
+
+.logo {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-grup{
+    width: 360px;
+}
+
+.input-grup > input,select{
+    width: 100%;
+    border: 1px solid #E5E5EA;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 16px 19px;
+    background-color: transparent;
+}
+
+.input-grup > input::placeholder{
+    color: #C7C7CC;
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.input-grup > label{
+    margin-bottom: 5px;
+    margin-top: 18px;
+    color: #434C5F;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
