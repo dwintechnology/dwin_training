@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="flex-div"> 
+        <div class="cls">
+
+            <input type="image" name="photo" src="https://image.shutterstock.com/image-vector/avatar-people-male-profile-gray-260nw-538707343.jpg">
+            <div>
+                <input class="file" type="file">
+            </div>
+            
+
+       </div>
+        <form id="formId" action="#" method="get">
+            
+            <div class="cls">
+                <div>
+                    <p>Name</p>
+                    <input maxlength="20" type="text"  placeholder="enter your name" tabindex="1" name="name" id="nameId">
+                </div>
+    
+                 <div>
+                      <p>Surname</p>
+                   <input type="text" placeholder="enter your surname" tabindex="2" name="surname" id="surnameId">
+                  </div>
+            
+                 <div>
+                <input class="male" tabindex="3" type="radio" name="sex" value="male">
+                <label for="">Male</label>  
+               <input class="male" tabindex="3" checked  type="radio" name="sex" value="female">
+               <label for="">Female</label>
+                   </div>
+    
+                 <div>
+                <p>Age</p>
+                <input min="5" max="100"  type="tel"  placeholder="enter your age" tabindex="4" name="age">
+                   </div>
+               <div>
+                <p>Country</p>
+                <select name="country" id="countryId">
+                    <option value="Armenia">Armenia</option>
+                    <option value="Russia">Russia</option>
+                    <option value="USA">USA</option>
+                </select>
+                </div>
+                <div>
+                <p>Email adress</p>
+                <input required tabindex="5" placeholder="enter your email" type="email" name="email" id="">
+                </div>
+              <div>
+                <p>Password</p>
+                <input required minlength="5" maxlength="20" tabindex="6" placeholder="enter your passsword" type="password" name="pass" id="">
+               </div>
+              <div>
+                  <input class="button" type="submit">
+              </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
