@@ -1,0 +1,43 @@
+.container {
+    margin: auto;
+    max-width: 900px;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+}
+.nameSurname {
+    display: flex;
+    justify-content: space-between;
+}
+.countryCity {
+    display: flex;
+    justify-content: space-between;
+}
+.restaurantEmail{
+    display: flex;
+    justify-content: space-between;
+}
+.pass{
+    display: flex;
+    justify-content: space-between;
+}
+select{
+    padding: 12px 166px;
+}
+input{
+    padding: 10px 100px;
+}
+.button {
+    margin-left: 330px;
+    margin-top: 80px;
+    border-radius: 20%;
+    background-color:#FF2D55;;
+}
+.footer {
+    margin-left: 380px;
+    margin-top: 30px;
+}
+.login {
+    background-color: #FF2D55;;
+}
