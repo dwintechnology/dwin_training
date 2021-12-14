@@ -1,0 +1,24 @@
+.img-file{
+    border: 15px blue solid;
+}
+.container{
+    max-width: 1110px;
+    margin: auto;
+}
+.input-style{
+    outline-offset: none;
+    display: block;
+    margin-top: 15px;
+}
+.input-style1{
+    margin-top: 15px;
+}
+.number-style{
+    width: 80px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.button{
+    margin-top: 15px;
+    margin-left: 50px;
+}
