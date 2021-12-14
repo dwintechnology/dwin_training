@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+div:nth-child(even){
+    background-color: gray;
+}
+.h{
+    display: inline-block;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+.hHover{
+    display: none;
+}
+.h:hover + .hHover{
+    display: block;
+}
