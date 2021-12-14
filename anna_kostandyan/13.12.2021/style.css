@@ -1,5 +1,11 @@
 .scaleofhover:hover{
     transform: scale(1.3);
     transition: 1s all ease;
+}
+table {
+    width:100%;
 
+}
+tr:nth-child(even){
+    background-color: bisque;
 }
