@@ -30,6 +30,7 @@ body {
 
 .input-grup{
     width: 360px;
+    margin-bottom: 18px;
 }
 
 .input-grup > input,select{
@@ -39,6 +40,10 @@ body {
     border-radius: 3px;
     padding: 16px 19px;
     background-color: transparent;
+}
+
+.input-grup > input,select:focus{
+    outline: none;
 }
 
 .input-grup > input::placeholder{
@@ -60,4 +65,50 @@ body {
     font-size: 10px;
     line-height: 14px;
     text-transform: uppercase;
+}
+
+.buttons{
+    text-align: center;
+}
+
+.sign-up-btn{
+    margin: 17px auto 26px auto;
+    padding: 15px 80px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #FF2D55;
+    border-radius: 50px;
+    border: none;
+}
+
+.links {
+    width: 218px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.heve-ac{
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #8E8E93;
+    text-decoration: none;
+}
+
+.login{
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FF2D55;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }

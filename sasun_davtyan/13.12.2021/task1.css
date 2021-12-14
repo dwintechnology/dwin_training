@@ -25,10 +25,12 @@ table, th, td {
   span {
       color: blue;
   }  
+
   tbody tr:nth-child(even)
   {
 background: greenyellow;  
 }
+
 .td1 {
     transition: 1s; 
     text-align: center;
