@@ -12,19 +12,19 @@
 
         <form autocomplete="on" action="#">
             <input class="img-file" type="file"  alt="Submit" >
-            <input class="input-style" name="name" type="text" value="name" required>
-            <input class="input-style" name="lastname" type="text" value="surname" max="30" required>
-            <input class="input-style1" name="check" type="checkbox" required>
+            <input class="input-style" name="name" type="text" value="name" maxlength="15" required>
+            <input class="input-style" name="lastname" type="text" value="surname" maxlength="15" required>
+            <input class="input-style1" name="check" type="radio" name="button" required>
             <label for="">male</label>
-            <input class="input-style1"  type="checkbox">
+            <input class="input-style1"  type="radio"  name="button">
             <label for="">female</label><br>
-            <input class="number-style" name="age" type="number" required max="100" min="0" value="age">
+            <input class="number-style" name="age" placeholder="age" type="number" required max="100" min="0" value="age">
             <select name="select" id="">
                 <option value="">armenia</option>
                 <option value="">russia</option>
             </select>
-            <input class="input-style" type="email" required name="mail">
-            <input class="input-style"  type="password" name="pass" min="5" max="20" required>
+            <input class="input-style" type="email" required name="mail" value="email">
+            <input class="input-style"  type="password" name="pass" minlength="5" maxlength="20" required>
             <input type="submit" class="button">
         </form>
     </div>

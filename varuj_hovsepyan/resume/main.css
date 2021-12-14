@@ -2,8 +2,9 @@
     border: 15px blue solid;
 }
 .container{
-    max-width: 1110px;
+    width: 50%;
     margin: auto;
+    background-color: darkgoldenrod;
 }
 .input-style{
     outline-offset: none;
