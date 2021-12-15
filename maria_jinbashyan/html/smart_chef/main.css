@@ -1,0 +1,61 @@
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+.div-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.section-1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.input-style{
+    border: 1px solid #E5E5EA;
+box-sizing: border-box;
+border-radius: 3px;
+padding: 10px 180px 10px 20px;
+}
+.number {
+    border: 1px solid #E5E5EA;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 310px 10px 20px;
+
+}
+select{
+    border: 1px solid #E5E5EA;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 280px 10px 20px;
+    background: transparent;
+}
+.input-btn-div{
+    justify-content: center;
+    display: flex;
+    margin-top: 65px;
+
+
+}
+.section-2 input{
+    background: #FF2D55;
+    border-radius: 50px;
+    padding: 15px 80px;
+    font-size: 15px;
+line-height: 18px;
+color: #FFFFFF;
+text-transform: uppercase;
+}
+.i-have {
+    text-align: center;
+}
+.i-have h3{
+    display: inline;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+#h3-{
+    color: #FF2D55;
+}

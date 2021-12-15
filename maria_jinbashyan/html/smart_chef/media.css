@@ -1,0 +1,26 @@
+@media only screen and (max-width: 790px){
+    .input-style{
+        padding: 10px 80px 10px 20px;
+    }
+    .number{
+        padding: 10px 210px 10px 20px;
+    }
+    select{
+        padding: 10px 180px 10px 20px;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .section-1{
+        display: block;
+    }
+    .div-img{
+        display: block;
+    }
+    .input-btn-div{
+        display: block;
+    }
+    .i-have {
+          text-align:left ;
+    }
+}
