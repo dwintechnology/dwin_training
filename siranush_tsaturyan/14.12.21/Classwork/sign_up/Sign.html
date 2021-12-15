@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <meta charset="utf-8">
+    <style>
+       
+       @media only screen and (max-width: 768px) {
+        #ffff{
+       display: block;
+  }
+}
+        .form_reg{
+            display:flex;
+            justify-content: center;
+            width:100%;
+        }
+
+        input {
+	padding-left: 5px;
+	width: 100%;
+	height: 7vh;
+
+}
+
+input:hover{
+	border-color: rgb(204, 204, 199);
+	color: rgb(160, 160, 141);
+}
+
+h1{
+    text-align: center;
+}
+
+
+.padd{
+    width:200px;
+    height:200px;
+    padding-left: 30px;
+    
+
+}
+
+.paddnew{
+    padding-left:50px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Sign up</h1>
+    </div>
+    <div id="ffff" class="form_reg">
+        <input class="padd" type="image" src="./150773338_3232049816895964_7589756673291180228_n.jpg" alt="Submit" width="400" height="400"/>
+    
+    
+       
+        <div>
+            <form class="paddnew">
+                    <input type="text" minlength="20" placeholder="Name"  >
+                    <input type="text" minlength="30" placeholder="Surname">
+                    <legend>Choose your gender:</legend>
+            
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="male" checked>
+                    <label for="female">Female</label>
+                    <input  type="radio" name="gender" id="female" value="female">
+                    <input  type="number" size="4" name="age" min="0" max="100" placeholder="Age">
+                    <select i id="country together" name="country" placeholder="country">
+                        <option value="Armenia" > Armenia </option>
+                        <option value="USA"> USA </option>
+                        <option value="Russia"> Russia </option>
+                        <input type="email" placeholder="email">
+                        <input type="password" placeholder="password" id="pass" name="password"
+           maxlength="10" minlength="5" required> 
+           <button> Submit </button>
+                  
+            </form>
+        </div>
+    </div>
+</body>
+</html>
