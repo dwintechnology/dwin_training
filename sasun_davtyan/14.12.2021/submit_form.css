@@ -1,5 +1,5 @@
 body {
-    background-color: #007242;
+    background-color: #00b167;
 }
 .div {
     display: block;
@@ -9,7 +9,7 @@ body {
     margin-right: auto;
     border: 2px solid rgb(207, 207, 207, 0.5);
     background: #FFFFFF;
-    opacity: 0.8;
+    opacity: 0.9;
 
 }
 .header {
@@ -17,15 +17,15 @@ body {
     justify-content: center;
     margin-top: 40px;
 }
-.form_row1, .form_row2, .form_row3, .form_row4{
+.row{
     justify-content: space-around;
         display: flex;
 }
-.form_row5{
+.row_one{
     justify-content: center;
     display: flex;
 }
-.form_row6{
+.row_two{
     justify-content: space-evenly;
     display: flex;
     margin-top: 20px;
@@ -120,8 +120,12 @@ body {
     color: #a8001f;
  }
  
-@media screen and (max-width: 1000px) {
-    .form_row1, .form_row2, .form_row3, .form_row4, .form_row5, .form_row6 {
+@media screen and (max-width: 700px) {
+    .row, .row_one, .row_two {
             flex-direction: column;
+     }
+     .div {
+         width: 100%;
+         height: 1000px;
      }
  }
