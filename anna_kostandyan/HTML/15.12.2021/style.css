@@ -1,0 +1,212 @@
+*{border:1px solid red;}
+
+body {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.fword {
+    
+    width: 150px;
+    font-weight: 700;
+    color: #252B42;
+    
+    
+
+}
+.menu {
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    
+    font-style: normal;
+    font-weight: bold;
+}
+
+.menu > a{
+    margin-right:25px;
+    color: #737373;
+}
+.header {
+    margin:30px 195px 0 195px; 
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.log {
+    width: 41px;
+    height: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    color:#1BA0AB;
+}
+.one {
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+.sumbit {
+    width: 137px;
+    height: 52px;
+    background: #1BA0AB;
+    border-radius: 5px;
+    border:white;
+    color:white;
+}
+.two {
+    display:flex;
+    justify-content: space-between;
+    width: 223px;
+   
+}
+.sumbit1 {
+    border:none;
+    color:white;
+
+}
+.btext {
+    width:542px;
+    height: 160px;
+    font-weight: bold;
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 58px;
+    line-height: 80px;
+    color:#252B42;
+
+}
+.three {
+    display:block;
+    margin-left:28%;
+  
+}
+.picandtext {
+    display:flex;
+    margin-top:3%;
+}
+
+
+.wel{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    width: 77px;
+    height: 24px;
+    color: #1BA0AB;
+}
+.mtext {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    width: 338px;
+    height: 30px;
+    color: #737373;
+}
+.sumbit1 {
+    width: 137px;
+    height: 52px;
+    background: #1BA0AB;
+    border-radius: 5px;
+    color:white;
+}
+.more{
+    width: 137px;
+    height: 52px;
+    background:white;
+    border-radius: 5px;
+    border:1px solid  #1BA0AB;
+    color: #1BA0AB;
+}
+.four{
+    display:flex;
+}
+.line {
+    width: 94px;
+    height: 7px;
+    background-color:#E74040;
+}
+.words {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    width: 300px;
+    height: 50px;
+    color: #252B42;
+    }
+.story {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #737373;
+    width: 351px;
+    height: 60px;
+}
+.learn {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color:#1BA0AB;
+
+}
+.four{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    height: 671px;
+    justify-content: space-between;
+    padding:195px;
+}
+.heart {
+    width: 70px;
+    height: 76px;
+    padding: 22px 19px;
+}
+.booking {
+    width: 157px;
+    height: 24px;
+    font-size:16px;
+    color:#252B42;
+}
+.num1 {
+    width: 50px;
+    height: 2px;
+    background-color:#E74040;
+
+}
+.the {
+    width: 132px;
+    height: 60px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color:#737373;
+}
+.bird {
+    width: 70px;
+    height: 76px;
+    padding: 22px 19px;
+}
+.health {
+    width: 157px;
+    height: 24px;
+    font-size:16px;
+    color:#252B42;
+}

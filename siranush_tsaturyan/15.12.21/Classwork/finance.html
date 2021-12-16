@@ -2,56 +2,305 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap" rel="stylesheet">
     <style>
-        .container{
-            background-image: 
+        body{
+            margin:0;
+            padding:0;
+                
+        }
+        header{
+            display:flex;
+            justify-content: space-between;
+            background-image: url("./background\ \(1\).png");
+            color:white;
+            letter-spacing: 2px;
+            font-family: 'Readex Pro', sans-serif;
+            
         }
 
+        .container{
+            display:flex;
+            justify-content:flex-start;
+            max-width:100%;
+            padding-left:120px;
+            position:fixed;
+            z-index:20;
+            
+}
+    nav{
+        display:flex;
+        width:100%;
+       
+        
+    }
+   nav ul{
+     display:flex;
+     list-style: none;
+     margin-top: 20px;
+    
+   }
+   nav li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 20px;
+    margin-left: 20px; 
+    
+           
+         
+        }
+     .first_name{
+         margin-top:17px;
+         width:200px;
+         font-size:20px;
+         font-weight: 700;
+     }
+    .a_left{
+        margin-top: 10px;
+        padding-left: 90px;
+        font-weight: 700;
+    }
+
+    .button{
+        padding-left: 20px;
+        width:350px;
+    }
+
+    .button_border{
+        border-radius:7px;
+        padding:10px 22px;
+        background-color: rgb(0, 172, 230);
+    }
+
+    #container2{
+        display:flex;
+        position:relative;
+       
+        
+        
+
+    }
+    .col{
+        margin-top: 120px;
+        margin-left:120px;
+        width:300px;
+        flex-wrap: wrap;
+        
+
+}
+    
+
+    #button1 {
+    background-color: rgb(0, 172, 230);
+    color: white;
+    border: none;
+    border-radius:10px;
+    padding: 7px 11px;
+    text-align: center;
+    font-size: 17px;
+    height:5vh;
+}
+
+#button2 {
+    background-color: grey;
+    color: white;
+    border: 1px  solid white;
+    border-radius:12px;
+    padding: 6px 11px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.pic{
+    position:static;
+   
+}
+.pic img{
+    margin-top:60px;
+    margin-left: 330px;
+    height:410px;
+    width:344px;
+}
+
+.container3{
+    display:flex;
+}
+
+.row3{
+    margin:auto;
+    margin-top:30px;
+    
+}
+
+.container3.1{
+    display:flex;
+    width:100%;
+}
+.col3{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;    
+}
 
 
+.container4{
+    display:flex;
+    justify-content: center;
+    font-family: 'Readex Pro', sans-serif;
+    margin-top:60px;
+}
+
+.hp_font{
+    padding-left:100px;
+}
+
+.padd4{
+    padding-left:55px;
+
+}
+
+.color_s{
+    color:rgb(143, 143, 118)
+}
+
+
+.container5{
+    display:flex;
+    margin-top:50px;
+    align-content: flex-start;
+  
+}
+
+.row5{
+    padding-left: 100px;
+   
+}
+
+.col5{
+    font-family: 'Readex Pro', sans-serif;
+   
+}
 
     </style>
 
 
 </head>
 <body>
-    <div>
+    <header>
         <div class="container">
-            <div class="row">
-                <div class="col">
-
-
+            <nav>
+                <div class="first_name">
+                    Brand Name
                 </div>
-                <div class="col">
-                    
-                </div>
-                <div class="col">
-                    
-                </div>
-                <div class="col">
-                    
-                </div>
+                <div>
+                <ul >
+                    <li>
+                        <a href="#"> 
+                            Home
+                        </a>
+                   </li>
+                    <li>
+                        <a href="#">
+                            Product
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Pricing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a class="a_left" href="#">
+                            Login
+                        </a>
+                    </li>
+                    <li class="button">
+                        <a class="button_border" href="#">
+                            Become a member
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+    </div>
+    
+        <div id="container2">
+            <div class="col">
+            <h1>Your Financial <br> Assistant</h1>
+           
+            
+            <h6>We know how large objects will act, <br>
+                but things on a small scale.
+            </h6>
+            <button id="button1" type="button">Get Quote Now</button>
+            <button id="button2" type="button">Learn More</button>
+        </div>
+        <div class="pic">
+           <img src="./png-cover.1.png" alt="men" />
+        </div>
+       
+            
+    </header>
 
+    <div class="container3">
+        <div class="row3">
+            <img src="./h2 feature-section.1.png" /><br><br>
+            <img src="./paragraph.png" />
 
+        </div>
+        </div>
+        <div class="container3.1">
+        <div class="row3.1">
+            <div class="col3">
+                <img src="./card-item.png" />
+                <img src="./card-item (1).png" />
+                <img src="./card-item (2).png" />
+                <img src="./card-item (3).png" />
 
+            </div> 
+        </div>
+    </div>
+    <div class="container4">
+        <div class="row4">
+            <h1 class="font_4 hp_font">
+                What Clients Say
+            </h1>
+            <span class="font_4 padd4 color_s">
+                Problems trying to resolve the conflict between</span> <br>
+         <span class="font_4 color_s">the two major realms of Classical physics: Newtonian mechanics 
+         </span>
+        </div>
+    </div>
+    <div class="container5">
+        <div class="row5">
+            <div class="col5">
+                <img src="./user.1.png" alt="girl" />
+               
+                <h2>Regina Miles</h2>
+                <h3> Designer</h3>
+            
 
-
-
+            </div>
+            <div class="col5">
 
             </div>
 
+
+
+
+
+
         </div>
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
 </body>
