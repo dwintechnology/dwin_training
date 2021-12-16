@@ -66,6 +66,18 @@ h5 {
     margin:5px 0;
 }
 
+h6 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
 /* header */
 
 .header {
@@ -193,6 +205,7 @@ h5 {
     display: flex;
     justify-content: space-between;
     margin-top: 80px;
+    align-items: center;
 }
 
 .width_h{
@@ -243,7 +256,6 @@ h5 {
 .advice-title > p {
     width: 28%;
     margin: 0 auto;
-    margin-bottom: 45px;
 }
 
 .advice-main {
@@ -258,6 +270,7 @@ h5 {
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
 }
 
 .advice-main-item > h5{
@@ -322,4 +335,441 @@ h5 {
 .aboutus-main-text-puncts p{
     margin: 0;
 }
+
+/* aboutus */
+/* brands */
+
+.brands {
+    padding-top: 71px;
+    padding-bottom: 156px;
+}
+
+.brands-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* brands */
+/* email */
+
+.email {
+    height: 77px;
+    background: #252B42;
+    position: relative;
+    z-index: 1;
+}
+
+.email > .container {
+    position: absolute;
+    z-index: 2;
+    padding: 30px;
+    height: 124px;
+    background: #17213C;
+    margin-left: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    top: -67px;
+}
+
+.email h3 {
+    width: 258px;
+    color: #fff;
+}
+
+.inputs_area {
+    width: 50%;
+    display: flex;
+}
+
+.email .email-input {
+    background: #F9F9F9;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    width: 80%;
+    height: 58px;
+    margin: 0px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 15px 20px;
+}
+
+.email .subscribe {
+    width: 19%;
+    background: #FF7B47;
+    border: 1px solid #E6E6E6;
+    height: 58px;
+    margin-left: -4px;
+    height: 58px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* .email  */
+/* touch */
+
+.touch {
+    padding-top: 85px;
+    background: #F3F3F3;
+    padding-bottom: 148px;
+}
+
+.touch-title {
+    margin-bottom: 85px;
+}
+
+.touch-title > h2, .touch-title > p{
+    text-align: center;
+} 
+
+.touch-title > p {
+    width: 28%;
+    margin: 0 auto;
+}
+
+.touch-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.touch-content-item {
+    width: 328px;
+    height: 333px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.touch-content-item a {
+    color: #252B42;
+}
+
+.touch-content-item img {
+    margin-bottom: 15px;
+}
+
+.touch-content-item h5 {
+    margin-top: 15px;
+}
+
+.touch-content-item-submit {
+    margin-top: 15px;
+    background: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #FF7B47;
+    width: 160px;
+    height: 44px;
+    border: 1px solid #FF7B47;
+    border-radius: 5px;
+}
+
+
+.touch-content-item:nth-child(2) a {
+    color: #fff; 
+}
+
+.touch-content-item:nth-child(2) {
+    width: 328px;
+    height: 393px;
+    background: #252B42;
+}
+
+.touch-content-item:nth-child(2) .touch-content-item-submit{
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    background: #252B42;
+}
+
+
+/* touch */
+/* business */
+
+.business{
+    background: #FAFAFA;
+}
+
+.business .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-submit {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    width: 160px;
+    height: 58px;
+    background: #FF7B47;
+    border-radius: 5px;
+    border: none;
+}
+
+/* business */
+/* footer */
+
+.footer {
+
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+}
+
+.footer_links {
+    background: #17213C;
+}
+
+.footer_links-item {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+
+.footer_links-item h5{
+    color: #fff;
+    margin-bottom: 17px;
+}
+
+.footer_links-item:last-child a{
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.social {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.social h6 {
+    color: #737373;
+}
+
+.social-links > a {
+    margin-right: 20px;
+}
+
+.social-links > a:last-child {
+    margin-right: 0px;
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+    .advice-main {
+        flex-wrap: wrap;
+    }
+
+    .advice-main-item {
+        margin-top: 45px;
+    }
+
+    .aboutus-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutus-main-text {
+        margin-top: 72px;
+    }
+
+    .what_we_do-products {
+        flex-direction: column;
+    }
+
+    .what_we_do-products > a {
+        margin-bottom: 30px
+    }
+
+    .what_we_do-product > a:last-child {
+        margin-bottom: 0
+    }
+    
+    .email > .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 1061px){
+    .header_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header_content > .title {
+        width: 100%;
+    }
+
+    .title > h1 {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 57px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        text-align: start;
+    }
+
+    .touch-content {
+        flex-direction: column;
+    }
+
+    .touch-content-item {
+        margin-bottom: 30px;
+    }
+
+    .touch-content-item:last-child {
+        margin-bottom: 0px;
+    }
+
+    .footer .container {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_links-item {
+        width: 200px;
+    }
+
+    .inputs_area {
+        width: 70%;
+    }
+
+    .touch-title > p, .aboutus-title > p, .advice-title > p, .what_we_do-title > p {
+        width: 100%;
+    }
+
+    .email h3 {
+        margin-bottom: 30px;
+    }
+    
+    
+
+    
+}
+
+
+@media screen and (max-width: 761px){
+    .brands-content {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .brands-content > img {
+        margin-bottom: 60px;
+    }
+
+    .brands-content > img:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 709px){
+    .social {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .social h6 {
+        margin-bottom: 52px;
+    }
+}
+
+@media screen and (max-width: 671px){
+    .links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 631px){
+    .links {
+        display: none;
+    }
+
+    .advice-main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .aboutus-main > img {
+        width: 100%;
+    }
+
+    .business .container {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+}
+
+
+@media screen and (max-width: 501px){
+    .title > h1 {
+        text-align: center;
+    }
+
+    .title > h4 {
+        text-align: center;
+    }
+
+    .header_butons {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .learn_more {
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 489px){
+    .inputs_area {
+        width: 104%;
+    }
+
+}
+
+@media screen and (max-width: 521px){
+
+    .man > img{
+        width: 377px;
+    }
+}
+
+
+
+
+
+
+
+
 
