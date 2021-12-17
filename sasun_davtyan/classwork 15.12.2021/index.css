@@ -431,3 +431,21 @@ border-radius: 5px;
     color: white;
     font-size: 25px;
 }
+.insta_fb{
+    background: #FAFAFA;
+    height: 74px;
+    display: flex;
+}
+.insta_fb1{
+    width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+}
+.social_icons>img{
+    margin-right: 10px;
+    
+}
