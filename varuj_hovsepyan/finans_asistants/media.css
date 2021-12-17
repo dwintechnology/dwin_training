@@ -1,0 +1,108 @@
+@media only screen and (max-width: 400px){
+    nav{
+        display: none;
+    }
+    .section-1{
+        text-align: center;
+        display: inline-block;
+        margin-top: 0px;
+    }
+    header{
+       background-position: top;
+    }
+    .bottom-div img {
+        width: 371px;
+        height: 215px;
+    }
+    .section-3 {
+        display: inline-block;
+        margin-left: 80px;
+    }
+    .card-2 {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .card-3 {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .card-4 {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    #mobile-img{
+        display: block;
+    }
+    #mobile-img-2{
+        display: block;
+    }
+    .section-3 img{
+        display: none;
+    }
+    #card-3-h1{
+        margin-left: 0px;
+    }
+    .section-5-flexdiv{
+        display: inline-block;
+    }
+    .user-div1{
+        margin-top: 100px;
+    }
+    .video-div{
+        display: inline-block;
+    }
+    #mobile-video{
+        width: 300px;
+    }
+    .video-div1{
+        text-align: center;
+    }
+    #hidden-block{
+        display: none;
+    }
+    .section-7-card{
+        display: inline-block;
+    } 
+    .test {
+        padding: 10px 20px;
+    }
+    .last-div {
+        background: none;
+    }
+    .last-div form{
+       display: none;
+    }
+    .last-div1{
+        display: inline-block;
+    }
+    .last-section-2{
+        margin-left: 0;
+    }
+    .last-section-3{
+        margin-left: 0;
+    }
+    .last-section-4{
+        margin-left: 0;
+    }
+    .login h3{
+        display: none;
+    }
+    .login h2{
+        display: none;
+    }
+
+    .container{
+    max-width: 350px;
+    margin: auto;
+    }
+    .hidden-last-div{
+        background: #252B42;
+        display: inline-block;
+    }
+    .hidden-last-div h2{
+        text-align: center;
+    }
+    .card-7-2{
+        margin-left: 0;
+    }
+}
