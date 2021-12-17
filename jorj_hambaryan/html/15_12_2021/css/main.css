@@ -136,6 +136,7 @@ h6 {
     width: 36%;
 }
 
+
 .title > h4 {
     margin-top: 35px;
 }
@@ -216,6 +217,12 @@ h6 {
     justify-content: center;
     align-items: center;
     padding-top: 30px;
+    transition: 0.8s all 0s ease;
+}
+
+.width_h:hover {
+    box-shadow: 0px 13px 19px 20px rgb(0 0 0 / 7%);
+    transition: 0.8s all 0s ease;
 }
 
 .width_h h5{
@@ -251,6 +258,10 @@ h6 {
     text-align: center;
     background: #FAFAFA;
     padding-bottom: 80px;
+}
+
+.aboutus-title {
+    padding-bottom: 45px;;
 }
 
 .advice-title > p {
@@ -521,10 +532,6 @@ h6 {
 /* business */
 /* footer */
 
-.footer {
-
-}
-
 .footer .container {
     display: flex;
     justify-content: space-between;
@@ -573,6 +580,22 @@ h6 {
     margin-right: 0px;
 }
 
+
+/* footer end */
+/* scroll effect */
+
+.what_we_do-title, .advice-title, .aboutus-title, .touch-title {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.what_we_do-title._active, .advice-title._active, .aboutus-title._active, .touch-title._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+/* scroll effect end*/
 
 
 
@@ -653,10 +676,13 @@ h6 {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        
     }
 
+    
     .footer_links-item {
         width: 200px;
+        padding: 15px 0;
     }
 
     .inputs_area {
