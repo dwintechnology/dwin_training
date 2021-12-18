@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -97,7 +98,7 @@ margin-top: 30px;
     margin-top: 180px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 219px;
+    padding-bottom: 52px;
 }
 .reddiv{
     background-color: tomato;
@@ -311,9 +312,7 @@ button img{
     position: relative;
 }
 
-#time-3-icon {
-    fill: green;
- }
+ 
 
 @keyframes slack1{
     0%{
@@ -339,3 +338,236 @@ button img{
       
     }
 }
+.page50{
+    padding-top: 160px;
+}
+.page50 p{
+    color: #1BA0AB;
+    Font-style: Bold;
+    Font-size: 14px;
+    Line-height: 24px;
+    
+}
+.page50 h2{
+    Font-style: Bold;
+    Font-size: 40px;
+    Line-height: 50px;
+    margin: top 10px; 
+}
+.page50 h3{
+    Font-size: 14px;
+    Line-height: 20px;
+    margin-top: 10px;
+    color: #737373;
+    margin-top: 30 px;
+}
+.page51 img{
+    border-radius: 100px;
+    margin-top: 29px;
+}
+.page51{
+    text-align: center;
+    padding: 25px 95px;
+}
+.page51 h3{
+    Font-size: 14px;
+    Line-height: 20px;
+    color: #737373;
+    
+}
+.page51 h2{
+   
+    margin-top: 15px;
+    Font-style: Bold;
+    Font-size: 20px;
+    Line-height: 24px;
+}
+.page51 p{
+    Font-size: 14px;
+    Line-height: 24px;
+    color: #737373;
+    margin-top: 5px;
+    
+}
+.page51a{
+    margin-right:200px ;
+    display: flex;
+    justify-content: space-between;
+
+}    
+.page60 p{
+    color: #1BA0AB;
+    Font-style: Bold;
+    Font-size: 14px;
+    Line-height: 24px;
+    margin-top: 210px;
+    
+}
+.page60 h2{
+    Font-style: Bold;
+    Font-size: 40px;
+    Line-height: 50px;
+    margin: top 10px; 
+}
+.page60 h3{
+    Font-size: 14px;
+    Line-height: 20px;
+    margin-top: 10px;
+    color: #737373;
+}
+.div1 h2{
+    Font-size: 16px;
+    Line-height: 24px;
+    margin-top: 30px;
+    margin-left: 55px;
+
+}
+.div1 p{
+    Font-size: 12px;
+    Line-height: 16px;
+    margin-left: 86px;
+    margin-top: 10px;
+}
+.div1 img{
+    margin-top: 112px;
+    border-radius: 40px 40px 0px 0px;
+    
+}
+.soc{
+    margin-left: 60px;
+    
+}
+.soc img {
+    margin-left: 10px;
+    margin-bottom: 147px;
+}
+.fordiv{
+    display: flex;
+    justify-content: space-between;
+}
+#strong{
+    margin-top: 15px;
+    border-radius: 0px;
+}
+.laster{
+    background-color: #FFF5F0;
+    text-align: center;
+    
+}
+.div1{
+   
+    border-radius: 0px 0px 40px 40px;
+    box-shadow: 1px 1px #888888;
+}
+.laster h3{
+    Font-size: 14px;
+    Line-height: 20px;
+    color: #737373;
+    
+}
+.laster h2{
+   
+    margin-top: 15px;
+    Font-style: Bold;
+    Font-size: 20px;
+    Line-height: 24px;
+}
+.laster p{
+    Font-size: 14px;
+    Line-height: 24px;
+    color: #1BA0AB;
+    margin-top: 5px;
+    Font-style: Bold;
+    padding-top: 160px;}
+
+    .forma{
+        margin-top: 50px;
+     padding-bottom: 162px;
+    }
+    #fname{
+        padding: 15px 460px 15px 20px;
+        color: #737373;
+    }
+    #fname1{
+        padding: 17px 25px;
+        margin-left: -5px;
+        border: none;
+        background-color: #1BA0AB;
+        color: #FFFFFF;
+        
+    }
+    .foother{
+        margin-top: 50px;
+    }
+    .win h2{
+        Font-style: Bold;
+        Font-size: 16px;
+        Line-height: 24px;
+        padding-bottom:  20px ;
+    }
+    .win p{
+        Font-style: Bold;
+        Font-size: 14px;
+        Line-height: 24px;
+        margin-top: 10px;
+      color: #737373;
+
+    }
+    .foother{
+        display: flex;
+        justify-content: space-around;
+    }
+    #svg{
+        animation-name: svg-color;
+        animation-duration: 5s;
+    animation-iteration-count: infinite;
+    }
+
+@keyframes svg-color{
+    0%{
+        fill: violet;
+        
+        
+    }
+    25%{
+        fill: burlywood;
+      
+    }
+    50%{
+        fill: coral;
+        
+    }
+    75%{
+        fill: cornflowerblue;
+        
+    }
+    100%{
+       fill: crimson;
+      
+    }
+}
+.win div{
+    padding-bottom: 10px;
+}
+        footer{
+            background-color: #FAFAFA;
+            padding: 95px 25px 20px 25px;
+            
+        }
+
+.footer1{
+    display: flex;
+    justify-content: space-between;
+}
+.footer1 p{
+    Font-style: Bold;
+    Font-size: 14px;
+    Line-height: 24px;
+    color:#737373 ;
+}
+ 
+
+    
+   
+
+    
