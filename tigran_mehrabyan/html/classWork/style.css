@@ -1,0 +1,363 @@
+body{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #26335D;
+    color: #fff;
+}
+*{
+    box-sizing: border-box;
+}
+p {
+    margin: 0;
+}
+.header-brand{
+
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    padding-top: 11px;
+    margin-right: 80px;
+
+
+}
+.header-wrapper{
+    padding-top: 19px;
+    padding-left: 195px;
+    display: flex;
+    align-items: center;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-top: 14px;
+    margin-right: 241px;
+}
+.header-nav-item{
+    margin-right: 21px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+
+}
+.header-login{
+    padding-top: 15px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    margin-right: 45px;
+}
+.header-button {
+    background-color: #FC724D;
+    color: white;
+    padding: 15px 25px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+}
+header {
+    position: relative;
+    background-image: url(img/hero-shape-dark-6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin-bottom: 200px;
+}
+.header-main{
+    margin-left: 132px;
+    margin-top: 146px;
+}
+.header-main p{
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+
+}
+h1 {
+    font-size: 58px;
+    line-height: 80px;
+    letter-spacing: 0.2px;
+
+}
+.header-main-button1{
+    padding: 15px 40px;
+    background-color: #FC724D;
+    border: 0;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2;
+    color: white;
+}
+.container{
+    max-width: 1440px;
+    margin: auto;
+}
+.achiko{
+    margin-top: 44px;
+}
+.big-div{
+    display: flex;
+    justify-content: space-between;
+}
+.header-main-button2{
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 2px solid #FC724D;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2;
+    color: white;
+}
+.header-main-button{
+    margin-top: 30px;
+}
+.first-section-p1{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #FC724D;
+}  
+.first-section-p2{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+.first-section h2 {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+.first-section{
+    text-align: center;
+}
+.Emergy-Case {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+.The-gradual{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+.first-section-rec1{
+   text-align: center;
+    padding: 35px 95px;
+    background-color: #fff;
+    margin-left: 50px;
+}
+.first-section-rec1 img{
+    margin: auto;
+}
+.div-for-flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.our-department h2 {
+    font-size: 40px;
+    line-height: 50px; 
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+.our-department p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}
+.our-department button {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #FC724D;
+    background-color: #26335D;
+    border: 0;
+}
+.second-section{
+    margin-top: 367px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 430px;
+
+}
+.our-department{
+    margin-top: 140px;
+    margin-left: 100px;
+}
+.third-first-line p{
+    display: inline-block;
+}
+.english-departement{
+    margin-right: 46px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #FC724D;
+    padding-bottom: 10px;
+}
+.img-rate{
+    margin-left: 46px;
+
+}
+.third-section-p1{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+    padding-bottom: 10px;
+}
+.third-section-p2{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    padding-bottom: 10px;
+}
+.third-fourth-line{
+    padding-bottom: 15px;
+    color: #737373;
+}
+.third-section-rec button{
+    margin-top: 15px;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #FC724D;
+    background-color: transparent;
+    border: 2px solid #FC724D;
+    
+}
+.third-section-rec{
+    background-color: white;
+    margin-left: 15px;
+}
+.third-rec-bot {
+    padding: 30px;
+}
+.third-section-img{
+    width: 100%;
+}
+.fourth-section{
+    margin-top: 400px;
+}
+
+.fourth-img{
+    border-radius: 100%;
+    padding-top: 25px;
+}
+.fourt-rec-p1 {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    padding-top: 30px;
+    padding-left: 171px;
+    padding-right: 171px;
+}
+.fourt-rec-p2 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+.fourt-rec-p3 {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+.img-starts{
+    margin-top: 17px;
+}
+.fourt-rec-p2{
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+.fourt-rec-p3{
+    padding-bottom: 30px;
+}
+.fourth-section-rec{
+    background-color: #fff;
+
+}
+.fourth-section-rec {
+    text-align: center;
+    margin-right: 15px;
+}
+.fifth-section{
+    margin-top: 288px;
+}
+.fifth-p1{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+.fifth-p2 {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+.fifth-section-rec{
+    display: inline-flex;
+    background-color: #fff;
+    border-radius: 5%;
+
+}
+.fifth-section-rec img{
+    padding: 25px 20px 110px 33px;;
+}
+.fifth-flex{
+    padding-top: 20px;
+    padding-right: 33px;
+}
+.fifth-flex-3{
+    display: flex;
+    justify-content: center;
+    margin-top: 95px;
+}
+.fifth-for-margin{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.last-section{
+    margin-top: 247px;
+}
+.last-section input{
+    padding: 20px 200px;     
+}
+.last-flex{
+    margin: 80px 376px 162px;
+    display: flex;
+    border-radius: 5%;
+
+}
+.last-section ::placeholder{
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+.last-section button{
+    padding: 20px 50px;
+    background-color: #FC724D;
+    color: white;
+    cursor: pointer;
+}
