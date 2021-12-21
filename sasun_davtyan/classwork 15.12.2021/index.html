@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,33 +19,49 @@
 <body>
     <header>
         <div class="head_container">
-            <nav class="navbar_menu">
-                <h3>Deline</h3>
-                <ul>
-                    <li><a class="nav_link" href="###">Home</a></li>
-                    <li><a class="nav_link" href="####">Product</a></li>
-                    <li><a class="nav_link" href="#pircing">Pricing</a></li>
-                    <li><a class="nav_link" href="#contact">Contact</a></li>
-                    <li><img class="nav_link" src="./img&icon/Vector.png" alt="foto1"></li>
-                    <li><img class="nav_link" src="./img&icon/Vector2.png" alt="foto2"></li>
-                </ul>
-                <img class="vector_menu" src="./img&icon/Vector 3.png" alt="foto3">
-            </nav>
+            <div class="navbar_menu">
+                <div class="navbar_title">
+                    <h2 style="color: white;">Deline</h2>
+                </div>
+                <div class="nav_nav">
+            <div id="myNav" class="overlay">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./img&icon/Vector 3.png" alt=""></a>
+              <div class="overlay-content">
+                <a href="#section_one">Home</a>
+                <a href="#section_two">Product</a>
+                <a href="#section_tree">Pricing</a>
+                <a href="#section_finish">Contact</a>
+              </div>
+            </div>
+            <div class="title_icons">
+            <img class="nav_link" src="./img&icon/Vector.png" alt="foto1"></li>
+            <img class="nav_link" src="./img&icon/Vector2.png" alt="foto2"></li>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()"><img src="./img&icon/Vector 3.png" alt=""></span>
+            </div>
+            </div>
+            </div>
             <div class="header_body">
                 <div class="left_block">
-                    <h1>Finance and Consultacy Solution</h1>
-                    <div class="small_text">
-                        <h4>We know how large objects will act, but things on small scale</h4>
+                                 <div>
+                                    <div >
+                                        <h1 class="big_tetx">Finance and Consultacy Solution</h1>
+                                        <h4 class="small_text">We know how large objects will act, <br> things on small scale</h4>
+                                    </div>
+                                    <div class="bottonsss">
+                                        <button class="first_header_button">Get Quete Now</button>
+                                        <button class="second_header_button">Learn More</button>
+                                    </div>
+                                  </div>
                     </div>
-                    <button class="first_header_button">Get Quete Now</button>
-                    <button class="second_header_button">Learn More</button>
-                </div>
+                     <div class="agent_block">
                 <img class="agent" src="./img&icon/agent-v 1.png" alt="agent">
             </div>
+            </div>
         </div>
-    </header>
+        </div>
+      </header> 
     <div class="container">
-        <section class="section_one">
+        <section id="section_one" class="section_one">
             <div class="main_content">
                 <h2>What We Do</h2>
                 <p style="margin-top: 10px;">Problems trying to resolve the confict between<br>
@@ -65,7 +82,7 @@
                 </div>
             </div>
         </section>
-        <section class="section_two">
+        <section id="section_two" class="section_two">
             <div class="main_content_first">
                 <h2>Practice Advice</h2>
                 <p style="margin-top: 10px;">Problems trying to resolve the confict between<br>
@@ -97,7 +114,7 @@
                 </div>
             </div>
         </section>
-        <section class="section_tree">
+        <section id="section_tree" class="section_tree">
 
             <div class="main_content_tried">
                 <h2>Who We Were</h2>
@@ -145,7 +162,7 @@
             </div>
             <div class="blue_line"></div>
         </section>
-        <section class="section_finish">
+        <section id="section_finish" class="section_finish">
             <div class="main_content_finish">
                 <h2>Get In Touch</h2>
                 <p style="margin-top: 10px;">Problems trying to resolve the confict between<br>
@@ -242,8 +259,16 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </div>  
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
 </body>
 
 </html>

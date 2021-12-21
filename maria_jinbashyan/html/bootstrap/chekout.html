@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./st.css">
+    <link rel="stylesheet" href="./chekout.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <div id="cont" class="container">
+      <form action="#">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" required>
+               
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02"  required>
+               
+                </div>
+        </div></div>
+        <div class="col-md-8">
+            <label for="validationCustomUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="Username" required>
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+              </div>
+              </div>
+              <div class="col-md-8">
+                <label for="exampleInputEmail1" class="form-label">Email (Optional)</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" value="yor@example.com" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="col-8">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="col-8">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                    <label for="validationCustom04" class="form-label">Country</label>
+                    <select class="form-select" id="validationCustom04" required>
+                      
+                      <option>choose</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                  </div>
+              <div class="col-md-2">
+                <label for="validationCustom04" class="form-label">State</label>
+                <select class="form-select" id="validationCustom04" required>
+                  
+                  <option>choose</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid state.
+                </div>
+              </div>
+              <div class="col-md-2">
+                <label for="validationCustom05" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div></div><hr>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Shipping address is the same as my billing address
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    Save this information for next time
+                </label>
+              </div>
+              <hr>
+              <h1>
+                Payment
+              </h1>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Credit card
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Debit card
+                </label>
+                
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    PayPal
+                </label>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label">Name on card</label>
+                        <input type="text" class="form-control" id="validationCustom01" required>
+                        <p>Full name as displayed on card</p>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label">Credit card number</label>
+                        <input type="text" class="form-control" id="validationCustom02"  required>
+                        
+                      </div>
+                      <div class="row">
+                        <div class="col-2">
+                            <label for="validationCustom01" class="form-label">Expiration</label>
+                            <input type="text" class="form-control" id="validationCustom01" required>
+                            
+                          </div>
+                          <div class="col-2">
+                            <label for="validationCustom02" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="validationCustom02"  required>
+                            
+                          </div>
+                         
+                      </div>
+                      <div id="center" class="col-4">
+                        <button id="bttn" type="submit" class="btn btn-primary">Continue to checkout</button> 
+                      </div>
+
+      </form>
+  </div>
+
+    
+</body>
+</html>
