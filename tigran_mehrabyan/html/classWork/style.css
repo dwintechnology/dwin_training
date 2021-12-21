@@ -350,7 +350,7 @@ h1 {
 
 }
 .last-section ::placeholder{
-    font-size: 14px;
+    font-size: 26px;
     line-height: 28px;
     letter-spacing: 0.2px;
     color: #737373;
@@ -360,4 +360,80 @@ h1 {
     background-color: #FC724D;
     color: white;
     cursor: pointer;
+    font-size: 26px;
 }
+footer{
+    background-color: #fff;
+}
+.footer-col h4 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+.footer-col p{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;  
+    color: #737373;
+}
+footer{
+
+}
+.footer-col{
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+.footer-col-first{
+    margin-left: 195px;
+}
+.footer-flex{
+    display: flex;
+    
+}
+.under {
+    display: flex;
+    margin-top: 90px;
+    justify-content: space-between;
+    padding-bottom: 100px;
+
+}.under p{
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    margin-left: 180px;
+    
+}
+.under img {
+    margin-right: 285px;
+}
+.touch {
+    display: flex;
+}
+.touch img {
+    margin-right: 10px;
+}
+.touch-1{
+    margin-left: 110px;
+}
+.touch-3 {
+    margin-left: 80px;
+}
+.touch-2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+svg path{
+    animation-name: anim;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes anim {
+    0%   {fill: red;}
+    25%  {fill: blue;}
+    50%  {fill: yellow;}
+    75%  {fill: green;}
+    100% {fill: red;}
+  }
