@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+    <script>
+        function gcd_num(x, y) {
+             if ((typeof x !== 'number') || (typeof y !== 'number')) 
+               return false;
+             x = Math.abs(x);
+             y = Math.abs(y);
+             while(y) {
+               var t = y;
+            y = x % y;
+             x = t;
+           }
+            return x;
+          }
+          
+          let temp = gcd_num(10, 45)
+          alert(temp)
+         
+    </script>
+</body>
+</html>

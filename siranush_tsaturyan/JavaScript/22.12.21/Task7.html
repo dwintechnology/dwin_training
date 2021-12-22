@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 7</title>
+</head>
+<body>
+    <script>
+        function func() {
+            return function () {
+                return "Wow! It's nested function!";
+            };
+        }
+        let result = func();
+        alert(result());
+</script>
+</body>
+</html>
