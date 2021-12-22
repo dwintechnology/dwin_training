@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+
+    function getLargest(a, b, c, d, e) {
+      if (a > b && a > c && a > d && a > e) {
+        return console.log("larg is a", a);
+      }
+      if (b > a && b > c && b > d && b > e) {
+        return console.log("larg is b", b);
+      }
+      if (c > a && c > b && c > d && a > e) {
+        return console.log("larg is c", c);
+      }
+      if (d > a && d > b && d > c && d > e) {
+        return console.log("larg is d", d);
+      }
+      if (e > a && e > b && e > c && e > d) {
+        return console.log("larg is e", e);
+      }
+    }
+
+    getLargest(1, 2, 3, 4, 5);
+    getLargest(2, 3, 4, 5, 1);
+    getLargest(3, 4, 5, 1, 2);
+    getLargest(4, 5, 1, 2, 3);
+    getLargest(5, 1, 2, 3, 4);
+
+
+  </script>
+</body>
+
+</html>

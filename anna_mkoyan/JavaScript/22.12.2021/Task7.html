@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+
+        function func() {
+            return function () {
+                return "Wow! It's nested function!";
+            };
+        }
+        let result = func();
+        alert(result());
+
+    </script>
+</body>
+
+</html>
