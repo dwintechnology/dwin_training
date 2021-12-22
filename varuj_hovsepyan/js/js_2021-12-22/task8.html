@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        // let num = Number(prompt("number"));
-        // let fac = 1;
-        
-        // for (let i = 2; i <= num; i++) {
-        //     fac = fac * i;  
-        //     while(fac > pow(5, i)){
-        //         console.log(i)
-               
-        //     }
-                
-        
-        // }
-        
-        
-        
+        let num = Number(prompt("number"));
+        function numbDegree(arg, print) {
+            for (let n = 1; arg > Math.pow(5, n); n++) {
+                var div = arg / Math.pow(5, n);
+                var es = 0;
+                es = Math.floor(es + div)
+                print(es)
+            }
+            
+        }
+
+        numbDegree(num, alert)
+
+
+
+
+
+
+
     </script>
 </body>
+
 </html>
