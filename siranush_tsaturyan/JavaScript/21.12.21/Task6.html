@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+    <script>
+         function reverse(num) {
+             const numStr = "" + num;
+             const reversedNumStr = numStr.split("")
+             .reverse()
+             .join("");
+                 return +reversedNumStr;
+             
+         }
+         alert(reverse(12345));
+
+    </script>
+</body>
+</html>

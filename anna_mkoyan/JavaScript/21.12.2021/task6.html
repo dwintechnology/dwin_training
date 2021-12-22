@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let number = prompt("number?");
+        if (isNaN(number)) {
+            alert("false")
+        } else {
+            let temp = number;
+            let str = temp.split("");
+            let reverse = str.reverse();
+            let res = reverse.join("");
+
+            alert(`${res}`)
+        }
+
+    </script>
+</body>
+
+</html>
