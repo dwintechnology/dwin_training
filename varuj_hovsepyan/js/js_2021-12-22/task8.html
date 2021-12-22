@@ -12,12 +12,12 @@
     <script>
         let num = Number(prompt("number"));
         function numbDegree(arg, print) {
+            var es = 0;
             for (let n = 1; arg > Math.pow(5, n); n++) {
                 var div = arg / Math.pow(5, n);
-                var es = 0;
-                es = Math.floor(es + div)
-                print(es)
+                es += Math.floor(div); 
             }
+            print (es)
             
         }
 
