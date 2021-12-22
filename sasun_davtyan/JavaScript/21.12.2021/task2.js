@@ -1,12 +1,11 @@
-let number = 20;
+function getIsPrime(number,print){
 if (number === 1) {
-    console.log("x=x=x=x=x=x");
+    return 1;
 } else if (number > 1) {
     let isPrime = true;
     for (let i = 2; i < number; i++) {
         if (number % i == 0) {
-            isPrime = false;
-            break;
+            return false;
         }
     }
     if (isPrime) {
@@ -16,4 +15,5 @@ if (number === 1) {
     }
 } else {
     console.log("this is a negative number");
+}
 }

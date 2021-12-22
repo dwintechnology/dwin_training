@@ -1,15 +1,13 @@
-const num =6;
-let fib1 = 1;
-let fib2 = 1;
-if(num<=1) {
-     fib = num;   
-} else {
-    for(let i = 2; i < num; i++){
-	        let fib3 = fib1 + fib2;
-            fib1 = fib2;
-            fib2 = fib3;
-        
+function fibon(n,print) {
+    let a = 1;
+    let b = 1;
+    for (let i = 3; i <= n; i++) {
+      let c = a + b;
+      a = b;
+      b = c;
+      print(c)
     }
-}
-console.log(fib)
-    
+    return b;
+  }
+  fibon(12,console.log)
+

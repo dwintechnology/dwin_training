@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Write a function to compute the greatest common divisor (GCD) of two positive integers.
+        function gcd(x, y) {
+            if ((typeof x !== 'number') || (typeof y !== 'number'))
+                return false;
+            x = Math.abs(x);
+            y = Math.abs(y);
+            while (y) {
+                let t = y;
+                y = x % y;
+                x = t;
+            }
+            return x;
+        }
+        console.log(gcd());
+    </script>
+    
+</body>
+</html>
