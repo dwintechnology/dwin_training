@@ -1,5 +1,8 @@
-let sum = 0;
-for(let i =15;i<1000;i+=15){
-sum +=i;
+function number(n, print) {
+    let sum = 0;
+    for (let i = 15; i < n; i += 15) {
+        sum += i;
+    }
+    print(sum)
 }
-console.log(sum)
+number(1000, console.log)
