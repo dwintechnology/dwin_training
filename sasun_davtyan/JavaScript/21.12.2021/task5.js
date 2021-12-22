@@ -1,7 +1,10 @@
-let num =6;
-let total = 1;
 
-for (let i = 0; i < num; i++){
-    total = total * (num - i);
+
+function factorial(n) {
+    let result = n;
+    for (let i = n - 1; i > 1; --i) {
+        result *= i;
+    }
+    return result;
 }
-console.log(total)
+console.log(factorial(5));
