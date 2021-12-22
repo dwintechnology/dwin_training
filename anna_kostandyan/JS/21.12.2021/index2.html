@@ -8,21 +8,19 @@
 </head>
 <body>
     <script>
-        let num=Number(prompt("number"));
-       
-        for(let i = 2; i < num; i++)
-        {
-            if (num%i===0)
-            {
-                alert("composite num")
-                break
-            }
-            else
-            {
-                alert("prime num")
-                break
-            }
-        }
+
+      let primeOrNot=prompt("Enter the number:","");
+      function primeNumber (print){
+          for (let i=2;i<primeOrNot;i++) {
+              if ((+primeOrNot%i)===0){
+                  print ("Number is composite");
+                  break;
+              }else if (i+1===+primeOrNot){
+                  print ("Number kis prime");
+              }
+          }
+      }
+      primeNumber(console.log);
           
         
     </script>

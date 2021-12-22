@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
-        
-        AB = prompt('Enter side1: ');
-        BC = prompt('Enter side2: ');
-        AC = prompt('Enter side3: ');
-        
-        
-        const s = (AB+BC+AC) / 2;
-        
-       
-        const area = Math.sqrt(s * (s - AB) * (s - BC) * (s - AC));
-        
+        function areaOfTriangle(print) {
+        x1 = prompt("Enter x1 coordinate", "")
+        y1 = prompt("Enter y1 coordinate", "")
+        x2 = prompt("Enter x2 coordinate", "")
+        y2 = prompt("Enter y2 coordinate", "")
+        x3 = prompt("Enter x3 coordinate", "")
+        y3 = prompt("Enter y3 coordinate", "")
+
+        print(area);
+       const area = (1 / 2)(math.abs(x1 * (y2-y3)) + math.abs(x2(y3-y1)) + math.abs(x3(y1-y2)));
+        }
         console.log(`area`);
-        </script>
+        areaOfTriangle(console.log);
+
+    </script>
 </body>
+
 </html>
