@@ -82,6 +82,17 @@
 // TASK - 4
 // Write a program which will check if a given n number symmetrical or not
 
+let n = prompt('','');
+let a = n.split("").reverse().join("");
+if (a == n){
+    alert('Число симетричное');
+}else {
+    alert('Число не симетричное');
+}
+
+
+
+
 
 
 
@@ -107,8 +118,6 @@
 // e.g 12345 -> 54321
 
 
-let n = prompt('','');
-n = n + "";
-n.split("").reverse().join("");
-// number = ([number.toString()].reverse().join(""));
-console.log(n);
+// let n = prompt('','');
+// n = n.split("").reverse().join("");
+// alert(n);
