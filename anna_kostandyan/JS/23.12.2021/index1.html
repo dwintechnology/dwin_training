@@ -8,13 +8,14 @@
 </head>
 <body>
     <script>
-        //Write a function that returns another function that print the following text: "Wow! It's nested function!".
-        function function1() {
-    return function(argument) {
-        console.log(argument);
-    }
-}
-function1()(`Wow! It's nested function!"`);
+        let obj = {},
+        function isEmpty(obj) {
+            for (let key in obj) {
+                return true;
+            }
+            return false;
+        }
+        console.log(isEmpty(obj));
     </script>
 </body>
 </html>

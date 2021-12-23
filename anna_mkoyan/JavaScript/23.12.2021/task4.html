@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <script>
+        function copy(aObject) {
+            if (!aObject) {
+                return aObject;
+            }
+            let v;
+            let bObject = Array.isArray(aObject) ? [] : {};
+            for (const k in aObject) {
+                v = aObject[k];
+                bObject[k] = (typeof v === "object") ? copy(v) : v;
+            }
+            return bObject;
+        }
+
+        const a = {
+        
+            name: "a",
+            b: {
+                name: "b"
+            }
+        }
+
+        const c = copy(a);
+        c.name = "e";
+        c.b.name = "d";
+        console.log("a", a);
+        console.log("c", c);
+    </script>
+</body>
+
+</html>

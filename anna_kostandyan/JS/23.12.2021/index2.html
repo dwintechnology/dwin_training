@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dwinTraining = {
+            studentCount: 11,
+            teacherCount: 8,
+            averageMark: 8,
+            students: [
+                {
+                    name: "Tigran",
+                    mark: 10,
+                },
+                {
+                    name: "Anna",
+                    mark: 10,
+                },
+                {
+                    name: "Zhorzh",
+                    mark: 10,
+                },
+                {
+                    name: "Sasun",
+                    mark: 10,
+                },
+                {
+                    name: "Arthur",
+                    mark: 10,
+                },
+                {
+                    name: "Varuzh",
+                    mark: 10,
+                },
+                {
+                    name: "Maria",
+                    mark: 10,
+                },
+                {
+                    name: "Suro",
+                    mark: 10,
+                },
+                {
+                    name: "Arman",
+                    mark: 10,
+                },
+                {
+                    name: "Siranush",
+                    mark: 10,
+                },
+                {
+                    name: "Anna_M",
+                    mark: 10,
+                },
+            ],
+            
+            getAverageMark: function () {
+                console.log(dwinTraining.averageMark);
+            },
+            printAllStudents: function (){
+                console.log(this.Tigran);
+                console.log(this.Anna);
+                console.log(this.Zhorzh);
+                console.log(this.Sasun);
+                console.log(this.Artur);
+                console.log(this.Varuzh);
+                console.log(this.Maria);
+                console.log(this.Suro);
+                console.log(this.Arman);
+                console.log(this.Siranush);
+                console.log(this.Anna_M);
+            },
+            setMark:  function(mark, student) {
+                student.mark += mark;
+            },
+        }
+        dwinTraining.printAllStudents()
+    </script>
+</body>
+</html>

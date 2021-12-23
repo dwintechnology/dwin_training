@@ -1,11 +1,11 @@
-task1:     Write a program which will print n -th Fibonacci number
-User should enter n number when program is starting
-task2: Write a program which will print is a given number prime(պարզ) or not?
-task3 :Write a program which will print sum of numbers which  are dividing 5 and 3 without remainder from 1-1000 interval.
-
-
-task5:  Write a program which will print factorial of given n number.
-task6:  Write a program which will print reverse of given n number.
-e.g 12345 -> 54321
-task7:Write a program which will calculate area of triangle by given 3 coordinates.
-
+Write a function that gets a number as an argument and print all combinations of its digits.
+Write a function that returns the biggest prime number consisting of digits of the given number(as an argument).
+NOTE: use the existing functions if possible
+NOTE: @Seryozha Khachatryan already explained this!
+Write a function to find the largest of 5 given integers.
+Write a function to construct the (1) pattern, using a nested for loop. The height of the triangle should be passed to the function as an argument.
+Write a function to compute the greatest common divisor (GCD) of two positive integers.
+Write a function to sum the multiples of 3 and 5 under 1000.
+Write a function that returns another function that print the following text: "Wow! It's nested function!".
+Write a function that returns the 0's count at the end of the number for the factorial of the given number FOR BIG NUMBERS(e.g. 10000).
+e.g. 8! = 40320. The function should return 1

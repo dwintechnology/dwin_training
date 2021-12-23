@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const marka1 = {
+            name: "mercedes",
+            Marka2: {
+                name: "mercedesCclass",
+            }
+        }
+        function deepClone(marka1) {
+            const objClone = {}
+            for (let key in marka1) {
+                if (typeof (marka1[key]) == "object") {
+                    deepClone(marka1[key])
+                }
+                objClone[key] = marka1[key];
+            }
+            return objClone;
+        }
+        console.log(deepClone(marka1))
+    </script>
+</body>
+
+</html>
