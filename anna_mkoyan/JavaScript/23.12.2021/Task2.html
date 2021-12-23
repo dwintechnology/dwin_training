@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <script>
+        let x = {
+            name: ""
+        }
+        function hasProperty(obj, prop) {
+            for (let key in obj) {
+                if (obj[key] == prop) {
+                    return true;
+                }
+            }
+            return false
+        }
+
+
+        console.log(hasProperty(x, ""))
+        console.log(hasProperty(x, "hello")) 
+    </script>
+</body>
+
+</html>
