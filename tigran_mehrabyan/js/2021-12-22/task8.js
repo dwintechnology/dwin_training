@@ -2,7 +2,7 @@
  function countOfZero(n){
      let res = 0;
      while (n > 0) {
-         n /= 5;
+         n = Math.floor(n/5);
          res += n;
          
     }
