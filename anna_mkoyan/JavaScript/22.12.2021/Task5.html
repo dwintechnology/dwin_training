@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+      
+function gcd(x, y) {
+
+  if ((typeof x !== 'number') || (typeof y !== 'number')) 
+    return false;
+ 
+  x = Math.abs(x);
+  y = Math.abs(y);
+  while(y) {
+    let t = y;
+    y = x % y;
+    x = t;
+  }
+  return x;
+}
+let result = gcd(126, 86)
+ alert(result)
+
+ </script>
+
+</body>
+
+</html>

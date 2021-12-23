@@ -1,0 +1,21 @@
+!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8</title>
+</head>
+<body>
+    <script>
+        let num = Number(prompt("number"));
+        function numbDegree(arg, print) {
+            var es = 0;
+            for (let n = 1; arg > Math.pow(5, n); n++) {
+                var div = arg / Math.pow(5, n);
+                es += Math.floor(div);
+            }
+            print (es)
+        }
+        numbDegree(num, alert)
+    </script>
+    </body>
+    </html>

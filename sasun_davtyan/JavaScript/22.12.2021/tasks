@@ -1,0 +1,11 @@
+task1:     Write a program which will print n -th Fibonacci number
+User should enter n number when program is starting
+task2: Write a program which will print is a given number prime(պարզ) or not?
+task3 :Write a program which will print sum of numbers which  are dividing 5 and 3 without remainder from 1-1000 interval.
+
+
+task5:  Write a program which will print factorial of given n number.
+task6:  Write a program which will print reverse of given n number.
+e.g 12345 -> 54321
+task7:Write a program which will calculate area of triangle by given 3 coordinates.
+
