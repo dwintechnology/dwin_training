@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Division</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        function primeNumber(print) {
-            let n=1;
-         for (let i=15; i < 1000; i+=15){
-            if( i % 3 == 0 && i % 5 == 0 ){
-                 n+=i;
-            }
-         }
-         print(n);
+        let obj = {
+            
         }
-        primeNumber(alert) ;
         
+        function isEmpty(obj) {
+            for (let key in obj) {
+                return true;
+            }
+            return false;
+        }
+        console.log(isEmpty(obj));
     </script>
 </body>
 </html>

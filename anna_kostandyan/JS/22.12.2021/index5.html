@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Write a function to compute the greatest common divisor (GCD) of two positive integers.
+                    function nod(a,b){
+            while (a!== 0 && b!== 0){
+                if (a > b){
+                    a = a % b
+                } else{
+                    b = b % a
+            }
+            }
+            console.log(a + b)
+            }
+            nod(24,36)
+    </script>
+    
+</body>
+</html>

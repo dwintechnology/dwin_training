@@ -4,9 +4,9 @@
 // Task - 1
 // Write a program which will print n -th Fibonacci number
 // User should enter n number when program is starting
-    
 
-// function fib(n) {
+
+// function fib(n, print) {
 //     let a = 1;
 //     let b = 1;
 //     for (let i = 3; i <= n; i++) {
@@ -14,14 +14,13 @@
 //       a = b;
 //       b = c;
 //     }
-//     return b;
+//     print(b);
 //   }
 
 // let FibNum = prompt("Вводите число", 2);
- 
-// console.log(fib(FibNum));
 
 
+// fib(FibNum, console.log);
 
 
 
@@ -36,24 +35,19 @@
 
 // let primeOrNo = prompt("Вводите число", '');
 
+// function primeNumber (print) {
+//     for (let i = 2; i < primeOrNo; i++){
 
-// for (let i = 2; i < primeOrNo; i++){
- 
-// if ((+primeOrNo % i) === 0){
-//     alert('Число не простое');
-//     break;
-// }else if (i+1 === +primeOrNo) {
-//     alert('Число простое');
+//         if ((+primeOrNo % i) === 0){
+//             print('Число не простое');
+//             break;
+//         }else if (i+1 === +primeOrNo) {
+//             print('Число простое');
+//         }
+
+//         }
 // }
-
-// }
-
-
-
-
-
-
-
+// primeNumber(console.log);
 
 
 
@@ -61,18 +55,16 @@
 // TASK - 3
 // Write a program which will print sum of numbers which  are dividing 5 and 3 without remainder from 1-1000 interval.
 
-// let a = 0;
+// function numbersOfSum(print) {
+//     let a = 0;
 
-// for (let i = 1; i <= 1000 ; i++){
-//     if ((i % 5) == 0 && (i % 3) == 0){
-//        a =a + i; 
+//     for (let i = 15; i <= 1000 ; i+=15){
+//     a += i;
 //     }
+//     print(a);
 // }
-// console.log(a);
 
-
-
-
+// numbersOfSum(console.log);
 
 
 
@@ -81,6 +73,23 @@
 
 // TASK - 4
 // Write a program which will check if a given n number symmetrical or not
+
+// let n = prompt('','');
+
+// function simetrickOrNo(print) {
+//     let a = n.split("").reverse().join("");
+// if (a == n){
+//     print('Число симетричное');
+// }else {
+//     print('Число не симетричное');
+// }
+// }
+
+// simetrickOrNo(console.log);
+
+
+
+
 
 
 
@@ -107,8 +116,18 @@
 // e.g 12345 -> 54321
 
 
-let n = prompt('','');
-n = n + "";
-n.split("").reverse().join("");
-// number = ([number.toString()].reverse().join(""));
-console.log(n);
+
+// let num = prompt('', '');
+
+
+// function RevNum(print) {
+//     let rev = 0;
+//     let num2;
+//     while (num != 0) {
+//         num2 = num % 10;
+//         rev = rev * 10 + num2;
+//         num = Math.floor(num / 10);
+//     }
+//     print(rev);
+// }
+// RevNum(console.log);

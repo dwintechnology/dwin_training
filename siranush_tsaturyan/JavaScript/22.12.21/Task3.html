@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <script>
+
+        function highNumb(numbers) {
+            var arr = numbers.split(" ").map(Number);
+            var largest = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    largest = arr[i];
+                }
+            }
+            return largest;
+        }
+        alert(highNumb("4 5 29 54 4 "));
+
+
+    </script>
+
+
+</body>
+
+</html>

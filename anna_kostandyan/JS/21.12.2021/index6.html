@@ -8,15 +8,20 @@
 </head>
 <body>
     <script>
-        let a = prompt("Enter a value");
-        let b, sum = 0;
-        var z = a;
-        while(a > 0){
-        b = a % 10;
-        sum = sum * 10 + b;
-        a = parseInt(a / 10);
-                                }
-            alert(sum);
+        let num=prompt("","");
+        function reverseNumber(print){
+            let num1=0;
+            let num2;
+            while(num!=0){
+                num2=num%10;
+                num1=num1*10+num2;
+                num=Math.floor(num/10);
+            }
+            print(num1);
+        }
+        reverseNumber(console.log);
+
+        
     </script>
 </body>
 </html>

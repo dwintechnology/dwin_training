@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dwinTraining = {
+    membersCount: 11,
+    teacherCount: 8,
+    averageMark: 8,
+    tigran: {
+      mark: 10,
+      name:tigran,
+      
+    },
+    jorj: {
+        mark: 10,
+        name:tigran,
+    },
+    annaK: {
+        mark: 10,
+        name:annak,
+    },
+    siranush: {
+        mark: 10,
+        name:siranush,
+    },
+    annaM: {
+        mark: 10,
+        name:annaM,
+    },
+    arman: {
+        mark: 10,
+        name:arman,
+    },
+    suro: {
+        mark: 10,
+        name:suro,
+    },
+    varuj: {
+        mark: 10,
+        name:varuj,
+    },
+    maria: {
+        mark: 10,
+        name:maria,
+    },
+    artur: {
+        mark: 10,
+        name:artur,
+    },
+    sasun: {
+        mark: 10,
+        name:sasun,
+    },
+    getAverageMark: function () {
+        console.log(dwinTraining.averageMark);
+    },
+    printAllStudents: function (){
+        console.log(this.tigran);
+        console.log(this.jorj);
+        console.log(this.annaK);
+        console.log(this.siranush);
+        console.log(this.annaM);
+        console.log(this.arman);
+        console.log(this.suro);
+        console.log(this.maria);
+        console.log(this.artur);
+        console.log(this.sasun);
+        console.log(this.varuj);
+    },
+    setMark:  function(mark, student) {
+         student.mark += mark;
+    },
+}
+dwinTraining.printAllStudents()
+
+    </script>
+</body>
+</html>
