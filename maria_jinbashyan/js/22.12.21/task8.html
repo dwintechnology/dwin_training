@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = Number(prompt("number"));
+        function numbDegree(faq, print) {
+            var sum = 0;
+            for (let n = 1; faq > Math.pow(5, n); n++) {
+                var divide = faq / Math.pow(5, n);
+                sum += Math.floor( divide);
+            }
+            print (sum)
+        }
+        numbDegree(num, alert)
+    </script>
+    
+</body>
+</html>
