@@ -6,8 +6,8 @@
 //      b = +prompt('Введите 2-ую цыфру',''),
 //      c = 0;
 
-let a = 110,
-    b = 2,
+let a = 84,
+    b = 90,
     f = 0;
 
 if (a < b){
@@ -34,7 +34,7 @@ function gcd() {
                  
                  
                 //  c = a % b;
-            }alert(`GCD = ${a / b}`);
+            }alert(`GCD = ${b}`);
 
     }
 }
