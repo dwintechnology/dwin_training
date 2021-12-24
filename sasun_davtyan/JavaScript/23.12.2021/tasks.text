@@ -1,0 +1,11 @@
+[200~Write a function isEmpty(obj). Should return Boolean value
+Write a function hasPropery(obj, prop). Should return Boolean value
+Write a function deepClone(obj). Should return object. Hint: use for .. in and recursion
+Create a Training object with following methods:
+4.1 printAllStudentsNames()
+4.2 getAvarageMark()
+4.3 setMark(mark, student)
+4.4 addStudent(name, initialMark)
+4.5 removeStudent(student)
+4.6 getBestStudent()
+4.7 removeWorstStudent()
