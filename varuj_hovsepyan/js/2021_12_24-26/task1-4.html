@@ -153,19 +153,6 @@
 
             },
             groupStudentsByMarkRange: function () {
-                for (const name in this.students[name].mark) {
-                    const sorted
-                    if (this.students[name].mark > 0 && this.students[name].mark < 10) {
-                        sorted = {
-                            name: this.students[name].name,
-                            mark: this.students[name].mark,
-                        }
-                    }
-
-                }
-                return sorted
-            },
-            groupStudentsByMarkRange: function () {
                 let sorted = {}
                 for (let name in this.students) {
                     const age = this.students[name].age
@@ -178,6 +165,15 @@
                     }
                 }
                 return sorted
+            },
+            callBestStudentFromTheSmokingRoomInTheClassRoom: function (name) {
+                for (let key in this.smokingRoom) {
+                    if (key === name) {
+                        const student = this.smokingRoom
+                        delete this.smokingRoom[name]
+                        this.students[name] = student
+                    }
+                }
             },
         };
 
