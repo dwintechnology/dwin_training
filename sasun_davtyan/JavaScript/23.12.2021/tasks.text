@@ -1,0 +1,4 @@
+~Write a function isEmpty(obj). Should return Boolean value
+Write a function hasPropery(obj, prop). Should return Boolean value
+Write a function deepClone(obj). Should return object. Hint: use for .. in and recursion
+)
