@@ -112,19 +112,26 @@
             getMostYoungStudent: function () {
                 let older = {};
                 for (const name in this.students) {
-                    if (this.students[name].age > (older.age|| 0)) {
-                        older = {...this.students[name], name}
+                    if (this.students[name].age > (older.age || 0)) {
+                        older = { ...this.students[name], name }
                     }
                     if (this.students[name].age == older.age) {
                         if (this.students[name].mark > older.mark) {
-                            older = {...this.students[name], name}
+                            older = { ...this.students[name], name }
                         }
                     }
                 }
                 return older;
-            }
+            },
+            getStudentSmokingroom: function (name) {
+                const student = this.smokingRoom[name];
+                if (student) {
+                    return student;
+                }
+                alert('No student where name is ' + name);
+            },
         };
-          
+
         function init() {
 
             DwinTraining.addStudent({
@@ -145,6 +152,8 @@
             });
         }
 
+
+        
     </script>
 </body>
 
