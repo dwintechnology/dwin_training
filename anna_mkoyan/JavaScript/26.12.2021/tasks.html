@@ -130,6 +130,22 @@
                 }
                 alert('No student where name is ' + name);
             },
+
+            moveStudentToTheStudents: function (name) {
+                const student = this.smokingRoom[name];
+                if (!student) {
+                    return alert('No student where name is ' + name);
+                }
+                delete this.smokingRoom[name];
+                this.students[name] = student;
+            },
+            getAllStudentsSmokingroom:function(){
+                for (const name in this.smokingRoom) {
+                    if (Object.hasOwnProperty.call(this.smokingRoom, name)) {
+                        console.log(`${name}: ${this.smokingRoom[name]}`);
+                    }
+                }
+            }
         };
 
         function init() {
