@@ -62,57 +62,40 @@
       },
       // TASK 2
       // Write a function/method for dwinTraining object groupStudentsByMarkRange(range) -> should return map with users grouped by marks(e.g.  e.0)․
-      groupStudentsByMarkRange: function () {
-        let groupStudentsByMark = {
-          
-        };
-        for (let name in this.students) {
-          if (this.students[name].mark == 0) {
-            groupStudentsByMark.eg_0 = {}
-            groupStudentsByMark.eg_0[name] = this.students[name];
+
+      groupStudentsByMarkRange: function (range) {
+        let range1 = range - range
+        let range2 = range
+        let r = {}
+        
+        res()
+        function res() {
+          for (let name in DwinTraining.students) {
+            let s = {
+              [name]:{}
+            }
+            if ((DwinTraining.students[name].mark > range1) && (DwinTraining.students[name].mark <= range2)) {
+              // // r[`${range1}_${range2}`] = s
+              // r[`${range1}_${range2}`][name] = DwinTraining.students[name];
+              s[name] = DwinTraining.students[name];
+            }
           }
-          else if (this.students[name].mark == 1){
-            groupStudentsByMark.eg_1 = {}
-            groupStudentsByMark.eg_1[name] = this.students[name];
+          if (range1 == 0) {
+            range1 = range2
+          } else {
+            range1 = range1 + range;
           }
-          else if (this.students[name].mark == 2){
-            groupStudentsByMark.eg_2 = {}
-            groupStudentsByMark.eg_2[name] = this.students[name];
-          }
-          else if (this.students[name].mark == 3){
-            groupStudentsByMark.eg_3 = {}
-            groupStudentsByMark.eg_3[name] = this.students[name];
-          }
-          else if (this.students[name].mark == 4){
-            groupStudentsByMark.eg_4 = {}
-            groupStudentsByMark.eg_4[name] = this.students[name];
-          }
-          else if (this.students[name].mark == 5){
-            groupStudentsByMark.eg_5 = {}
-            groupStudentsByMark.eg_5[name] = this.students[name];
-          }
-          else if (this.students[name].mark == 6){
-            groupStudentsByMark.eg_6 = {}
-            groupStudentsByMark.eg_6[name] = this.students[name];
-          }
-          else if (this.students[name].mark == 7){
-            groupStudentsByMark.eg_7 = {}
-            groupStudentsByMark.eg_7[name] = this.students[name];
-          }
-          else if (this.students[name].mark == 8){
-            groupStudentsByMark.eg_8 = {}
-            groupStudentsByMark.eg_8[name] = this.students[name];
-          }
-          else if (this.students[name].mark == 9){
-            groupStudentsByMark.eg_9 = {}
-            groupStudentsByMark.eg_9[name] = this.students[name];
-          }else if (this.students[name].mark == 10){
-            groupStudentsByMark.eg_10 = {}
-            groupStudentsByMark.eg_10[name] = this.students[name];
-          }
+          range2 = range2 + range;
+          if (range1 > 50) return;
+          res()
         }
-        return groupStudentsByMark;
+        return r
       },
+
+
+
+
+
       // TASK 3
       // Write a function/method for dwinTraining object call students back from smokingRoom  by name.
       returnStudentfromTheSmookingRoomByName: function (name) {
@@ -237,7 +220,7 @@
       DwinTraining.addStudent({
         name: 'John',
         age: 12,
-        mark: 10,
+        mark: 15,
 
       });
       DwinTraining.addStudent({
@@ -254,6 +237,26 @@
         name: 'Susan',
         age: 12,
         mark: 5,
+      });
+      DwinTraining.addStudent({
+        name: 'Jorj',
+        age: 12,
+        mark: 40,
+      });
+      DwinTraining.addStudent({
+        name: 'Anna',
+        age: 18,
+        mark: 30,
+      });
+      DwinTraining.addStudent({
+        name: 'Arman',
+        age: 18,
+        mark: 20,
+      });
+      DwinTraining.addStudent({
+        name: 'Artur',
+        age: 18,
+        mark: 35,
       });
     }
   </script>
