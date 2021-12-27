@@ -66,20 +66,19 @@
       groupStudentsByMarkRange: function (range) {
         let range1 = range - range
         let range2 = range
-        let r = {}
+        let result = {}
+        let shellRange = {}
         
         res()
         function res() {
           for (let name in DwinTraining.students) {
-            let s = {
-              [name]:{}
-            }
+            
             if ((DwinTraining.students[name].mark > range1) && (DwinTraining.students[name].mark <= range2)) {
-              // // r[`${range1}_${range2}`] = s
-              // r[`${range1}_${range2}`][name] = DwinTraining.students[name];
-              s[name] = DwinTraining.students[name];
+              shellRange[name] = DwinTraining.students[name];
             }
           }
+          result[`${range1}_${range2}`] = shellRange;
+          shellRange = {}
           if (range1 == 0) {
             range1 = range2
           } else {
@@ -89,11 +88,8 @@
           if (range1 > 50) return;
           res()
         }
-        return r
+        return result
       },
-
-
-
 
 
       // TASK 3
