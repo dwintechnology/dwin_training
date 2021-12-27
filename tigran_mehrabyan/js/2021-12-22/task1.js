@@ -1,30 +1,25 @@
-// // combination
-// let number = prompt("enter number");
-// let array = number.split("");
-// let result = [];
 
 
-// function permutation(arr, currentSize) {
+// algortm@ asuma: verdznum enq araji element@ u swap enq anum bolori het(nuynisk ira)
+// heto mer cucich@ gnuma mi hat aj,hamarelov vor araji element@ el chka(dzaxic mi hat ktrum enq)
+// u ste kanchum enq mer function@(recursion) arden mi element poqr array-i hamar
 
-//     if (currentSize == 1) { 
-//         result.push(arr.join(""));
-//         return;
-//     }
-    
-//     for (let i = 0; i < currentSize; i++){
-//         permutation(arr, currentSize - 1);
-//         if (currentSize % 2 == 1) {
-//             let temp = arr[0];
-//             arr[0] = arr[currentSize - 1];
-//             arr[currentSize - 1] = temp;
-//         } else {
-//             let temp = arr[i];
-//             arr[i] = arr[currentSize - 1];
-//             arr[currentSize - 1] = temp;
-//         }
-//     }
-// }
 
-// permutation(array, array.length);
 
-// console.log(result);
+/* start@ mer cucichna vor@ amen angam gnalua mi hat aj minchev naxaverji tiv@*/
+function permutation(arr, start) { 
+    // let arr = String(number).split("");
+    if (arr.lenght - 1 == start) {
+         console.log(arr);
+    }
+    // debugger
+    for (let index = start; index < arr.length; index++) {
+        
+        let temp = arr[start];/*swap*/
+        arr[start] = arr[index];
+        arr[index] = temp;
+        permutation(arr, start + 1);
+    }
+}
+
+permutation([1, 2, 3], 0);

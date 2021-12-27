@@ -1,0 +1,8 @@
+Homework
+Task:1 Write a function/method for dwinTraining object getMostYoungStudent() -> should return student object with name. Note: if 2 students have the same age sort them by mark․
+Task:2  Write a function/method for dwinTraining object groupStudentsByMarkRange(range) -> should return map with users grouped by marks(e.g.  e.0)․
+Task:3 Write a function/method for dwinTraining object call students back from smokingRoom  by name.
+Task:4 Write a function/method for dwinTraining object call all students back from smokingRoom․
+Task:5 Write a function which will transform a nested object(e.g. e.1) to a one-level object(e.g. e.2).
+Task 6: Write a function which will transform a one-level object(e.g. e.2) to a nested object(e.g. e.1)․
+
