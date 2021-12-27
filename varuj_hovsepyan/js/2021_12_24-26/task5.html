@@ -12,16 +12,20 @@
         {
             'a': "akk",
             "b":{
-                name:"volod"
+                name:"volod",
+                "c":{
+                    name:"aaa"
+                }
             }
         }
         let fun = (obj, oldKey) => {
-            let res = []
+            let res = {}
             for(const key in obj){
                 if(typeof obj[key] == "object" ){
-                    fun(obj[key], key)
+                    fun(obj[key], oldKey);
                     for(const oldKey in obj[key]){
-                        res.push(`${!!oldKey ? `${oldKey}.` : ''}${key} : ${obj[key].name}`)
+                        // key: 
+                        res.push(`${key} . ${!!oldKey ? `${oldKey}` : ''}:  ${!!oldKey ? `${obj[oldKey]}` : ''}: ${obj[key].name}`)
                     }
                 }
                 res.push(`${!!oldKey ? `${oldKey}.` : ''}${key} : ${obj[key]}`)

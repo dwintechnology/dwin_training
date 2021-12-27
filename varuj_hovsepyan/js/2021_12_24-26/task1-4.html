@@ -152,17 +152,20 @@
                 return youngstudent
 
             },
-            groupStudentsByMarkRange: function () {
+            groupStudentsByMarkRange: function (range) {
                 let sorted = {}
+                
                 for (let name in this.students) {
                     const age = this.students[name].age
                     const mark = this.students[name].mark
-                    if (mark > 0 && mark < 10) {
-                        sorted[name] = {
-                            age: age,
-                            mark: mark,
-                        };
-                    }
+                   for (let index = 1.5; index <4; index++) {
+                    if (mark > range*((index-1.5)*2) && mark <= range*((index-1)*2)) {
+                        sorted[range*((index-1.5)*2) + "-" + range*((index-1)*2) ] = {}
+                        sorted[range*((index-1.5)*2) + "-" + range*((index-1)*2)][name]=this.students[name]
+                }
+                       
+                   }
+
                 }
                 return sorted
             },
