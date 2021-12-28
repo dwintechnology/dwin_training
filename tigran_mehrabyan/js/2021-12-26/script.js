@@ -93,11 +93,9 @@
     },
 
 
-
-    getMostYoungStudent: function(){
-        let smallestAge = 101;
-        let mostYoungStudentsArray = [];
-  
+    getMostYoungStudent: function(){                   /* HOMEWORK */
+        let smallestAge = 101;                         /* HOMEWORK */
+        let mostYoungStudentsArray = [];               /* HOMEWORK */
 
         for (const key in this.students) {
                 if(smallestAge > this.students[key].age){
@@ -127,18 +125,48 @@
     },
 
     callStudentFromSmokingRomm(studentName){
-        const temp = this.smokingRoom[studentName];    
-        delete this.smokingRoom[studentName];
-        this.students[studentName] = temp;
-
+        if(studentName in this.smokingRoom){
+            let temp = this.smokingRoom[studentName];    
+            delete this.smokingRoom[studentName];
+            this.students[studentName] = temp;
+        }
+        
     },
     callAllStudentsFromSmokingRomm(){
+        for (const key in this.smokingRoom) {
+           let temp = this.smokingRoom[key];
+           delete this.smokingRoom[key];
+           this.students[key] = temp;
+        }
+
+    },
+    groupStudentsByMarkRange(range) {                    //HOMEWORK
+        ressultObject = {};                              //HOMEWORK
+        let hightestMark = 0;                            //HOMEWORK
+
+        for(let key in this.students){
+            if(this.students[key].mark > hightestMark){
+                hightestMark = this.students[key].mark;
+            }
+        }
+
+        hightestMark /= range;
+
+        for (let i = 0; i < Math.ceil(hightestMark); i++) {
+            ressultObject[range * i + "-" + ((range * i )+ range)] ={}
+            for (const key in this.students) {
+               if(this.students[key].mark > range * i && this.students[key].mark < ((range * i)+ range))
+               ressultObject[range * i + "-" + ((range * i) + range)][key] = this.students[key];
+            }
+            
+        }      
+        return ressultObject;
 
     },
 
 
 
-    exam: function (subjectName, studentName) {
+    exam: function (subjectName, studentName) {            
       const random = getRandomMark(0, 10);
       this.subjects[subjectName].results[studentName] = random;
       this.students[studentName].mark = this.students[studentName].mark + random;

@@ -1,0 +1,8 @@
+I am read
+
+бъекты
+Копирование объектов и ссылки
+Методы объекта, "this"
+
+ in progress
+ Write a function which will transform a nested object(e.g. e.1) to a one-level object(e.g. e.2).
