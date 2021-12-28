@@ -52,41 +52,37 @@
                             mark: mark,
                         }
                     } else if (age === young.age) {
-                        if (mark === young.mark) {
+                        {
+                            if (mark > young.mark) { }
                             young = {
-                                name: young.name,
-                                age: young.age,
-                                mark: young.mark,
+                                name: student.name,
+                                age: student.age,
+                                mark: student.mark,
 
                             }
-                        } else {
-                            young = {
-                                name: name,
-                                age: students.age,
-                                mark: students.mark,
-                            }
                         }
+
                     }
 
                 }
                 return young
 
             },
-             // TASK 4
+            // TASK 4
             returnAllStudentfromTheSmookingRoom: function () {
                 for (let studentname in this.smokingRoom) {
-                this.students[studentname] = this.smokingRoom[studentname]
+                    this.students[studentname] = this.smokingRoom[studentname]
                 }
-                this.smokingRoom=null;
+                this.smokingRoom = null;
             },
-                    
-                    printAllStudents: function () {
-                        for (const name in this.students) {
-                            if (Object.hasOwnProperty.call(this.students, name)) {
-                              console.log(`${name}: ${this.students[name].mark}`);
-                            }
-                        }
-                    },
+
+            printAllStudents: function () {
+                for (const name in this.students) {
+                    if (Object.hasOwnProperty.call(this.students, name)) {
+                        console.log(`${name}: ${this.students[name].mark}`);
+                    }
+                }
+            },
             getAverageMark: function () {
                 let res = 0;
                 let count = 0;
@@ -147,21 +143,21 @@
                 this.smokingRoom[name] = bestStudent;
             },
             //task3
-            callBackStudentsbynameFromSmokingRoom: function (name){
-                for(let key in this.smokingRoom){
-                    if (key.name===name){
-                        const student=this.smokingRoom[name]
+            callBackStudentsbynameFromSmokingRoom: function (name) {
+                for (let key in this.smokingRoom) {
+                    if (key.name === name) {
+                        const student = this.smokingRoom[name]
                         delete this.smokingRoom[name]
-                        this.students[name]=student
-                    }else{
+                        this.students[name] = student
+                    } else {
                         "error"
                     }
 
                 }
 
-            }, 
-            
-            
+            },
+
+
             exam: function (subjectName, studentName) {
                 const random = getRandomMark(0, 10);
                 this.subjects[subjectName].results[studentName] = random;
