@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+     
+        let num = prompt("number");
+     function integerOrNot(number,print){
+let printer={};
+         if (number%1===0) {
+             printer=("n is integer number")
+             
+         }else if (number%1!==0) {
+            printer=("n is floating number")}
+             else { 
+                printer=("Not A Number");
+
+    
+}
+print(printer);
+         }
+ alert(printer); -->
+
+
+    <script>
+
+        let num = prompt("number");
+        function integerOrNot(num) {
+            if (num % 1 === 0) {
+                let printer = ("n is integer num")
+                return printer
+            } else if (num % 1 !== 0) {
+                let printer1 = ("n is floating num")
+                return printer1
+            }
+            else {
+                let printer2 = ("Not A Number");
+
+
+            }
+            return printer2
+        }
+        alert(integerOrNot(num));
+    </script>
+</body>
+
+</html>
