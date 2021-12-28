@@ -77,7 +77,7 @@
                 for (let studentname in this.smokingRoom) {
                 this.students[studentname] = this.smokingRoom[studentname]
                 }
-                delete this.smokingRoom;
+                this.smokingRoom=null;
             },
                     
                     printAllStudents: function () {
