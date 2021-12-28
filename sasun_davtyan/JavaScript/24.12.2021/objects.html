@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS</title>
 </head>
-
 <body>
   <script>
     function clone(x, y) {
@@ -37,80 +36,47 @@
           },
         },
       },
-      // TASK - 1 
-      // Write a function/method for dwinTraining object getMostYoungStudent() -> should return student object with name. Note: if 2 students have the same age sort them by mark․
+      //task1
       getMostYoungStudent: function () {
-        let less;
+        let count;
         for (let name in this.students) {
-          const age = this.students[name].age
-          const mark = this.students[name].mark
-          if (less == undefined || age < less.age) {
-            less = {
-              name: name,
-              age: age,
-              mark: mark,
+         
+          if (count == undefined || this.students[name].age < count.age) {
+            count = {
+              name,
+              age,
+              mark,
             }
-          } else if (age == less.age && mark > less.mark) {
-            less = {
-              name: name,
-              age: age,
-              mark: mark,
+          } else if (this.students[name].age == count.age && this.students[name].mark > count.mark) {
+            count = {
+              name,
+              age,
+              mark,
             }
           }
         }
-        return less;
+        return count;
       },
-      // TASK 2
-      // Write a function/method for dwinTraining object groupStudentsByMarkRange(range) -> should return map with users grouped by marks(e.g.  e.0)․
+      //task3
+      goBack: function (name) {
 
-      groupStudentsByMarkRange: function (range) {
-        let range1 = range - range
-        let range2 = range
-        let result = {}
-        let shellRange = {}
-        
-        res()
-        function res() {
-          for (let name in DwinTraining.students) {
-            
-            if ((DwinTraining.students[name].mark > range1) && (DwinTraining.students[name].mark <= range2)) {
-              shellRange[name] = DwinTraining.students[name];
-            }
-          }
-          result[`${range1}_${range2}`] = shellRange;
-          shellRange = {}
-          if (range1 == 0) {
-            range1 = range2
-          } else {
-            range1 = range1 + range;
-          }
-          range2 = range2 + range;
-          if (range1 > 50) return;
-          res()
-        }
-        return result
-      },
-
-
-      // TASK 3
-      // Write a function/method for dwinTraining object call students back from smokingRoom  by name.
-      returnStudentfromTheSmookingRoomByName: function (name) {
-
-        for (let StName in this.smokingRoom) {
-          if (StName == name) {
-            this.students[StName] = this.smokingRoom[StName]
+        for (let i in this.smokingRoom) {
+          if (i == name) {
+            this.students[i] = this.smokingRoom[i]
           }
         }
       },
-
       // TASK 4
-      // Write a function/method for dwinTraining object call all students back from smokingRoom․
-      returnAllStudentfromTheSmookingRoom: function () {
-        for (let StName in this.smokingRoom) {
-          this.students[StName] = this.smokingRoom[StName]
+      goBackAll: function () {
+        for (let i in this.smokingRoom) {
+          this.students[i] = this.smokingRoom[i]
         }
         delete this.smokingRoom;
       },
+
+
+
+      
       getBestStudent: function () {
         let bestStudentNameAndMark;
         for (const name in this.students) {
@@ -191,6 +157,7 @@
         const clonedStudent = clone(this.students[bestStudentNameAndMark.name], res);
         return clonedStudent;
       },
+      
       moveBestStudentToTheSmokingRoom: function () {
         const bestStudent = this.getBestStudent();
         const name = bestStudent.name;
@@ -211,12 +178,11 @@
         }
       },
     };
-
     function init() {
       DwinTraining.addStudent({
         name: 'John',
         age: 12,
-        mark: 15,
+        mark: 10,
 
       });
       DwinTraining.addStudent({
@@ -234,27 +200,11 @@
         age: 12,
         mark: 5,
       });
-      DwinTraining.addStudent({
-        name: 'Jorj',
-        age: 12,
-        mark: 40,
-      });
-      DwinTraining.addStudent({
-        name: 'Anna',
-        age: 18,
-        mark: 30,
-      });
-      DwinTraining.addStudent({
-        name: 'Arman',
-        age: 18,
-        mark: 20,
-      });
-      DwinTraining.addStudent({
-        name: 'Artur',
-        age: 18,
-        mark: 35,
-      });
+      init()
+      console.log(DwinTraining)
     }
+  };
+    // init()
   </script>
 </body>
 

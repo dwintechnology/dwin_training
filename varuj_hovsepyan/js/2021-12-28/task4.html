@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let leng = prompt("circle length")
+        
+        function circle(leng) {
+            const p = 314 / 100;
+            let circle_length = 2*p*leng;
+            return  Math.floor((circle_length * 100) / 100 )
+        }
+        alert(circle(leng))
+    </script>
+</body>
+</html>
