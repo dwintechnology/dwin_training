@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Random </title>
+</head>
+
+<body>
+
+    <script>
+        let students = ["Siranush", "Anna", "Maria", "Varuj", "Tigran", "Jorj", "Suren", "Arman", "Sasun", "Artur"];
+
+        function randomName(students) {
+
+            let s = Math.floor(Math.random() * students.length);
+            return students[s]
+
+        }
+        alert(randomName(students));
+
+
+
+    </script>
+</body>
+
+</html>
