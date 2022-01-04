@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK_3</title>
+</head>
+
+<body>
+    <script>
+        let card = '1444-4444-4444-4444';
+        card = card.replaceAll('-', '');
+        let cardStatus = {
+            valid: true,
+            number: card,
+        };
+
+
+        function creditCardValidation(nums) {
+            for (let key of nums) {
+                let numKey = Number(key);
+                if (numKey !== numKey) {
+                    cardStatus.error = 'The card does not contain only numbers.';
+                    cardStatus.valid = false;
+                    return (cardStatus)
+
+                }
+                if (nums.indexOf(key) >= 0) {
+                    let rets = nums.replaceAll(key, '');
+
+                    if (rets.length < 2) {
+                        cardStatus.error = 'You must have at least two different digits represented.';
+                        cardStatus.valid = false;
+                        return (cardStatus)
+                    }
+                }
+            }
+            function checkingLenghtCard() {
+                if (nums.length !== 16) {
+                    cardStatus.error = 'YThe card must contain at least 16 digits.';
+                    cardStatus.valid = false;
+                    return (cardStatus)
+                }
+            }
+            checkingLenghtCard()
+
+            function checkingTheLastCardForAnEvenNumber() {
+                let lastDigit = nums[(nums.length - 1)]
+                if (lastDigit % 2 !== 0) {
+                    alert('The final digit must be even.')
+                    return
+                }
+            }
+            checkingTheLastCardForAnEvenNumber();
+        }
+
+
+        creditCardValidation(card);
+    </script>
+</body>
+
+</html>
