@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let C = +prompt("Celsius");
+        let F = +prompt("Fahrenheit");
+
+        function converter(C, F) {
+            let convertC
+            let convertF
+            if (C !== 0){
+                convertF=C * 9 / 5 + 32;
+                console.log(convertF);
+            }
+            if ( F !== 0){
+                convertC = (F - 32) * 5 / 9;
+                console.log (convertC)
+            }
+            
+            
+
+        }
+
+        console.log(converter(C, F))
+    </script>
+</body>
+
+</html>
