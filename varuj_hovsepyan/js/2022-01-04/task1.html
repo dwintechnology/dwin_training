@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let cel = +prompt("celsius")
+        let far = +prompt("fahrenheit")
+        let farchange
+        let celchange
+        function change(cel, far) {
+            if(cel !== 0){
+                farchange = (cel * (9 / 5)) + 32  
+            }
+            if(far !== 0){
+                celchange = (far - 32) * 5 / 9 
+            }
+            console.log(farchange)
+            console.log(celchange)
+            
+        }
+        console.log(change(cel, far))
+    </script>
+</body>
+
+</html>
