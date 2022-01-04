@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let cardnum = prompt("card number")
+        function checkdashes(num){
+            for(let i = 4; i<num.length; i+=5){
+                if(num[i]=='-'){
+                    return true
+                }
+            }
+        }
+        function slicedashes(num){
+            for(let i = 4; i<num.length; i+=5){
+                if(num[i]=='-'){
+                    num = num.slice(num[i], num[i])
+                }
+
+            }
+            return num
+        }
+        function checknum(num) {
+            for (let i = 1; i < num.length; i++) {
+                if (num[0] !== num[i]) {
+                    return false
+                }
+            }
+            return true
+        }
+        function checksumnumber(num) {
+            let sum = 0;
+            for (let i = 0; i < num.length; i++) {
+                sum += Number(num[i])
+
+            }
+            if (sum > 16) {
+                return true
+            }
+        }
+        function validator(cardnum) {
+            if (cardnum.length !== 16 && cardnum.length !==19 ) {
+                return false
+            }
+            if(cardnum.length === 19 && !checkdashes(cardnum)){
+                return false
+            } 
+            card1 = cardnum
+            card1 = slicedashes(card1)
+            if (checknum(card1)) {
+                return false
+            }
+            if (card1[card1.length - 1] % 2 !== 0) {
+                return false
+            }
+            if (!checksumnumber(card1)) {
+                return false
+            }
+            
+            return true
+        }
+        console.log(validator(cardnum))
+    </script>
+</body>
+
+</html>
