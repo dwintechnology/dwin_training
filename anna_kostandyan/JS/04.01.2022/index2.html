@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //task2_A function which randomly alerts a student name
+        let studentsName = ["Tigo", "Anna", "Zhorzh"];
+        let box;
+        function randomNames(studentsName) {
+                box= Math.floor(Math.random() * 3);
+                return studentsName[box];
+        }
+        console.log(randomNames(studentsName));
+    </script>
+</body>
+
+</html>
