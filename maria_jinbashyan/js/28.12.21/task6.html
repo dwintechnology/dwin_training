@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num1 = Number(prompt("number"));
+        let num2 = Number(prompt("number"));
+        let num3 = Number(prompt("number"));
+        let num4 = Number(prompt("number"));
+        let num5 = Number(prompt("number"));
+        function maxMin(num1, num2, nam3, nam4, nam5) {
+            let z = Math.max(num1, num2, num3, num4, num5);
+            let x = Math.min(num1, num2, num3, num4, num5);
+            let pow1 = Math.pow(z, 3);
+            let pow2 = Math.pow(x, 4);
+            
+            if (pow1 > pow2) {
+                return("true");
+            } else {
+                return("False");
+            }
+        }
+        alert(maxMin(num1, num2, num3, num4, num5) )
+    </script>
+
+</body>
+
+</html>
