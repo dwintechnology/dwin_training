@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //task1_Temperature Converter(celsius to fahrenheit, fahrenheit to celsius)
+        function cToF(celsius) {
+            let cTemp = celsius;
+            let cToFahr = cTemp * 9 / 5 + 32;
+            let message = cTemp + ' celsius is ' + cToFahr + ' farenheit ';
+            console.log(message);
+        }
+        function fToC(fahrenheit) {
+            let fTemp = fahrenheit;
+            let fToCel = (fTemp - 32) * 5 / 9;
+            let message = fTemp + ' farenheit is ' + fToCel + ' celsius ';
+            console.log(message);
+        }
+        cToF(100);
+        fToC(80);
+    </script>
+</body>
+
+</html>

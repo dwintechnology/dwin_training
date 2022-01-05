@@ -221,192 +221,192 @@
 // 6 Write a function which will transform a one-level object(e.g. e.2) to a nested object(e.g. e.1)․ didn't
 
 
-function clone(x, y) {
-    const z = {};
-    for (const key in x) {
-        z[key] = x[key];
-    }
-    for (const key in y) {
-        z[key] = y[key];
-    }
-    return z;
-}
-function getRandomMark(from, to) {
-    return Math.floor(Math.random() * (to + 1)) + from;
-}
-const DwinTraining = {
-    students: {},
-    smokingRoom: {},
-    subjects: {
-        git: {
-            results: {
-                Tigran: 7,
-                Joe: 8,
-                Valod: 2,
-            },
-        },
-    },
+// function clone(x, y) {
+//     const z = {};
+//     for (const key in x) {
+//         z[key] = x[key];
+//     }
+//     for (const key in y) {
+//         z[key] = y[key];
+//     }
+//     return z;
+// }
+// function getRandomMark(from, to) {
+//     return Math.floor(Math.random() * (to + 1)) + from;
+// }
+// const DwinTraining = {
+//     students: {},
+//     smokingRoom: {},
+//     subjects: {
+//         git: {
+//             results: {
+//                 Tigran: 7,
+//                 Joe: 8,
+//                 Valod: 2,
+//             },
+//         },
+//     },
 
     
     
-    getMostYoungStudent: function () {
-        let less
-        for (let name in this.students) {
-            const student = this.students[name]
-            const age = this.students[name].age
-            const mark = this.students[name].mark
-            if (less === undefined || age < less.age) {
+//     getMostYoungStudent: function () {
+//         let less
+//         for (let name in this.students) {
+//             const student = this.students[name]
+//             const age = this.students[name].age
+//             const mark = this.students[name].mark
+//             if (less === undefined || age < less.age) {
 
-                less = {
-                    name: name,
-                    age: age,
-                    mark: mark,
-                }
-            } else if (age === less.age) {
-                if (mark < less.mark) {
-                    less = {
-                        name: less.name,
-                        age: less.age,
-                        mark: less.mark
-                    }
-                } else {
-                    less = {
-                        name: name,
-                        age: student.age,
-                        mark: student.mark
-                    }
-                }
-            }
-        }
-        return less
-    }
-    ,
-    printAllStudents: function () {
-        for (const name in this.students) {
-            if (Object.hasOwnProperty.call(this.students, name)) {
-                console.log(`${name}: ${this.students[name].mark}`);
-            }
-        }
-    },
-    getAverageMark: function () {
-        let res = 0;
-        let count = 0;
-        for (const name in this.students) {
-            if (Object.hasOwnProperty.call(this.students, name)) {
-                res = res + this.students[name].mark;
-                count++;
-            }
-        }
-        if (count === 0) {
-            return 0;
-        }
-        return res / count;
-    },
-    addStudent: function (student) {
-        if (!this.students.hasOwnProperty(student.name)) {
-            this.students[student.name] = {
-                age: student.age,
-                mark: student.mark,
-            };
-        } else {
-            // TODO:
-        }
-    },
-    removeStudent: function (studentName) {
-        if (this.students.hasOwnProperty(studentName)) {
-            delete this.students[studentName];
-        } else {
-            // TODO:
-        }
-    },
-    setMark: function (mark, studentName) {
-        this.students[studentName].mark = mark;
-    },
-    getBestStudent: function () {
-        let bestStudentNameAndMark;
-        for (const name in this.students) {
-            const mark = this.students[name].mark;
-            if (bestStudentNameAndMark === undefined || mark > bestStudentNameAndMark.mark) {
-                bestStudentNameAndMark = {
-                    name: name,
-                    mark: mark,
-                };
-            }
-        }
+//                 less = {
+//                     name: name,
+//                     age: age,
+//                     mark: mark,
+//                 }
+//             } else if (age === less.age) {
+//                 if (mark < less.mark) {
+//                     less = {
+//                         name: less.name,
+//                         age: less.age,
+//                         mark: less.mark
+//                     }
+//                 } else {
+//                     less = {
+//                         name: name,
+//                         age: student.age,
+//                         mark: student.mark
+//                     }
+//                 }
+//             }
+//         }
+//         return less
+//     }
+//     ,
+//     printAllStudents: function () {
+//         for (const name in this.students) {
+//             if (Object.hasOwnProperty.call(this.students, name)) {
+//                 console.log(`${name}: ${this.students[name].mark}`);
+//             }
+//         }
+//     },
+//     getAverageMark: function () {
+//         let res = 0;
+//         let count = 0;
+//         for (const name in this.students) {
+//             if (Object.hasOwnProperty.call(this.students, name)) {
+//                 res = res + this.students[name].mark;
+//                 count++;
+//             }
+//         }
+//         if (count === 0) {
+//             return 0;
+//         }
+//         return res / count;
+//     },
+//     addStudent: function (student) {
+//         if (!this.students.hasOwnProperty(student.name)) {
+//             this.students[student.name] = {
+//                 age: student.age,
+//                 mark: student.mark,
+//             };
+//         } else {
+//             // TODO:
+//         }
+//     },
+//     removeStudent: function (studentName) {
+//         if (this.students.hasOwnProperty(studentName)) {
+//             delete this.students[studentName];
+//         } else {
+//             // TODO:
+//         }
+//     },
+//     setMark: function (mark, studentName) {
+//         this.students[studentName].mark = mark;
+//     },
+//     getBestStudent: function () {
+//         let bestStudentNameAndMark;
+//         for (const name in this.students) {
+//             const mark = this.students[name].mark;
+//             if (bestStudentNameAndMark === undefined || mark > bestStudentNameAndMark.mark) {
+//                 bestStudentNameAndMark = {
+//                     name: name,
+//                     mark: mark,
+//                 };
+//             }
+//         }
 
-        const res = {
-            name: bestStudentNameAndMark.name,
-        };
-        this.students[bestStudentNameAndMark.name];
-        const clonedStudent = clone(this.students[bestStudentNameAndMark.name], res);
-        return clonedStudent;
-    },
-    moveBestStudentToTheSmokingRoom: function () {
-        const bestStudent = this.getBestStudent();
-        const name = bestStudent.name;
-        delete this.students[name];
-        this.smokingRoom[name] = bestStudent;
-    },
-    callBestStudentFromTheSmokingRoomInTheClassRoom: function (name) {
-        for(let key in this.smokingRoom){
-            if(key === name){
-                const student = this.smokingRoom
-                delete this.smokingRoom[name]
-                this.students[name]= student
-                break
-            }
+//         const res = {
+//             name: bestStudentNameAndMark.name,
+//         };
+//         this.students[bestStudentNameAndMark.name];
+//         const clonedStudent = clone(this.students[bestStudentNameAndMark.name], res);
+//         return clonedStudent;
+//     },
+//     moveBestStudentToTheSmokingRoom: function () {
+//         const bestStudent = this.getBestStudent();
+//         const name = bestStudent.name;
+//         delete this.students[name];
+//         this.smokingRoom[name] = bestStudent;
+//     },
+//     callBestStudentFromTheSmokingRoomInTheClassRoom: function (name) {
+//         for(let key in this.smokingRoom){
+//             if(key === name){
+//                 const student = this.smokingRoom
+//                 delete this.smokingRoom[name]
+//                 this.students[name]= student
+//                 break
+//             }
 
-        }
-    },
+//         }
+//     },
     
-    callAllStudentFromTheSmokingRoomInTheClassRoom:function () {
-        for(let key in this.smokingRoom){
+//     callAllStudentFromTheSmokingRoomInTheClassRoom:function () {
+//         for(let key in this.smokingRoom){
 
-            const student = this.smokingRoom[key]
-            delete this.smokingRoom[key]
-            this.students[key]= student
+//             const student = this.smokingRoom[key]
+//             delete this.smokingRoom[key]
+//             this.students[key]= student
         
-            }
-    },
-    exam: function (subjectName, studentName) {
-        const random = getRandomMark(0, 10);
-        this.subjects[subjectName].results[studentName] = random;
-        this.students[studentName].mark = this.students[studentName].mark + random;
-        return random;
-    },
-    printAllDroppedOutStudents: function (subjectName, minMark) {
-        for (const name in this.subjects[subjectName].results) {
-            if (this.subjects[subjectName].results[name] < minMark) {
-                alert(name + ':' + ' ' + this.subjects[subjectName].results[name]);
-            }
-        }
-    },
-};
-function init() {
-    DwinTraining.addStudent({
-        name: 'John',
-        age: 20,
-        mark: 41,
-    });
-    DwinTraining.addStudent({
-        name: 'Joe',
-        age: 15,
-        mark: 41,
-    });
-    DwinTraining.addStudent({
-        name: 'Ann',
-        age: 12,
-        mark: 24,
-    });
-    DwinTraining.addStudent({
-        name: 'Susan',
-        age: 75,
-        mark: 31,
-    });
-    DwinTraining.addStudent({
-        name: 'Karen',
-        age: 12,
-        mark: 55,
-    })
-}
+//             }
+//     },
+//     exam: function (subjectName, studentName) {
+//         const random = getRandomMark(0, 10);
+//         this.subjects[subjectName].results[studentName] = random;
+//         this.students[studentName].mark = this.students[studentName].mark + random;
+//         return random;
+//     },
+//     printAllDroppedOutStudents: function (subjectName, minMark) {
+//         for (const name in this.subjects[subjectName].results) {
+//             if (this.subjects[subjectName].results[name] < minMark) {
+//                 alert(name + ':' + ' ' + this.subjects[subjectName].results[name]);
+//             }
+//         }
+//     },
+// };
+// function init() {
+//     DwinTraining.addStudent({
+//         name: 'John',
+//         age: 20,
+//         mark: 41,
+//     });
+//     DwinTraining.addStudent({
+//         name: 'Joe',
+//         age: 15,
+//         mark: 41,
+//     });
+//     DwinTraining.addStudent({
+//         name: 'Ann',
+//         age: 12,
+//         mark: 24,
+//     });
+//     DwinTraining.addStudent({
+//         name: 'Susan',
+//         age: 75,
+//         mark: 31,
+//     });
+//     DwinTraining.addStudent({
+//         name: 'Karen',
+//         age: 12,
+//         mark: 55,
+//     })
+// }
 
