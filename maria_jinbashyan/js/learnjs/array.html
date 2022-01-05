@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Создайте массив styles с элементами «Джаз» и «Блюз».
+        // Добавьте «Рок-н-ролл» в конец.
+        // Замените значение в середине на «Классика». Ваш код для поиска значения в середине должен работать для массивов с любой длиной.
+        // Удалите  первый элемент массива и покажите его.
+        // Вставьте «Рэп» и «Регги» в начало массива.
+        let styles=["djaz","blyuz"];
+        styles.push("roknroll")
+        styles[Math.floor(styles.length/2)] = "klasika"
+        alert(styles.shift())
+        styles.unshift("rep","regge")
+                console.log(styles)
+
+    </script>
+</body>
+</html>
