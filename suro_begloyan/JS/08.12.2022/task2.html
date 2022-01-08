@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let students = ["Anna", "Maria", "Tigran", "Arman", "Sasun", "Jorj", "Suro", "Varuj"];
+        let stuLeng = students.length
+        function getRandomInt(stuLeng) {
+            let num = Math.floor(Math.random() * stuLeng);
+            return students[num]
+        }
+        getRandomInt(stuLeng)
+    </script>
+</body>
+
+</html>

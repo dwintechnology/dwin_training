@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let card = {
+            name: "Vaghinak",
+            surName: "Khachatryan",
+            nums: "0111-0000-1111-0086",
+            CVC: 524,
+            expDate: "25.08.2023",
+        }
+        let cardStatus = {
+            valid: true,
+            name: card.name,
+            surName: card.surName,
+            nums: card.nums,
+            CVC: card.CVC,
+            expDate: card.expDate,
+        }
+        function creditCardValidation(nums) {
+            card = nums.replaceAll("-", "");
+            nums = card;
+            if (nums.length !== 16) {
+                cardStatus.volid = false;
+                cardStatus.error = "wrong_length";
+                return cardStatus;
+            };
+            let sum = 0;
+            for (let key of card) {
+                let keyNum = +key;
+                if (keyNum !== keyNum) {
+                    cardStatus.volid = false;
+                    cardStatus.error = "Not a number";
+                    return cardStatus;
+                }
+                sum += +key;
+                if (nums.indexOf(key) !== -1) {
+                    let remainder = nums.replaceAll(key, "");
+                    if (remainder.length < 2) {
+                        cardStatus.volid = false;
+                        cardStatus.error = "all of the digits cannot be the same";
+                        return cardStatus;
+
+                    }
+                }
+            }
+            let lastNum = nums[(nums.length - 1)]
+            if (lastNum % 2 !== 0) {
+                cardStatus.volid = false;
+                cardStatus.error = "Last number is not even";
+                return cardStatus;
+
+            }
+            if (sum <= 16) {
+                cardStatus.volid = false;
+                cardStatus.error = "The sum of all the digits must be greater than 16";
+                return cardStatus;
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
