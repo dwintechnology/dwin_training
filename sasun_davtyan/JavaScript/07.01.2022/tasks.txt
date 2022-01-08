@@ -1,0 +1,18 @@
+ 3...Credit Card Validation
+ - Here are the rules for a valid number:
+   * Number must be 16 digits, all of them must be numbers
+   * You must have at least two different digits represented (all of the digits cannot be the same)
+   * The final digit must be even
+   * The sum of all the digits must be greater than 16
+3.1. A valid credit card number can also contain dashes: 6666-6666-6666-1666
+3.2. Function should return an object indicating whether the credit card is valid, and if not, what the error is
+      { valid: true, number: 'a923-3211-9c01-1112' }
+      { valid: false, number: 'a923-3211-9c01-1112', error: ‘wrong_length’ }
+3.3. Full Credit Card Validation: store credit card details(placeholder name, card number, Expiration date, CVC code) in a object, pass that object to a function that will validate it and return another object with the status(valid: true/false), error(e.g. error: "wrong_length") and the property on which the error appears(e.g. property: "cvc")
+4 Do the following changes for Credit Card object from task 3:
+ - Add "balance" property
+ - Implement addMoney method that will add the given money to "balance" property
+4.1 Create User object with name, gender and creditCards properties and addCreditCard method that will add the given credit card(object) to creditCards array if it's valid.
+4.2 Create array of objects called cookies with this structure: [{name: "biscuit", price: "50"}, {name: "macaron", price: "30"}, ...]
+4.3 Implement buyCookie method for User object that will get cookie name and card number as an argument, validate whether this user can buy a cookie or not. if yes, return the corresponding cookie object with an extra "status: "success" field, if not, return {"status": "failed"}.
+NOTE FOR THIS TASK: the workflow should be this: create a user object, add a few credit cards, add money to a credit card, buy a cookie with that credit card.

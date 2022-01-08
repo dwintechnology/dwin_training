@@ -65,20 +65,20 @@
 
 
 
-function getNotComent(arr, arr2) {
-    let notComent = []
+// function getNotComent(arr, arr2) {
+//     let notComent = []
     
-    for(let i of arr){
-        if(arr2.indexOf(i)!== -1){
-            if(!notComent.includes(i)){
-                notComent.push(i)
-            }
-        }
+//     for(let i of arr){
+//         if(arr2.indexOf(i)!== -1){
+//             if(!notComent.includes(i)){
+//                 notComent.push(i)
+//             }
+//         }
         
-    }
-    return notComent
+//     }
+//     return notComent
 
-}
+// }
 
 
-console.log(getNotComent([1,2,2,2,2,2,3,4,5,6],[1,2,6,6,6,6,6,6,3,8,9]))
+// console.log(getNotComent([1,2,2,2,2,2,3,4,5,6],[1,2,6,6,6,6,6,6,3,8,9]))
