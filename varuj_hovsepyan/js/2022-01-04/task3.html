@@ -11,26 +11,32 @@
 <body>
     <script>
         let cardnum = prompt("card number")
-        function checkdashes(num){
-            for(let i = 4; i<num.length; i+=5){
-                if(num[i]=='-'){
+        let cvc = prompt("cvc")
+        let name = prompt("name")
+        let surname = prompt("surname")
+        let money = +prompt("money")
+        let date = prompt("date")
+        let cardnumcopy = cardnum
+
+        function checkdashes(num) {
+            for (let i = 4; i < num.length; i += 5) {
+                if (num[i] == '-') {
                     return true
                 }
             }
         }
-        function slicedashes(num){
-            for(let i = 4; i<num.length; i+=5){
-                if(num[i]=='-'){
-                    num = num.slice(num[i], num[i])
+        function slicedashes(num) {
+            for (let i = 4; i < num.length; i += 5) {
+                if (num[i] == '-') {
+                    num = num.replace(/[^0-9]/g, '');
                 }
-
             }
             return num
         }
         function checknum(num) {
             for (let i = 1; i < num.length; i++) {
                 if (num[0] !== num[i]) {
-                    return false
+                    return false;
                 }
             }
             return true
@@ -46,27 +52,102 @@
             }
         }
         function validator(cardnum) {
-            if (cardnum.length !== 16 && cardnum.length !==19 ) {
+            if (cardnum.length !== 16 && cardnum.length !== 19) {
+                let lengtherror = {
+                    valid: false,
+                    number: cardnumcopy,
+                    error: "wrong_length"
+                }
+                return lengtherror
+            }
+            if (cardnum.length === 19 && !checkdashes(cardnum)) {
                 return false
             }
-            if(cardnum.length === 19 && !checkdashes(cardnum)){
-                return false
-            } 
-            card1 = cardnum
-            card1 = slicedashes(card1)
-            if (checknum(card1)) {
-                return false
+            cardnum = slicedashes(cardnum)
+            if (checknum(cardnum)) {
+                let repeatnumber = {
+                    valid: false,
+                    number: cardnumcopy,
+                    error: "repeat_number_error"
+                }
+                return repeatnumber
             }
-            if (card1[card1.length - 1] % 2 !== 0) {
-                return false
+            if (cardnum[cardnum.length - 1] % 2 !== 0) {
+                let lastnumber = {
+                    valid: false,
+                    number: cardnumcopy,
+                    error: "last_number_not_even_error"
+                }
+                return lastnumber
             }
-            if (!checksumnumber(card1)) {
-                return false
+            if (!checksumnumber(cardnum)) {
+                let sumnumber = {
+                    valid: false,
+                    number: cardnumcopy,
+                    error: "sum_number_min_16_error"
+                }
+                return sumnumber
             }
-            
-            return true
+            let truecard = {
+                valid: true,
+                number: cardnumcopy
+            }
+            return truecard
         }
-        console.log(validator(cardnum))
+        let validatorobject = {
+            name: name,
+            surname: surname,
+            card_number: validator(cardnum),
+            cvc: cvc,
+            date: date,
+            balance: money,
+            allvalidcontrol: function () {
+                for (let i = 0; i < this.name.length; i++) {
+                    if (!isNaN(this.name[i])) {
+                        return "write only letter"
+                    }
+                }
+                for (let i = 0; i < this.surname.length; i++) {
+                    if (!isNaN(this.surname[i])) {
+                        return "write only letter"
+                    }
+                }
+                if (this.cvc.length !== 3 || isNaN(this.cvc)) {
+                    return "cvc length error"
+                }
+                if (this.date.length !== 5 || !this.date[2].includes('/')) {
+                    return "or wrong length or not /"
+                }
+                let cookis = [
+                    { name: "biscuit", price: "50" },
+                    { name: "macaron", price: "30" },
+                    { name: "pizza", price: "1000" }
+                ]
+                let validatorobject2 = {
+                    name: name,
+                    surname: surname,
+                    card_number: validator(cardnum),
+                    cvc: cvc,
+                    date: date,
+                    balance: money,
+                }
+                if(cookis.length !== 0){
+                    let k = []
+                    for (let i = 0; i < cookis.length; i++) {
+                       
+                        if (cookis[i].price < this.balance) {
+                            this.balance = this.balance - cookis[i].price
+                            k.push(cookis[i])
+                        }
+                    }
+                    return k
+                }
+                return validatorobject2
+            }
+        }
+
+
+        console.log(validatorobject.allvalidcontrol())
     </script>
 </body>
 
