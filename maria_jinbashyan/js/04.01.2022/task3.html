@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numberofcard = prompt("card number")
+        let numberofcard2 = numberofcard
+        let username = prompt("username")
+        let usersurname = prompt("user surname")
+        let cvc = prompt('cvcnumber')
+        
+        function dashis(num) {
+            for (let i = 4; i < num.length; i += 5) {
+                if (num[i] == "-")
+                    return true
+            }
+        }
+        function differentnum(num) {
+            for (let i = 1; i < num.length; i++) {
+                if (num[0] !== num[i]) {
+                    return false
+                }
+            } return true
+        }
+        function namsum(num) {
+            let sumnumber = 0
+            for (i = 0; i < num.length; i++) {
+                sumnumber += Number(num[i])
+            }
+            if (sumnumber > 16) {
+                return true
+            }
+
+        }
+
+
+        function validator(num) {
+            if (num.length !== 16 && num.length !== 19) {
+                let error1 = {
+                    valid: false,
+                    number: numberofcard2,
+                    error: "wrong_length"
+                }
+                return error1
+            }
+            if (num.length === 19 && !dashis(num)) {
+                let error2 = {
+                    valid: false,
+                    number: numberofcard2,
+                    error: "length=19 but not - _error"
+                }
+                return error2
+            }
+
+            num = num.replace(/[^0-9]/g, '');
+            if (differentnum(num)) {
+                let error3 = {
+                    valid: false,
+                    number: numberofcard2,
+                    error: "all of the digits cannot be the same "
+                }
+                return error3
+            }
+            if (num[num.length - 1] % 2 !== 0) {
+                let error4 = {
+                    valid: false,
+                    number: numberofcard2,
+                    error: "dont even number "
+                }
+                return error4
+            }
+            if (!namsum(num)) {
+                let error5 = {
+                    valid: false,
+                    number: numberofcard2,
+                    error: "Number sum <16 "
+                }
+                return error5
+            }
+            let noterror = {
+                valid: true,
+                number: numberofcard2
+            }
+            return noterror
+        }
+        let valobject = {
+            name: username,
+            surname: usersurname,
+            userCardNumber: validator(numberofcard),
+            cvc: cvc,
+            validcontrol: function () {
+                for (let i = 1; i < this.name.length; i++) {
+                    if (!isFinite(this.name[i])) {
+                        return "wright only world in name"
+                    }
+                }
+                for (let i = 1; i < this.surname.length; i++) {
+                    if (!isFinite(this.surname[i])) {
+                        return "wright only world in surname"
+                    }
+                }
+
+                if (this.cvc.length !== 3 || isNaN(this.cvc)) {
+                    return "error cvc number"
+                }
+                let newvalobject = {
+                    name: username,
+                    surname: usersurname,
+                    userCardNumber: validator(numberofcard),
+                    cvc: cvc,
+                }
+                return newvalobject
+            }
+        }
+        console.log(valobject.validcontrol())
+
+
+    </script>
+</body>
+
+</html>

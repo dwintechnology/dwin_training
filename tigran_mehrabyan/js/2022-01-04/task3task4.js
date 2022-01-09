@@ -5,13 +5,12 @@ function isEveryDigitNumber(string){
         return false;
     }
     let array = string.split("");
-    let temp = true
     for (let i = 0; i < array.length; i++) {
         if(isNaN(array[i])){
-            temp = false;
+            return false;
         }
     }
-    return temp;
+    return true;
 }
 
 function isValidLengthAndDigits(string){
@@ -30,10 +29,7 @@ function isValidLengthAndDigits(string){
 }
 
 function isLastDigitEven(string){
-    if(string[string.length - 1] % 2 == 0){
-        return true;
-    }
-    return false
+    return (string[string.length - 1] % 2 == 0) ? true : false
 }
 
 function isSumMoreThen16(string){
@@ -42,9 +38,7 @@ function isSumMoreThen16(string){
     for (let i = 0; i < array.length; i++) {
         sum += array[i];
     }
-    if(sum > 16){
-        return true;
-    }return false;
+    return (sum > 16) ? true : false
 }
 function isAtLeastTwoDiffDigits(string){
     let array = string.split("");
@@ -55,6 +49,7 @@ function isAtLeastTwoDiffDigits(string){
             }
         }
     }
+    return false
 }
 
 
@@ -72,7 +67,7 @@ function whetherCardValid(string){
     }
     if(string.length === 19){
         let arr = string.split("-");
-        str = arr[0] + arr[1] + arr[2] + arr[3];
+        str = str.join("");
     }else{
         str = string;
     }

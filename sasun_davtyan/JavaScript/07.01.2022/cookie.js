@@ -54,7 +54,7 @@ function buyCookie(cookieName, cardNumber){
   }
 for(let i =0;i<user.creditCardArray.lenght;i++){
     if(creditCardArray[i]===cardNumber){
-        if(UserCreditCard[i].blannce >=cookiesArray.price ){
+        if(UserCreditCard[i].balance >=cookiesArray.price ){
             UserCreditCard[i].balance -=cookiesArray.price;
             return {
                 cookie: "name",
