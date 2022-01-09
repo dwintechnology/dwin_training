@@ -10,21 +10,37 @@
 
 <body>
     <script>
-        let card = '1444-4444-4444-4444';
-        card = card.replaceAll('-', '');
+        let cardobj = {
+            nums: prompt('Card numbers'),
+            name: prompt('Your name'),
+            surName: prompt('Your Surname'),
+            cvv:  prompt('Your CVV coud'),
+            expirationDate: prompt('Expiration Date'),
+        }
+
+
         let cardStatus = {
+            numbers: cardobj.nums,
+            name: cardobj.name,
+            surName: cardobj.surName,
+            CVV: cardobj.cvv,
+            expirationDate: cardobj.expirationDate,
             valid: true,
-            number: card,
+            balans: 0,
         };
 
 
+
+
         function creditCardValidation(nums) {
+            nums = nums.nums.replaceAll('-','');
+            cardobj.nums = cardobj.nums.replaceAll('-','');
             for (let key of nums) {
                 let numKey = Number(key);
                 if (numKey !== numKey) {
                     cardStatus.error = 'The card does not contain only numbers.';
                     cardStatus.valid = false;
-                    return (cardStatus)
+                    return cardStatus
 
                 }
                 if (nums.indexOf(key) >= 0) {
@@ -33,7 +49,7 @@
                     if (rets.length < 2) {
                         cardStatus.error = 'You must have at least two different digits represented.';
                         cardStatus.valid = false;
-                        return (cardStatus)
+                        return cardStatus
                     }
                 }
             }
@@ -41,7 +57,7 @@
                 if (nums.length !== 16) {
                     cardStatus.error = 'YThe card must contain at least 16 digits.';
                     cardStatus.valid = false;
-                    return (cardStatus)
+                    return cardStatus
                 }
             }
             checkingLenghtCard()
@@ -49,15 +65,22 @@
             function checkingTheLastCardForAnEvenNumber() {
                 let lastDigit = nums[(nums.length - 1)]
                 if (lastDigit % 2 !== 0) {
-                    alert('The final digit must be even.')
-                    return
+                    cardStatus.error = 'The final digit must be even.';
+                    cardStatus.valid = false;
+                    return cardStatus
                 }
             }
             checkingTheLastCardForAnEvenNumber();
+            return cardStatus
         }
 
 
-        creditCardValidation(card);
+        creditCardValidation(cardobj);
+
+        function addBalance(sum){
+            cardStatus.balans = cardStatus.balans + sum
+        }
+
     </script>
 </body>
 
