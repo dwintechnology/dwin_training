@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> while 2</title>
+</head>
+
+<body>
+    <script>
+        let a = 0;
+        let b = 0;
+        while (a < 5) {
+            a++;
+            if (a == 3) {
+                continue;
+            }
+            b += a;
+            alert(b); // b=1, b=3, b=7, b=12
+        }
+
+    </script>
+</body>
+
+</html>

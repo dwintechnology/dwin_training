@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Task4</title>
+</head>
+
+<body>
+    <script>
+        const objectOne = {
+            name: "Dwin",
+            objectTwo: {
+                name: "Dwinstudents",
+            }
+
+        }
+        function deepClone(objectOne) {
+            const objClone = {}
+            for (let key in objectOne) {
+
+                if (typeof (objectOne[key]) == "object") {
+                    deepClone(objectOne[key])
+                }
+                objClone[key] = objectOne[key];
+            }
+            return objClone;
+        }
+        console.log(deepClone(objectOne))
+
+    </script>
+</body>
+
+</html>
