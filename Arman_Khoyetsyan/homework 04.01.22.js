@@ -71,7 +71,7 @@ function numberCheck(str) {
 }
 function characterFiltering(str) {
     let arr = str.split("-")
-    let newStr = arr[0] + arr[1] + arr[2] + arr[3]
+    let newStr = arr.join("")
     return numberCheck(newStr)
 
 }
