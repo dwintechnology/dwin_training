@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_3</title>
+</head>
+
+<body>
+    <script>
+        // Write a function to calculate sum of all number values even if there is nested object:
+        let obj = {
+            name: "John",
+            age: 10,
+            card: {
+                balance: 100
+            },
+            nested: {
+                veryNested: {
+                    foo: "boo",
+                    num: 21
+                }
+            }
+        }
+        let brni=[];
+        let a = JSON.stringify(obj).split(",")
+        // a.split(':')
+        // a = a.split(',');
+        // a = a.split(":");
+        // for (let key of a) {
+        //     brni.push(key.split(":")) 
+        // }
+    </script>
+</body>
+
+</html>
