@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let say = prompt("say barev",)
+        let sayNumber = +prompt("Number")
+        let slesh = prompt("grir mi ban vor@ parunaki / ")
+
+        function body(say, sayNumber, slesh) {
+            if (say !== "barev") {
+                return "error1";
+            }
+
+            if (sayNumber.toString().length !== 5) {
+                return "error2";
+            }
+
+
+            if (!slesh.includes("/")) {
+                return "error3";
+            }
+
+            let ifOnlyTrue = {
+                text: say,
+                number: sayNumber,
+                sleshik: slesh,
+            }
+            return ifOnlyTrue
+        }
+        let obj = {
+            
+            number:50,
+            arr: [
+                {
+                    name: "BMW",
+                    prise: 300
+                },
+                {
+                    name: "NIVA",
+                    prise: 150
+                },
+            ],
+            buycar: function () {
+                let arr2=[]
+                for (let i = 0; i < obj.arr.length; i++) {
+                    if (obj.number > obj.arr[i].prise) {
+                        obj.number -= obj.arr[i].prise
+                        arr2.push(obj.arr[i])
+                    }
+                    
+                }
+
+            return arr2
+            }
+        }
+
+        console.log(obj.buycar())
+
+
+
+    </script>
+</body>
+
+</html>

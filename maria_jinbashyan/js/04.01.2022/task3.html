@@ -18,9 +18,12 @@
         
         function dashis(num) {
             for (let i = 4; i < num.length; i += 5) {
-                if (num[i] == "-")
+                if (num[i] == "-"){
                     return true
+                }
+                
             }
+            return false
         }
         function differentnum(num) {
             for (let i = 1; i < num.length; i++) {
