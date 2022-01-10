@@ -27,20 +27,26 @@
                 libraryID: 3245
             }];
 
-        let res = []
-        let minId;
-        // const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-        // const result = words.filter(num => word.length > 6);
-        
+        let resFiltIf = [];
+        let res = [];
 
 
         let filterArr = function () {
-            let arr = Object.entries(library);
-            let a;
-            function filter(){
-                
+            for (let key of library) {
+                resFiltIf.push(key.libraryID);
             }
-            library.libraryID.sort();
+            resFiltIf.sort();
+        
+            function findFheValue(){
+                for(let key of resFiltIf){
+                    for(let keyOfLibrary of library){
+                        if (key == keyOfLibrary.libraryID){
+                            res.push(keyOfLibrary);
+                        }
+                    }
+                }
+            }
+            findFheValue()
 
         }
 
