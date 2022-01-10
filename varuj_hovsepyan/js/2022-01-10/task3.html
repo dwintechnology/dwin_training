@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj1 = {
+            name: "John",
+            age: 10,
+            card: { balance: 100 },
+            nested: {
+                veryNested: { foo: "boo", num: 21 }
+            }
+        }
+        function calculatorValue(obj1) {
+            let sum = 0
+            for (let value of Object.values(obj1)) {
+                if (typeof value === "object") {
+                    for (let value1 of Object.values(value)) {
+                        if (typeof value1 === "number") {
+                            sum += value1
+                        } else if (typeof value1 === "object") {
+                            for (let value2 of Object.values(value1)) {
+                                if (typeof value2 === "number") {
+                                    sum += value2
+                                }
+                            }
+                        }
+                    }
+                } else if (typeof value === "number") {
+                    sum += value
+                }
+            }
+            return sum
+        }
+
+        console.log(calculatorValue(obj1))
+    </script>
+</body>
+
+</html>

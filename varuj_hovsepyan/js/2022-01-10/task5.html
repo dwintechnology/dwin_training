@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    
+        const library = [
+            {
+                title: 'The Road Ahead',
+                author: 'Bill Gates',
+                libraryID: 1254
+            },
+            {
+                title: 'Walter Isaacson',
+                author: 'Steve Jobs',
+                libraryID: 4264
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                libraryID: 3245
+            }];
+            function sortId(library) {
+                let a = []
+                for(let i = 0; i<library.length; i++){
+                    for(let value of Object.values(library[i]) ){
+                        if(typeof value === "number"){
+                            a.push(value)
+                        }
+                    }
+                }
+                a = a.sort()
+                return a
+            }
+            console.log(sortId(library))
+    </script>
+</body>
+
+</html>
