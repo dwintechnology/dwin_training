@@ -76,8 +76,7 @@ function characterFiltering(str) {
 
 }
 function isTheLasNumberAEven(str) {
-    let arr = str.split("")
-    if (arr[arr.length - 1] % 2 === 0) {
+    if (str[str.length - 1] % 2 === 0) {
         return AreAllNumbersTheSame(str)
     }
     
@@ -89,12 +88,19 @@ function AreAllNumbersTheSame(str) {
     let num = arr[0]
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] !== num) {
-            return true
+            return allCardNumberAmount(str)
         }
 
     }
     
     return false
+}
+function allCardNumberAmount(str){
+    let sum = 0
+    for(let i = 0;i < str.length;i ++){
+        sum += str[i]
+    }
+    return (sum > 16 )
 }
 
 
