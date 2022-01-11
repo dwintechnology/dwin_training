@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Task 1
+        let obj = {
+            name: "Aram",
+            age: 23,
+            gender: "male",
+            profession: "programmer",
+            salary: 3000,
+        }
+        let obj2 = {}
+        Object.entries(obj).forEach(function ([key, value]) {
+            obj2[value] = key
+        })
+
+        console.log(obj2)
+
+        //Task 2 
+        let obj = {
+            name: "Aram",
+            age: 23,
+            gender: "male",
+            profession: "programmer",
+            salary: 3000,
+        }
+        function convert(obj) {
+            return Object.entries(obj);
+        }
+        console.log(convert(obj))
+
+        //Task 3
+        let obj = {
+            name: "John",
+            age: 10,
+            card: {
+                balance: 100
+            },
+            nested: {
+                veryNested: {
+                    foo: "boo",
+                    num: 21,
+                },
+            },
+        }
+        function sumValues(object) {
+            let sum = 0;
+            for (let key in object) {
+                if (typeof object[key] === "number") {
+                    sum += object[key];
+                } else if (typeof object[key] === "object") {
+                    sum += sumValues(object[key])
+                }
+            }
+            return sum;
+        }
+        console.log("Sum===", sumValues(obj))
+
+        //Task 4 
+        let arr = new Array(6000);
+        arr.fill(false);
+        arr[1234] = true;
+        console.log(arr)
+
+        //Task 5
+        const library = [
+            {
+                title: 'The Road Ahead',
+                author: 'Bill Gates',
+                libraryID: 125400
+            },
+            {
+                title: 'Walter Isaacson',
+                author: 'Steve Jobs',
+                libraryID: 4264
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                libraryID: 3245
+            }];
+
+
+        let arr = library.sort(function (a, b) {
+            return a.libraryID - b.libraryID
+        })
+        console.log(arr)
+    </script>
+</body>
+
+</html>
