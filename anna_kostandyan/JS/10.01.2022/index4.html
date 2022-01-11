@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //task5...Write a function to sort the following array by libraryID(էսօրվա սովորածի հետ կապ չունի):
+        const library = [
+            {
+                title: 'The Road Ahead',
+                author: 'Bill Gates',
+                libraryID: 1254
+            },
+            {
+                title: 'Walter Isaacson',
+                author: 'Steve Jobs',
+                libraryID: 4264
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                libraryID: 3245
+            }];
+        let sorted_library = library.sort(function (a, b) {
+            return a.libraryID - b.libraryID;
+        });
+
+        console.log(sorted_library);
+    </script>
+</body>
+
+</html>

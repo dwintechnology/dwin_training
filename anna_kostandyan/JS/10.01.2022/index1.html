@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //task1...Write a function to get a copy of the object where the keys have become the values and the values the keys
+        let  girl={
+           name: "Victorya",
+           status:"student",
+        }
+        let girlKeys=Object.keys(girl);
+        let girlValues=Object.values(girl);
+        let  transform={ };
+
+        function transformKeyAndValue() {
+            for (let i=0; i<girlKeys.length; i++) {
+                transform[girlValues[i]] = girlKeys[i]
+            }
+            return transform;
+        }
+    </script>
+</body>
+</html>
