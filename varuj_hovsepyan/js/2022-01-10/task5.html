@@ -10,7 +10,7 @@
 
 <body>
     <script>
-    
+
         const library = [
             {
                 title: 'The Road Ahead',
@@ -26,20 +26,27 @@
                 title: 'Mockingjay: The Final Book of The Hunger Games',
                 author: 'Suzanne Collins',
                 libraryID: 3245
-            }];
-            function sortId(library) {
-                let a = []
-                for(let i = 0; i<library.length; i++){
-                    for(let value of Object.values(library[i]) ){
-                        if(typeof value === "number"){
-                            a.push(value)
-                        }
-                    }
-                }
-                a = a.sort()
-                return a
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                libraryID: 5245
             }
-            console.log(sortId(library))
+        ];
+        function sortId(library) {
+            let a = Object.assign(library)
+            let librarycopy = library[0]
+            for (let i = 1; i < library.length; i++) {
+                let letlibrary = library[i]
+                for (let value of Object.values(letlibrary)) {
+                        a.sort(function (librarycopy, letlibrary) {
+                            return letlibrary.libraryID - librarycopy.libraryID;
+                        });
+                }
+            }
+            return a
+        }
+        console.log(sortId(library))
     </script>
 </body>
 
