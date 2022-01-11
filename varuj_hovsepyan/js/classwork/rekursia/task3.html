@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // factorial(rekursia)
-        function factorial(n){
+        function factorial(n) {
 
-            if(n === 1){
-                return n
-            }else if(n > 1){
-                let x = factorial(n-1)
-                return n * x
-            }
+            if (n === 1 || n === 0) return n;
+
+            return n * factorial(n - 1)
+
         }
         console.log(factorial(9))
     </script>
 </body>
+
 </html>
