@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Task 1
+        let today = new Date();
+        console.log(today)
+
+        //Task 2
+        let past = new Date(2017, 0, 05);
+        console.log(past)
+
+        //Task 3
+        let today = new Date()
+        let past = new Date(2017, 01, 01)
+        function calcDate(date1, date2) {
+            let diff = Math.floor(date1.getTime() - date2.getTime());
+            let day = 1000 * 60 * 60 * 24;
+            let days = Math.floor(diff / day);
+            var weeks = Math.floor(days / 7);
+            return weeks;
+        }
+        let theWeeks = calcDate(today, past)
+        console.log(theWeeks)
+        //Task 4
+        const res = [];
+
+        for (let i = 1; i < 44; ++i) {
+            let hours = i * 24;
+            res.push(new Date(new Date('11.30.2021').setHours(hours)))
+        }
+        console.log(res);
+    </script>
+</body>
+
+</html>
