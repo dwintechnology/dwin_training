@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let planetFacts = {
+  numPlanets: 8,
+  yearNeptuneDiscovered: 1846,
+  yearMarsDiscovered: 1659
+};
+let{numPlanets, ...rest}=planetFacts;
+
+console.log(rest)
+// const obj = {
+//   numbers: {
+//     a: 1,
+//     b: 2
+//   }
+// };
+// let{a,b}=obj.numbers;
+// console.log(a)
+function raceResults(first,second,third,...zest){
+    let newobject={
+        first,
+        second,
+        third,
+        zest,
+    }
+    return newobject
+   
+}
+
+    console.log(raceResults('Tom', 'Margaret', 'Allison', 'David', 'Pierre'))
+    </script>
+</body>
+</html>
