@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       function getOrNot(day){
+           let now = new Date()
+           let after = new Date("2022-01-08")
+           let lastday = new Date(day)
+           now.getTime();
+           after.getTime();
+           lastday.getTime();
+           if(day>after && day<now){
+               return true
+           }return false
+
+       }
+       console.log(getOrNot("2022-01-01"))
+   </script> 
+</body>
+</html>
