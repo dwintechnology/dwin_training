@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Task 1
+        function factorial(n) {
+            if (n == 1) return 1;
+            return n * factorial(n - 1)
+        }
+        console.log(factorial(5))
+
+        //task 2
+        function gcd(a, b) {
+            if (a == b) {
+                return a;
+            }
+            if (a > b) {
+                let t = a;
+                a = b;
+                b = t;
+            }
+            return gcd(a, b - a);
+        }
+        gcd(10, 8)
+
+        //task 3
+        function integers(x, y) {
+            if (x === y) return x;
+            if (x < y) {
+                console.log(x)
+                return integers(x + 1, y)
+            }
+        }
+        console.log(integers(2, 20))
+
+        //task 4
+        let arr = [12, 15, 30, 40, 56, 101]
+        function arraySum(a, b) {
+            if (b <= 0)
+                return 0;
+            return (arraySum(a, b - 1) + a[b - 1]);
+        }
+        console.log(arraySum(arr, arr.length));
+
+        //task 5
+        function pow(x, n) {
+            if (n == 1) return x;
+            return x * pow(x, n - 1);
+        }
+        console.log(pow(2, 3))
+
+        //task 6
+        function fib(n) {
+            if (n <= 1) return 1;
+            return fib(n - 1) + fib(n - 2);
+        }
+        console.log(fib(10))
+
+        //Task 7
+        function isEven(n) {
+            if (n === 0) {
+                return true;
+            } else if (n === 1) {
+                return false;
+            } else return isEven(n % 2);
+        }
+        console.log(isEven(11))//false
+        console.log(isEven(10))//true
+
+    </script>
+</body>
+
+</html>
