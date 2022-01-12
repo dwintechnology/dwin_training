@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let let1 = new Date(2021, 11, 1);
+        let let2 = new Date(2022, 0, 12);
+
+
+        function PushAnArrayWithDaysInTheBackRange(let1, let2) {
+            let1 = let1.getTime();
+            let2 = let2.getTime();
+            let day = 86400000;
+            let arr = [];
+            if (let1 > let2) {
+                let z = let2;
+                let2 = let1;
+                let1 = z;
+            }
+            while(let1 < let2){
+                let d  = new Date (let1 + day)
+                d = d.getTime();
+                let bb = new Date(d)
+                let year = bb.getFullYear();
+                let dayArr = bb.getDate();
+                let month = bb.getMonth() ;
+
+
+                arr.push(`${year}-${month}-${dayArr}`)
+                let1 = let1 + day;
+            }
+            return arr
+        }
+
+    </script>
+</body>
+
+</html>

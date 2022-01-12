@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let data1 = new Date(2021, 0, 01);
+
+        function CheckIfTheInsertedDateWasInLast5Days(data) {
+            function dateInMilliseconds(a) {
+                let MillisecondsDate = a.getMilliseconds();
+                let SecondsDate = a.getSeconds() * 1000;
+                let MinutesDate = a.getMinutes() * 60 * 1000;
+                let HoursDate = a.getHours() * 60 * 60 * 1000;
+                
+                return a = a.getTime() - HoursDate - MinutesDate - SecondsDate - MillisecondsDate;
+            }
+            let day = 86400000;
+            let dateNow = new Date();
+            dateNow  = dateInMilliseconds(dateNow);
+            data =  dateInMilliseconds(data);
+            let firstDay = dateNow - (day * 5)
+
+            while (firstDay <= dateNow){
+                if (firstDay == data){
+                    return true
+                }
+                
+                firstDay += day
+            }
+            return false
+
+        }
+    </script>
+</body>
+
+</html>
