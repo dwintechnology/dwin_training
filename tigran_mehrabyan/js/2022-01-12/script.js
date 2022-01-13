@@ -11,17 +11,18 @@ let diffInMs = today - jan_1_2017;
 let numberOfWeeks = Math.floor(diffInMs / 1000 / 3600 / 24 / 7);
 
 // #4
-// let array =[];
-// let date = new Date("2021-12-01");
-// let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-// function getShortDate(date){
-//     return date.getFullYear() + "-" + months[date.getMonth()] + "-" + date.getDate();
-// }
-// for (let i = 0; i < 43; i++) {
-//     let temp1 = date.setDate(date.getDate() + i);
-//     let temp2 = getShortDate(temp1)
-//     array.push(temp2)
-// }
+ let array =[];
+ let date = new Date("2021-12-01");
+ let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+ function getShortDate(date){
+     return date.getFullYear() + "-" + months[date.getMonth()] + "-" + date.getDate();
+ }
+ for (let i = 0; i < 43; i++) {
+     let temp = dateMs + 1000*3600*24*i;
+     let temp1 = new Date(temp)
+     let temp2 = getShortDate(temp1)
+     array.push(temp2)
+ }
 
 // #5
 function ifInLast5Days(date) {
