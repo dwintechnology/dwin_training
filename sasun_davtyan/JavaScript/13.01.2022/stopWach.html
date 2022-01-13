@@ -34,6 +34,7 @@
                 },
                 pause() {
                     clearInterval(this.interval);
+                    clearInterval(this.speed_interval);
                     
                 },
                 stop() {
@@ -53,7 +54,7 @@
                             sec += s;
                         };
                     } else {
-                        this.interval = setInterval(function () {
+                        this.speed_interval = setInterval(function () {
                             console.log(`${hour}:${min}:${sec}`)
                             if (sec / 60 == 1) {
                                 min++;
