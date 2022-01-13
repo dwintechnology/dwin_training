@@ -26,7 +26,7 @@
 //         }
 //         return largestCommonDivisor(number1, number3)
 //     }
-
+//     return false
 // }
 
 // console.log(largestCommonDivisor(140, 96))
