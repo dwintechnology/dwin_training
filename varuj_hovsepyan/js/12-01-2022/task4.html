@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        
+        //     let a  = []
+        //     let arr1copy = new Date("2022-Jan-13")
+        //     let x = arr1copy.getDate()
+        //     let b = -1
+        //     function anushka(arr1copy){
+        //         do {
+        //             x += b 
+        //             arr1copy.setDate(x)
+        //             a.push(arr1copy.setDate(x))
+        //     }while(x>1) // u -=1
+        // arr1copy.setDate(u)
+        // console.log(arr1copy)
+        //     return a
+        // }
+        // console.log(arr1copy)
+        // let a  = []
+        // let arr1copy = new Date("2022-Jan-13")
+        // let arr2copy = new Date("2021-Dec-01")
+        // let u = arr1copy.getDate()
+        // let v = arr2copy.setDate(arr2copy.getDate())
+        // u -=1
+        // arr1copy.setDate(u)
+        // console.log(arr1copy)
+        // function anunchka(arr1copy){
+        //     while(u<v){
+        //         u += 1
+        //         a.push(new Date(arr2copy.setDate(u)))
+        //     }
+        //     return a
+        // }
+        // console.log(anunchka(arr1copy))
+        // let date = new Date(2021, 11, 01)
+        // for (let i = 0; i < 43; i++) {
+        //     console.log(date)
+        //     date.setDate(date.getDate() + 1)
+        // }
+        const getDaysArray = function (start, end) {
+            let arr = []
+            for (let dt = new Date(start); dt <= end; dt.setDate(dt.getDate() + 1)) {
+                arr.push(new Date(dt));
+            }
+            return arr;
+        };
+       console.log( getDaysArray(new Date('2021-12-01'), new Date('2022-01-12')))
+
     </script>
 </body>
+
 </html>
