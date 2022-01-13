@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let t1;
+        function createStopwatch() {
+            return {
+                sec:0,
+                houer:0,
+                intervalId: undefined,
+                start: function () {
+                    this.intervalId = setInterval( () => {
+                        if (this.sec < 10 && this.houer < 10) {
+                            console.log(`0${this.houer}:0${this.sec}`)
+                        } else if (this.houer < 10) {
+                            console.log(`0${this.houer}:${this.sec}`)
+                        } else if (this.minutes < 10) {
+                            console.log(`${this.houer}:0${this.sec}`)
+                        }
+                        this.sec++
+                        if (this.sec > 60) {
+                            this.sec = 0;
+                            this.houer++
+                        }
+                        if (this.houer > 60) {
+                            this.houer = 0
+                        }
+                    }, 1000)
+                },
+                pause: function () {
+                    clearInterval(this.intervalId)
+                },
+                stop: function() {
+                    clearInterval(this.intervalId);
+                    this.sec = 0;
+                    this.houer = 0;
+                },
+                getTime: function(){
+                    if (this.sec < 10 && this.houer < 10) {
+                            return (`0${this.houer}:0${this.sec}`)
+                        } else if (this.houer < 10) {
+                            return (`0${this.houer}:${this.sec}`)
+                        } else if (this.minutes < 10) {
+                            return (`${this.houer}:0${this.sec}`)
+                        }
+                },
+                setSpeed: function(s){
+                    if (s > 60 || s < -60){
+                        this.sec = this.sec + s%60
+                        this.houer = this.houer + ((s - (s%60))/60)
+                    }else {
+                        this.sec = this.sec + s
+                    }
+                    
+                }
+            }
+        }
+        function speedUp(obj, s){
+            if (s > 60 || s < -60){
+                        obj.sec = obj.sec + s%60;
+                        obj.houer = obj.houer + ((s - (s%60))/60);
+                    }else {
+                        obj.sec = obj.sec + s
+                    }
+        };
+
+    </script>
+</body>
+
+</html>
