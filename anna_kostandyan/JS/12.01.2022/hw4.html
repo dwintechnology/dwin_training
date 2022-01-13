@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //task5 Check if the inserted date(e.g. 2021-01-01) was in last 5 days.
+        function last5Days (date){
+            let now = new Date();
+            let sub= now- date;
+            if (sub> 5* 24* 3600* 1000){
+                return false;
+            } return true;
+ 
+        }
+    </script>
+</body>
+</html>
