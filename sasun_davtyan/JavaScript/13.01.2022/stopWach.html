@@ -10,22 +10,66 @@
 
 <body>
     <script>
-        let sec = 0;
-        let min = 0;
-        let hour = 0;
-        let start = setInterval(function () {
-            console.log(`${hour}:${min}:${sec}`)
-            if (sec / 60 == 1) {
-                min++;
-                sec = 0;
-                if (min / 60 == 1) {
-                    hour++;
-                    min = 0;
-                }
+
+
+        let createStopwatch = () => {
+            let sec = 0;
+            let min = 0;
+            let hour = 0;
+            let temp = 1000;
+            return {
+                start() {
+                    this.interval = setInterval(function () {
+                        console.log(`${hour}:${min}:${sec}`)
+                        if (sec / 60 == 1) {
+                            min++;
+                            sec = 0;
+                            if (min / 60 == 1) {
+                                hour++;
+                                min = 0;
+                            }
+                        }
+                        sec++;
+                    }, temp)
+                },
+                pause() {
+                    clearInterval(this.interval);
+                    
+                },
+                stop() {
+                    this.pause();
+                    hour = min = sec = 0;
+                    console.log(`${hour}:${min}:${sec}`)
+                },
+                getTime() {
+                    console.log(`${hour}:${min}:${sec}`);
+                },
+                setSpeed(s) {
+                    if (Number.isInteger(s)) {
+                        if (s > 60 || s < -60) {
+                            sec += s % 60
+                            min += ((s - (s % 60)) / 60)
+                        } else {
+                            sec += s;
+                        };
+                    } else {
+                        this.interval = setInterval(function () {
+                            console.log(`${hour}:${min}:${sec}`)
+                            if (sec / 60 == 1) {
+                                min++;
+                                sec = 0;
+                                if (min / 60 == 1) {
+                                    hour++;
+                                    min = 0;
+                                }
+                            }
+                            sec++;
+                        }, temp * s)
+                    }
+                },
             }
-            sec++;
-        }, 1000);
-        let pause = () => clearInterval(start);
+        }
+        let t1 = createStopwatch();
     </script>
 </body>
 
