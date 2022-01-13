@@ -17,7 +17,7 @@
 //       b: 2,
 //     }
 //   };
-  
+
 //   var {a,b}= obj.numbers
 
 // alert (a+""+b)
@@ -37,3 +37,13 @@
 // raceResults('Tom', 'Margaret', 'Allison', 'David', 'Pierre')
 
 
+
+
+
+
+
+
+// for (let i = 0; i <= 30; i++) {
+
+//     setTimeout(console.log, i*1000, i)
+// }

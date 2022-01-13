@@ -21,20 +21,20 @@
 
 // }
 // console.log(arr)
-debugger
-// Task 5 Check if the inserted date(e.g. 2021-01-01) was in last 5 days.
-function checkiDay(date) {
-    a = new Date(date)
-    // let a = new Date(year, month, day)
-    a = a.getTime()
-    let newDate = new Date().getTime()
-    let fiveDay = new Date()
-    fiveDay.setDate(fiveDay.getDate() - 5)
-    fiveDay = fiveDay.getTime()
 
-    if (newDate > a && fiveDay < a) {
-        return true
-    }
-    return false
-}
-console.log(checkiDay("2022-01-5"))
+// Task 5 Check if the inserted date(e.g. 2021-01-01) was in last 5 days.
+// function checkiDay(date) {
+//     a = new Date(date)
+//     // let a = new Date(year, month, day)
+//     a = a.getTime()
+//     let newDate = new Date().getTime()
+//     let fiveDay = new Date()
+//     fiveDay.setDate(fiveDay.getDate() - 5)
+//     fiveDay = fiveDay.getTime()
+
+//     if (newDate > a && fiveDay < a) {
+//         return true
+//     }
+//     return false
+// }
+// console.log(checkiDay("2022-01-5"))
