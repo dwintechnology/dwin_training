@@ -38,6 +38,16 @@
             res.push(new Date(new Date('11.30.2021').setHours(hours)))
         }
         console.log(res);
+        // TAsk 5
+        let today = new Date().getTime();
+        let pass = new Date('2022-01-07').getTime();
+        function date(randomDay) {
+            let day = new Date(randomDay).getTime();
+            if (day < today && day > pass) return true;
+            return false;
+        }
+        let d = date('2022-01-2');
+        console.log(d)
     </script>
 </body>
 
