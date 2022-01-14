@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function createStopwatch() {
+            let second = 0
+
+            this.getTime = function () {
+                return new Date(second * 1000).toISOString().substr(11, 8);
+            }
+            this.start = function () {
+                
+                let a = setInterval(function () { second++}, 1000);
+               return second
+                
+                }
+                this.pause=function(){
+                    clearInterval(a)
+            }
+            this.stop=function(){
+                clearInterval(a)
+            }
+            
+        }
+        let t1 = new createStopwatch()
+
+
+    </script>
+</body>
+
+</html>
