@@ -1,26 +1,33 @@
 function StopWatch(){
     this.mainVar = 0;
     let id;
+    let speed = 1;
 
     this.start = function(){
-        id = setInterval(() => {this.mainVar ++}, 1000);
+        id = setInterval(() => {this.mainVar += speed}, 1000);
     }
     this.pause = function(){
         clearInterval(id);
-        clearInterval(speedId);
     }
     this.stop = function(){
         clearInterval(id);
-        clearInterval(speedId);
         this.mainVar = 0;
     }
     this.getTime = function(){
-        let sec = this.mainVar % 60;
-        let min = Math.floor(this.mainVar / 60) % 60;
-        let hour = Math.floor(min / 3600) % 60;
-        return `${hour} : ${min} : ${sec}`;
+        return new Date(this.mainVar * 1000).toISOString().substr(11, 8)
     }
     this.setSpeed = function(s){
-        speedId = setInterval(() => {this.mainVar ++}, s * 1000);
+        speed += (s-1) ;
+    }
+    this.toString = function(){
+        return this.getTime()
+    }
+    this.valueOf = function(){
+        
+        return this.mainVar;
     }
 }
+function speedUp(obj, number){
+    obj.mainVar += number;
+}
+
