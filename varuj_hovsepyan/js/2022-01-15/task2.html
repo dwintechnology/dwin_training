@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function repeate(a, b, callBack) {
+            let c = callBack(a)
+            do{
+                c = callBack(c)
+                b--
+            }while (b > 0) 
+            console.log(c)
+        }
+        function call(ress) {
+            return ress + "a"
+        }
+        
+            repeate("S", 1, call)
+        
+        
+            repeate("S", 2, call)
+        
+        
+            repeate("S", 3, call)
+        
+    </script>
+</body>
+
+</html>
