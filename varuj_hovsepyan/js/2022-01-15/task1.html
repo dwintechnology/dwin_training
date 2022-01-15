@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function atLeastThree(arr1, callback) {
+            callback(arr1)
+            if (!callback(arr1)) {
+                return false
+            } else {
+                return true
+            }
+        }
+        function isOdd(a) {
+            let aeven = []
+            let noteven = []
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] % 2 === 0) {
+                    aeven.push(a[i])
+                } else {
+                    noteven.push(a[i])
+                }
+            }
+            if (aeven.length >= 3) {
+                return true
+            } else if (noteven.length >= aeven.length) {
+                return false
+            }
+        }
+        console.log(atLeastThree([4, 8, 10, 3, 5, 11, 7], isOdd))
+    </script>
+</body>
+
+</html>
