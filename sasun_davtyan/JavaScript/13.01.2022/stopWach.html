@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        let createStopwatch = () => {
+            let sec = 0;
+            let min = 0;
+            let hour = 0;
+            // let temp = 1000;
+            return {
+                start() {
+                    this.interval = setInterval(function () {
+                        console.log(`${hour}:${min}:${sec}`)
+                        if (sec / 60 == 1) {
+                            min++;
+                            sec = 0;
+                            if (min / 60 == 1) {
+                                hour++;
+                                min = 0;
+                            }
+                        }
+                        sec++;
+                    }, 1000)
+                },
+                pause() {
+                    clearInterval(this.interval);
+                    clearInterval(this.speed_interval);
+                    
+                },
+                stop() {
+                    this.pause();
+                    hour = min = sec = 0;
+                    console.log(`${hour}:${min}:${sec}`)
+                },
+                getTime() {
+                    console.log(`${hour}:${min}:${sec}`);
+                },
+                setSpeed(s) {
+                    if (Number.isInteger(s)) {
+                        if (s > 60 || s < -60) {
+                            sec += s % 60
+                            min += ((s - (s % 60)) / 60)
+                        } else {
+                            sec += s;
+                        };
+                    } else {
+                        this.speed_interval = setInterval(function () {
+                            console.log(`${hour}:${min}:${sec}`)
+                            if (sec / 60 == 1) {
+                                min++;
+                                sec = 0;
+                                if (min / 60 == 1) {
+                                    hour++;
+                                    min = 0;
+                                }
+                            }
+                            sec++;
+                        }, 1000 * s)
+                    }
+                },
+            }
+        }
+        let t1 = createStopwatch();
+        function speedUp(obj,s){
+                    if (Number.isInteger(s)) {
+                        if (s > 60 || s < -60) {
+                            obj.sec += s % 60
+                            obj.min += ((s - (s % 60)) / 60)
+                        } else {
+                            obj.sec += s;
+                        };
+                    } else {
+                        obj.speed_interval = setInterval(function () {
+                            console.log(`${hour}:${min}:${sec}`)
+                            if (obj.sec / 60 == 1) {
+                                obj.min++;
+                                obj.sec = 0;
+                                if (obj.min / 60 == 1) {
+                                    obj.hour++;
+                                    obj.min = 0;
+                                }
+                            }
+                            obj.sec++;
+                        }, 1000 * s)
+
+        }
+    }
+    </script>
+</body>
+
+</html>

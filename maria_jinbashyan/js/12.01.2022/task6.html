@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const user = {
+            name: "John",
+            birthday: "1995-01-25"
+        }
+        let user2 = {
+            baby: "02",
+            child: "39",
+            "pre teen": "1012",
+            teenager: "1317",
+            "young adult": "1824",
+            adult: "2560",
+            elder: "60999"
+        }
+        function addyear(user) {
+            let yers = new Date()
+            let a = yers.getFullYear()
+            let userage = new Date(user.birthday)
+            let b = userage.getFullYear()
+            for (let key of Object.keys(user2)) {
+                if (key.length==2){
+                let fu = user2[key].split("")
+                let fu1 = +fu[0]
+                let fu2 = +fu[1]
+                if(a-b>=fu1 && a-b<=fu2){
+                    return key
+                }
+            } else if(key.length>2){
+                fu1= +user2[key].slice(0,2);
+                fu2= +user2[key].slice(2,5);
+                if(a-b>=fu1 && a-b<=fu2){
+                    return key
+            }
+        }
+    }
+            // if (a-b>0){
+            //     return "child"
+            // }
+            // return "ade"
+        }
+        console.log(addyear(user))
+    </script>
+</body>
+
+</html>
