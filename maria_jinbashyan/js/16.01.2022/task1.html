@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function atLeastThree(array, callback) {
+            callback(array)
+            if (callback(array)){
+                return true
+            }else{
+                return false
+            }
+        
+
+        }
+        function isOdd(arg){
+            let arr1 =[];
+            let arr2 =[];
+            for(i=0;i<arg.length; i++){
+                if (arg[i]%2!==0){
+                    arr1.push(arg[i])
+                }
+                else{arr2.push(arg[i])}
+            }
+            if (arr1.length>=3){
+                return true
+            }else if
+            (arr1.length<=arr2.length){
+                return false
+
+                }
+        };
+       console.log( atLeastThree([1,4,2,6,9,8], isOdd))
+    </script>
+</body>
+
+</html>
