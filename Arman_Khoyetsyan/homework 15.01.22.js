@@ -1,27 +1,24 @@
 // Task 1 
 
-// function atLeastThree(arr, cb) {
+function atLeastThree(arr, cb) {
+    let oddNumber = 0
+    arr.forEach((num) => {
+        if (cb(num)) {
+            oddNumber++
+        }
+    });
+    return (oddNumber >= 3) 
 
-//     if (cb(arr)) {
-//         return true
-//     }
-//     return false
+    
 
-// }
+}
 
-// function isOdd(arr) {
-//     let evenNumber = 0
-//     arr.forEach((num) => {
-//         if (num % 2 === 0) {
-//             evenNumber++
-//         }
-//     });
-//     if (evenNumber >= 3) {
-//         return true
-//     }
-//     return false
-// }
-// console.log(atLeastThree([2,6,7,9,11],isOdd))
+function isOdd(number) {
+    if (number % 2 !== 0) return true
+
+
+}
+console.log(atLeastThree([2, 6,11, 7, 9, 6], isOdd))
 
 // task 1 2 version
 
