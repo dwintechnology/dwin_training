@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 4];
+
+
+
+        
+        function atLeastThree(arr){
+            function isOdd(n){
+            if(n%2==0){
+                return false;
+            }
+            return true;
+            }
+            let count = 0;
+            arr.forEach(element => {
+               if(isOdd(element)) count++
+            });
+            return new Promise(function(resolve, reject){
+                if(count >= 3 ){
+                   resolve (true)
+                }else{
+                reject (false)
+                }
+            })
+            
+        }
+
+        let x  = atLeastThree(arr);
+        x.then((arg)=>{
+            console.log(arg)
+        })
+        x.catch((arg)=>{
+            console.log(arg)
+        })
+
+
+
+        // function atLeastThree(arr,func){
+        //     let count = 0;
+        //     arr.forEach(element => {
+        //        if(func(element)) count++
+        //     });
+        //     if(count >= 3 ){
+        //         return true
+        //     }else{
+        //         return false
+        //     }
+            
+        // }
+
+        // function isOdd(n){
+        //     if(n%2==0){
+        //         return false;
+        //     }
+        //     return true;
+        // }
+    </script>
+</body>
+
+</html>
