@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 'aca';
+
+
+        function foo(arg) {
+            return new Promise(function (resolve, reject) {
+                if (typeof (arg) !== 'number') {
+                    reject(new Error('in a string'))
+                }
+                if (arg % 2 == 1) {
+                    setTimeout(function () {
+                        resolve('odd')
+
+                    }, 1000)
+                }
+                if (arg % 2 == 0) {
+                    setTimeout(function () {
+                        resolve('even')
+
+                    }, 3000)
+                }
+            })
+        }
+
+
+        let x = foo(a);
+        x.then((arg)=>{
+            console.log(arg)
+        })
+        x.catch((arg) => {
+            console.log(arg)
+        })
+    </script>
+</body>
+
+</html>
