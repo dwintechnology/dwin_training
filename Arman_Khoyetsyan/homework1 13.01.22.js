@@ -4,7 +4,7 @@ function createStopwatch() {
     return {
         start: function () {
             let id = setInterval(function () {
-                console.log(++secend)
+                console.log(minute,++secend)
                 if (secend === 60) {
                     console.log(++minute, secend)
                     secend = 0
