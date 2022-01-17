@@ -20,7 +20,7 @@
             return {
                 start() {
                     this.interval = setInterval(function () {
-                        console.log(`${hour}:${min}:${sec}`)
+                        // console.log(`${hour}:${min}:${sec}`)
                         if (sec / 60 == 1) {
                             min++;
                             sec = 0;
@@ -35,7 +35,7 @@
                 pause() {
                     clearInterval(this.interval);
                     clearInterval(this.speed_interval);
-                    
+
                 },
                 stop() {
                     this.pause();
@@ -55,7 +55,7 @@
                         };
                     } else {
                         this.speed_interval = setInterval(function () {
-                            console.log(`${hour}:${min}:${sec}`)
+                            // console.log(`${hour}:${min}:${sec}`)
                             if (sec / 60 == 1) {
                                 min++;
                                 sec = 0;
@@ -71,30 +71,30 @@
             }
         }
         let t1 = createStopwatch();
-        function speedUp(obj,s){
-                    if (Number.isInteger(s)) {
-                        if (s > 60 || s < -60) {
-                            obj.sec += s % 60
-                            obj.min += ((s - (s % 60)) / 60)
-                        } else {
-                            obj.sec += s;
-                        };
-                    } else {
-                        obj.speed_interval = setInterval(function () {
-                            console.log(`${hour}:${min}:${sec}`)
-                            if (obj.sec / 60 == 1) {
-                                obj.min++;
-                                obj.sec = 0;
-                                if (obj.min / 60 == 1) {
-                                    obj.hour++;
-                                    obj.min = 0;
-                                }
-                            }
-                            obj.sec++;
-                        }, 1000 * s)
+        function speedUp(obj, s) {
+            if (Number.isInteger(s)) {
+                if (s > 60 || s < -60) {
+                    obj.sec += s % 60
+                    obj.min += ((s - (s % 60)) / 60)
+                } else {
+                    obj.sec += s;
+                };
+            } else {
+                obj.speed_interval = setInterval(function () {
+                    console.log(`${hour}:${min}:${sec}`)
+                    if (obj.sec / 60 == 1) {
+                        obj.min++;
+                        obj.sec = 0;
+                        if (obj.min / 60 == 1) {
+                            obj.hour++;
+                            obj.min = 0;
+                        }
+                    }
+                    obj.sec++;
+                }, 1000 * s)
 
+            }
         }
-    }
     </script>
 </body>
 
