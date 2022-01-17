@@ -55,3 +55,22 @@
 // atLeastThree2([2,4,6,7,5,9])
 
 //Task 2 
+
+
+
+
+// function repeat(str, num, cb) {
+//     let resolve = cb(str)
+//     num--
+//     for (let i = num; i > 0; i--) {
+//         resolve = cb(resolve)
+//     }
+//     return resolve
+// }
+
+// function reverse (string){
+//     return string.split("").reverse().join("");
+// }
+
+// console.log(repeat("Arman",1,reverse))
+// console.log(repeat("Arman",3,reverse))
