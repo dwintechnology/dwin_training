@@ -67,7 +67,7 @@
 
 
 // function repeat1(str, num) {
-//     return new Promise(function (resolve, rejacte) {
+//     return new Promise(function (resolve) {
 //         let reverseStr = str.split("").reverse().join("")
 //         num--
 //         for (let i = num; i > 0; i--) {
@@ -83,22 +83,23 @@
 // console.log(repeat("Arman",1,reverse))
 // console.log(repeat("Arman",3,reverse))
 
-function foo(num) {
-    return new Promise(function (resolve, rejacte) {
-        if (typeof num !== "number") {
-            rejacte(new Error("is not a Number"))
-        }
-        if (num % 2 === 0){
-           setTimeout(function(){
-               resolve("Even")
-           },2000)
-        }else{
-            setTimeout(function(){
-                resolve("Odd")
-            },1000)
-        }
+// function foo(num) {
+//     return new Promise(function (resolve, rejacte) {
+//         if (typeof num !== "number") {
+//             rejacte(new Error("is not a Number"))
+//         }
+        
+//         if (num % 2 === 0){
+//            setTimeout(function(){
+//                resolve("Even")
+//            },2000)
+//         }else{
+//             setTimeout(function(){
+//                 resolve("Odd")
+//             },1000)
+//         }
 
-    })
-}
+//     })
+// }
 
-foo("ll").then(alert).catch(alert)
+// foo("ll").then(alert).catch(alert)
