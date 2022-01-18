@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getData(str) {
+            try {
+
+                function isPositive(str) {
+                    try {
+                        if (isNaN(str)) {
+                            throw new Error('NotANumberError')
+                        }
+
+                        if (!isNaN(str)) {
+                            if (+str < 0) {
+                                throw new Error('NegativeNumber')
+                            }
+                        }
+                    } catch (err) {
+                        throw err;
+                    }
+                }
+                isPositive(str)
+            } catch (err) {
+                if (err.message == 'NegativeNumber') {
+                    return err.message
+                }
+                throw err
+            } finally {
+                console.log("getData function is finished")
+            }
+        }
+        try {
+            getData('12a')
+        } catch (err) {
+            console.error(err) 
+        }
+    </script>
+</body>
+
+</html>
