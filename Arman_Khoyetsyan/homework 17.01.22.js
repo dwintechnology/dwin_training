@@ -59,33 +59,34 @@
 // Task 5
 
 // ////////ClassWork
+// debugger
+// function all(...args) {
+//     return new Promise(function (resolve, reject) {
 
-function all(...args) {
-    return new Promise(function (resolve, reject) {
+//         let arr = []
+//         args.forEach(argument => {
+//             argument.catch(function (val) {
+//                 return reject(new Error(`${val} is Reject`))
+//             })
+//             argument.then(arg => { arr.push(arg) })
+//         })
 
-        let arr = []
-        args.forEach(argument => {
-            if(argument.catch()){
-               return reject(()=> new Error("Reject"))
-            }
-            argument.then(arg => { arr.push(arg)})
-        
-        })
-        
-        resolve(arr)
+//         resolve(arr)
 
-    })
-}
-
-
-let promise1 = new Promise((resolve,reject) => {
+//     })
+//}
+let promise1 = new Promise((resolve, reject) => {
     resolve("A")
 })
-let promise2 = new Promise((resolve,reject) => {
+let promise2 = new Promise((resolve, reject) => {
     reject("C")
 
 })
-let promise3 = new Promise((resolve,reject) => {
+let promise3 = new Promise((resolve, reject) => {
     resolve("B")
 })
-all(promise1, promise2, promise3, promise1).then(console.log)
+//all(promise1, promise2, promise3, promise1).then(console.log).catch(console.log)
+
+
+let promis = Promise.all([promise1, promise2, promise3, promise1])
+promis.then(console.log)
