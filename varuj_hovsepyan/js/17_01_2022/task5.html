@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = new Promise(function (resolve) {
+            setTimeout(resolve, 1000 , "a1")
+        })
+        let b = new Promise(function (resolve) {
+            setTimeout(resolve, 1000 , "a2")
+        })
+        let c = new Promise(function (resolve) {
+            setTimeout(resolve, 2000, "a3")
+        })
+        let d = new Promise(function (reject) {
+            setTimeout(reject, 1000, new Error("d"))
+        })
+        let arr = [a, b, c, d];
+        let result = arr.reduce(function(newarr, num){
+            num.then(async function(x){
+                await newarr.push(x)
+            })
+            // newarr.push(num)
+            return newarr
+        }, []);
+        console.log(result)
+    </script>
+</body>
+</html>
