@@ -10,31 +10,28 @@
 
 <body>
     <script>
-        function atLeastThree(arr1, callback) {
-            callback(arr1)
-            if (!callback(arr1)) {
-                return false
-            } else {
+        function atLeastThree(array, callback) {
+            for (i = 0; i < array.length; i++) {
+                callback(array[i])
+            }
+            if (truearr >= 3) {
                 return true
+            } else if (falsearr > truearr) {
+                return false
             }
         }
+        let truearr = 0
+        let falsearr = 0
         function isOdd(a) {
-            let aeven = []
-            let noteven = []
-            for (let i = 0; i < a.length; i++) {
-                if (a[i] % 2 === 0) {
-                    aeven.push(a[i])
-                } else {
-                    noteven.push(a[i])
-                }
-            }
-            if (aeven.length >= 3) {
-                return true
-            } else if (noteven.length >= aeven.length) {
-                return false
+            if (a % 2 != 0) {
+                truearr++
+            } else {
+                falsearr++
             }
         }
-        console.log(atLeastThree([4, 8, 10, 3, 5, 11, 7], isOdd))
+        console.log(atLeastThree([1, 4, 2, 3, 6, 9, 8], isOdd))
+
+
     </script>
 </body>
 
