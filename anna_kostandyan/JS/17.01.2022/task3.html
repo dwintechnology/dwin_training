@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Implement sum(a, b) function which will return promise. If a and b are numbers promise should be resolved and give the sum of a and b numbers. Otherwise, it should be rejected and give error message(e.g. "a or/and b aren't numbers"). In both cases print "sum function is finished!" message(TIP: outside of promise)
+        function sum(a,b){
+            return new Promise(function(resolve,reject){
+                if (!isNaN(a)&&!isNaN(b)){
+                    resolve(a+b)
+                }else{
+                    reject("cant be")
+                }
+            })
+        }
+        sum(4,9)
+            .then(function(data){
+                console.log(data)
+            })
+            .catch(function(error){
+                consol.log(error)
+            })
+    </script>
+</body>
+</html>
