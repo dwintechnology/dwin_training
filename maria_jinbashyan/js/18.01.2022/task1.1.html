@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         task1
+        //         function isPositive(num){
+        //      try{
+        //          if(typeof(num)!="number"){
+        //              throw new TypeError("NotANumberError")
+        //          }else if(num<0){
+        //              throw new Error("NegativeNumber")
+        //          }else{
+        //              alert(num)
+        //          }
+        //      }catch(error){
+        //          alert(error.message)
+
+        //      }
+        //  }
+        //  isPositive(-3534)
+
+        //       task1.a
+        //       function getData(){
+
+        //     function isPositive(num){
+        //         try{
+        //             if(typeof(num)!="number"){
+        //                 throw new TypeError("NotANumberError")
+        //             }else if(num<0){
+        //                 throw new Error("NegativeNumber")
+        //             }else{
+        //                 alert(num)
+        //             }
+        //         }catch(error){
+        //            throw error
+
+        //         }
+        //     }
+        //     isPositive("jhdg")}
+        //     try {
+        //      getData()
+        //    } catch (error) {
+        //      alert( "Внешний catch поймал: " + error ); 
+
+        //     }
+
+
+
+
+
+        // task1.b
+        // function getData() {
+
+        //     function isPositive(num) {
+        //         try {
+        //             if (typeof (num) != "number") {
+        //                 throw new TypeError("NotANumberError")
+        //             } else if (num < 0) {
+        //                 throw new Error("NegativeNumber")
+        //             } else {
+        //                 alert(num)
+        //             }
+        //         } catch (error) {
+        //             throw error
+
+        //         }
+        //     }
+        //     isPositive("jhdg")
+        // }
+        // try {
+        //     getData()
+        // } catch (error) {
+        //     alert("Внешний catch поймал: " + error);
+
+        // } finally {
+        //     alert("getData function is finished");
+        // }
+
+
+
+
+
+        // // // task1.c
+
+        // function getData() {
+
+        //     function isPositive(num) {
+        //         try {
+        //             if (typeof (num) != "number") {
+        //                 throw new TypeError("NotANumberError")
+        //             } else if (num < 0) {
+        //                 throw new Error("NegativeNumber")
+        //             } else {
+        //                 alert(num)
+        //             }
+        //         } catch (error) {
+        //             throw error
+
+        //         }
+        //     }
+        //     isPositive("jhdg")
+        // }
+        // try {
+        //     getData()
+        // } catch (error) {
+        //     if (error.message == "NegativeNumber") {
+        //         alert("Number is a negative" + error);
+        //     }
+
+        // } finally {
+        //     alert("getData function is finished");
+        // }
+
+
+
+        // task 1.d
+
+        function finedData() {
+            function getData() {
+
+                function isPositive(num) {
+                    try {
+                        if (typeof (num) != "number") {
+                            throw new TypeError("NotANumberError")
+                        } else if (num < 0) {
+                            throw new Error("NegativeNumber")
+                        } else {
+                            alert(num)
+                        }
+                    } catch (error) {
+                        throw error
+
+                    }
+                }
+                isPositive("jgf")
+            }
+            try {
+                getData()
+            } catch (error) {
+                if (error.message == "NegativeNumber") {
+                    alert("Number is a negative" + error);
+                }else{
+                    throw error;
+                }
+
+
+            } 
+        }
+        try{
+            finedData()
+        }catch(error){
+            alert("Not a Number" + error);
+            
+        }finally {
+                alert("getData function is finished");
+            }
+
+
+        
+
+    </script>
+</body>
+
+</html>
