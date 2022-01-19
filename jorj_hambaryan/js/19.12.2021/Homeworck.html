@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getPosts(){
+            let a = await fetch('https://jsonplaceholder.typicode.com/posts');
+            let b = await a.json();
+            for(let i of b){
+                let idOfItem = i.id
+                let comm = await fetch(`https://jsonplaceholder.typicode.com/posts/${idOfItem}/comments`);
+                let commJs = await comm.json();
+                i.comment = commJs;
+            }
+            console.log(b);
+            return b
+        }
+
+        async function CalculateTheBiggestPost(){
+            let Posts = await getPosts();
+            let maxLenght = 0;
+            let maxPost;
+            for(let i of Posts){
+                let sumCommentBody='';
+                for(let item of i.comment){
+                    sumCommentBody = sumCommentBody + item.body;
+                }
+                if(sumCommentBody.length > maxLenght){
+                    maxPost = i;
+                    maxLenght = sumCommentBody.length
+                }
+            }
+            console.log(maxPost);
+            return  maxPost
+        }
+    </script>
+</body>
+</html>
