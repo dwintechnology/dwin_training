@@ -1,3 +1,9 @@
+try{
+    getData()
+}catch(e){
+    alert(e)
+}
+
 function getData() {
     try {
         console.log(isPositive("-12"))
@@ -11,6 +17,7 @@ function getData() {
         alert("getData function is finished")
     }
 }
+
 function isPositive(num) {
     try {
         if (isNaN(num)) {
@@ -24,10 +31,6 @@ function isPositive(num) {
     return num
 
 }
-try{
-    getData()
-}catch(e){
-    alert(e)
-}
+
 
 
