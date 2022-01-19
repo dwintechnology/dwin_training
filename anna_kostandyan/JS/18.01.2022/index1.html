@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (async function () {
+            try{
+            let url = `https://api.github.com/users/Maria200011`
+            async function getUserInfo(abc) {
+                try {
+                    let a = await fetch(abc);
+                    let b = await a.json();
+                    console.log(b);
+                    if (b.message === "Not Found") {
+                        throw new Error("User not found")
+                    }
+                } catch (err) {
+                    throw  err
+                }
+            }
+            await getUserInfo(url)
+        } catch(error){
+            console.log(error)
+        }
+        })()
+    </script>
+</body>
+
+</html>

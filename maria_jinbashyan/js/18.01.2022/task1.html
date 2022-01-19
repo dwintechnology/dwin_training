@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function isPositive(num) {
+            try {
+                if (isNaN (num) ) {
+                    throw new TypeError("NotANumberError")
+                } else if (num < 0) {
+                    throw new Error("NegativeNumber")
+                } else {
+                    alert(num)
+                }
+            } catch (error) {
+                throw error
+
+            }
+        }
+
+        function getData() {
+            try {
+                isPositive("kjdfhbgkj")
+            } catch (error) {
+                if (error.message == "NegativeNumber") {
+                    alert("Number is a negative" + error);
+                }
+                else{
+                    throw error;
+                }
+
+            } finally {
+                alert("getData function is finished");
+            }
+        } 
+        try{
+            getData()
+        }catch(error){
+            alert ("Not a Number Error")
+        }
+
+    </script>
+</body>
+</html>

@@ -10,10 +10,10 @@
 
 <body>
     <script>
-        //         task1
+        // task1
         //         function isPositive(num){
         //      try{
-        //          if(typeof(num)!="number"){
+        //          if(isNaN(num)){
         //              throw new TypeError("NotANumberError")
         //          }else if(num<0){
         //              throw new Error("NegativeNumber")
@@ -25,64 +25,71 @@
 
         //      }
         //  }
-        //  isPositive(-3534)
+        //  isPositive("sfg")
+
+
 
         //       task1.a
-        //       function getData(){
 
-        //     function isPositive(num){
-        //         try{
-        //             if(typeof(num)!="number"){
-        //                 throw new TypeError("NotANumberError")
-        //             }else if(num<0){
-        //                 throw new Error("NegativeNumber")
-        //             }else{
-        //                 alert(num)
-        //             }
-        //         }catch(error){
-        //            throw error
-
-        //         }
-        //     }
-        //     isPositive("jhdg")}
+        // function isPositive(num) {
         //     try {
-        //      getData()
-        //    } catch (error) {
-        //      alert( "Внешний catch поймал: " + error ); 
+        //         if (isNaN(num)) {
+        //             throw new TypeError("NotANumberError")
+        //         } else if (num < 0) {
+        //             throw new Error("NegativeNumber")
+        //         } else {
+        //             alert(num)
+        //         }
+        //     } catch (error) {
+        //         throw error
 
         //     }
+        // }
+
+
+        // function getData() {
+        //     try {
+        //         isPositive(-86875)
+        //     } catch (error) {
+        //         alert("Внешний catch поймал: " + error);
+
+        //     }
+        // }
+        // getData()
+
 
 
 
 
 
         // task1.b
-        // function getData() {
 
-        //     function isPositive(num) {
-        //         try {
-        //             if (typeof (num) != "number") {
-        //                 throw new TypeError("NotANumberError")
-        //             } else if (num < 0) {
-        //                 throw new Error("NegativeNumber")
-        //             } else {
-        //                 alert(num)
-        //             }
-        //         } catch (error) {
-        //             throw error
-
+        // function isPositive(num) {
+        //     try {
+        //         if (isNaN(num)) {
+        //             throw new TypeError("NotANumberError")
+        //         } else if (num < 0) {
+        //             throw new Error("NegativeNumber")
+        //         } else {
+        //             alert(num)
         //         }
-        //     }
-        //     isPositive("jhdg")
-        // }
-        // try {
-        //     getData()
-        // } catch (error) {
-        //     alert("Внешний catch поймал: " + error);
+        //     } catch (error) {
+        //         throw error
 
-        // } finally {
-        //     alert("getData function is finished");
+        //     }
         // }
+        // function getData() {
+        //     try {
+        //         isPositive(-86875)
+        //     } catch (error) {
+        //         alert("Внешний catch поймал: " + error);
+
+        //     } finally {
+        //         alert("getData function is finished")
+        //     }
+        // }
+        // getData()
+
 
 
 
@@ -90,81 +97,90 @@
 
         // // // task1.c
 
-        // function getData() {
 
-        //     function isPositive(num) {
-        //         try {
-        //             if (typeof (num) != "number") {
-        //                 throw new TypeError("NotANumberError")
-        //             } else if (num < 0) {
-        //                 throw new Error("NegativeNumber")
-        //             } else {
-        //                 alert(num)
-        //             }
-        //         } catch (error) {
-        //             throw error
 
-        //         }
-        //     }
-        //     isPositive("jhdg")
-        // }
-        // try {
-        //     getData()
-        // } catch (error) {
-        //     if (error.message == "NegativeNumber") {
-        //         alert("Number is a negative" + error);
-        //     }
+        function isPositive(num) {
+            try {
+                if (isNaN (num) ) {
+                    throw new TypeError("NotANumberError")
+                } else if (num < 0) {
+                    throw new Error("NegativeNumber")
+                } else {
+                    alert(num)
+                }
+            } catch (error) {
+                throw error
 
-        // } finally {
-        //     alert("getData function is finished");
-        // }
+            }
+        }
+
+        function getData() {
+            try {
+                isPositive("kjdfhbgkj")
+            } catch (error) {
+                if (error.message == "NegativeNumber") {
+                    alert("Number is a negative" + error);
+                }
+                else{
+                    throw error;
+                }
+
+            } finally {
+                alert("getData function is finished");
+            }
+        } 
+        try{
+            getData()
+        }catch(error){
+            alert ("Not a Number Error")
+        }
 
 
 
         // task 1.d
 
-        function finedData() {
-            function getData() {
+        // function finedData() {
+        //     function getData() {
 
-                function isPositive(num) {
-                    try {
-                        if (typeof (num) != "number") {
-                            throw new TypeError("NotANumberError")
-                        } else if (num < 0) {
-                            throw new Error("NegativeNumber")
-                        } else {
-                            alert(num)
-                        }
-                    } catch (error) {
-                        throw error
+        //         function isPositive(num) {
+        //             try {
+        //                 if (typeof (num) != "number") {
+        //                     throw new TypeError("NotANumberError")
+        //                 } else if (num < 0) {
+        //                     throw new Error("NegativeNumber")
+        //                 } else {
+        //                     alert(num)
+        //                 }
+        //             } catch (error) {
+        //                 throw error
 
-                    }
-                }
-                isPositive("jgf")
-            }
-            try {
-                getData()
-            } catch (error) {
-                if (error.message == "NegativeNumber") {
-                    alert("Number is a negative" + error);
-                }else{
-                    throw error;
-                }
-
-
-            } 
-        }
-        try{
-            finedData()
-        }catch(error){
-            alert("Not a Number" + error);
-            
-        }finally {
-                alert("getData function is finished");
-            }
+        //             }
+        //         }
+        //         isPositive("jgf")
+        //     }
+        //     try {
+        //         getData()
+        //     } catch (error) {
+        //         if (error.message == "NegativeNumber") {
+        //             alert("Number is a negative" + error);
+        //         }else{
+        //             throw error;
+        //         }
 
 
-        
+        //     } 
+        // }
+        // try{
+        //     finedData()
+        // }catch(error){
+        //     alert("Not a Number" + error);
+
+        // }finally {
+        //         alert("getData function is finished");
+        //     }
+
+
+
 
     </script>
 </body>

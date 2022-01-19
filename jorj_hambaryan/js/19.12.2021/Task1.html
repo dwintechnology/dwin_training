@@ -1,0 +1,52 @@
+Jorj99
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function getUserInfo(name) {
+            try {
+                let a = await fetch(`https://api.github.com/users/${name}`)
+                let b = await a.json();
+                console.log(b)
+                if (b.message === "Not Found") {
+                    throw new Error(`${name}`)
+                }
+                return b
+            } catch (err) {
+                console.log(`${err} not found`)
+                throw err
+            }
+        }
+        let ar = ['Jorj99', 'Davtyan92S', 'Pogosikic8888'];
+
+        async function getUsers(arr) {
+            let tr = [];
+            let fl = [];
+            let res = [];
+            try {
+                for (i of arr) {
+                    let us = await getUserInfo(i);
+                    tr.push(us)
+                }
+            } catch (err) {
+                fl.push(err)
+            }
+            console.log(tr)
+            console.log(fl)
+            
+            res = [tr, fl];
+            console.log(res)
+            return res;
+        }
+    </script>
+</body>
+
+</html>
