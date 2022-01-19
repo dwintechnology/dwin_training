@@ -10,31 +10,29 @@
 
 <body>
     <script>
-        function bigfu() {
-            function getDate() {
-                function isPositive(x) {
-                    try {
-                        if (isNaN(x)) {
-                            throw new SyntaxError("NotANumberError")
-                        } else {
-                            if (x < 0) {
-                                throw new Error("NegativeNumber")
-                            } else {
-                                console.log(x)
-                            }
-                        }
-                    } catch (er) {
-                        if (er === SyntaxError) {
-                            console.log(er.message)
-                        } else {
-                            throw er
-                        }
+        function isPositive(x) {
+            try {
+                if (isNaN(x)) {
+                    throw new SyntaxError("NotANumberError")
+                } else {
+                    if (x < 0) {
+                        throw new Error("NegativeNumber")
+                    } else {
+                        console.log(x)
                     }
                 }
-                isPositive(77)
+            } catch (er) {
+                if (er === SyntaxError) {
+                    console.log(er.message)
+                } else {
+                    throw er
+                }
             }
+        }
+
+        function getDate() {
             try {
-                getDate()
+                isPositive(-18)
             } catch (error) {
                 if (error.message === "NegativeNumber") {
                     console.log("number is a negative")
@@ -42,15 +40,15 @@
                     throw error
                 }
 
-            }
-        }
-        try{
-            bigfu()
-        }catch(erorr2){
-            console.log(erorr2.message)
-        } finally {
+            } finally {
                 console.log("getData function is finished")
             }
+        }
+        try {
+            getDate()
+        } catch (error3) {
+            console.log("error is a not a number")
+        }
     </script>
 </body>
 
