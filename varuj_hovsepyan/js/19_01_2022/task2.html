@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ['Maria200011', 'Varuj2002', 'asshjhsakjhkj']
+        let big
+        async function getUserInfo(name) {
+            let esim = await fetch(`https://api.github.com/users/${name}`)
+            let esim1 = await esim.json()
+            if (esim1.message === 'Not Found') {
+                throw new Error("ayo valodik")
+            } else {
+                return esim1
+            }
+        }
+        // async function p(){
+        //     try {
+        //        await getUserInfo('Varuj2000002')
+        //     } catch (er) {
+        //          console.log(er)
+        //     }
+        // }
+        async function getUsers(arr) {
+            big = [[], []]
+            try {
+                for (let i = 0; i < arr.length; i++) {
+                    let y = await getUserInfo(arr[i])
+                    big[0].push(y)
+                }
+            } catch (er) {
+                big[1].push(er)
+            }
+            console.log(big)
+        }
+        let uf = await getUsers(arr)
+        console.log(uf)
+        //    p()
+    </script>
+</body>
+
+</html>
