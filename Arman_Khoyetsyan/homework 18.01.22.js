@@ -19,15 +19,13 @@ function getData() {
 }
 
 function isPositive(num) {
-    try {
+    
         if (isNaN(num)) {
             throw new SyntaxError("Argument Not A Number Error")
         } else if (+num < 0) {
             throw new SyntaxError("Argument Negative Number")
         }
-    } catch (error) {
-        throw error
-    }
+    
     return num
 
 }
