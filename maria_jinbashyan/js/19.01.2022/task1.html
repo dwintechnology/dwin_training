@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ['Maria200011', 'Varuj2002', 'filo3940','jolya342']
+        let arr1 ;
+        async function getUserInfo(user) {
+            let url = await fetch(`https://api.github.com/users/${user}`)
+
+            let json = await url.json()
+            if (json.message === "Not Found") {
+                throw new Error("Not Found User Name")
+            }
+            else {
+                return json
+            }
+        }
+        // async function getuser() {
+        //         try {
+        //             await getUserInfo('Maria20001')
+        //         }
+        //         catch (error) {
+        //             console.log(error)
+        //         }
+        //     } getuser()
+        async function sortedUser() {
+            arr1 = [[], []]
+            try {
+                for (let i = 0; i < arr.length; i++) {
+                    let fun = await getUserInfo(arr[i])
+                    arr1[0].push(fun)
+
+                }
+            }
+            catch (error) {
+                arr1[1].push(error)
+
+            }
+            return arr1
+        }
+        async function fun2() {
+            console.log(await sortedUser(arr1))
+        }
+        fun2()
+
+
+       
+
+
+    </script>
+</body>
+
+</html>
