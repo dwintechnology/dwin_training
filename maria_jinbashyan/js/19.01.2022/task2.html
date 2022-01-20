@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+   
+        let sum;
+        let arr = [];
+        async function getPost() {
+            let post = await fetch('https://jsonplaceholder.typicode.com/posts');
+            let post1 = await post.json()
+            for (let i = 0; i < post1.length; i++) {
+                let com = await fetch(`https://jsonplaceholder.typicode.com/posts/${i + 1}/comments`)
+                let com1 = await com.json()
+                post1[i].comment = com1
+            }
+
+            for (let d = 0; d < post1.length; d++) {
+                sum = 0;
+                for (let r = 0; r < post1[d].comment.length; r++) {
+                    sum += post1[d].comment[r].body.length;
+
+                }
+                arr.push(sum)
+                arr.sort(function (a, b) {
+                    return a - b;
+                })
+            }
+            for(let s=0; s<post1.length;s++){
+                sum=0;
+                for(let rm=0; rm<post1[s].comment.length;rm++){
+                    sum += post1[s].comment[rm].body.length;
+                }
+                if (arr[arr.length-1]===sum){
+                console.log(post1[s])
+
+            }
+            
+
+            }
+        }
+
+        getPost()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
