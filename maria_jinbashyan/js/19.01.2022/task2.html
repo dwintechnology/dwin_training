@@ -10,20 +10,7 @@
 
 <body>
     <script>
-        //    async function getPost() {
-        //         let arr = await fetch('https://jsonplaceholder.typicode.com/posts')
-        //         let arr1 = await arr.json()
-        //         for(let i = 0; i<arr1.length; i++){
-        //             let esim = await fetch('https://jsonplaceholder.typicode.com/posts/${i+1}/comments')
-        //             let esim2 = await esim.json()
-        //             arr1[i].comment = esim2
-        //         }
-        //         return arr1
-        //     }
-        //     console.log(getPost())
-
-
-
+   
         let sum;
         let arr = [];
         async function getPost() {
@@ -46,7 +33,18 @@
                     return a - b;
                 })
             }
-            console.log(arr[arr.length-1])
+            for(let s=0; s<post1.length;s++){
+                sum=0;
+                for(let rm=0; rm<post1[s].comment.length;rm++){
+                    sum += post1[s].comment[rm].body.length;
+                }
+                if (arr[arr.length-1]===sum){
+                console.log(post1[s])
+
+            }
+            
+
+            }
         }
 
         getPost()
