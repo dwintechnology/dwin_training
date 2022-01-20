@@ -10,6 +10,7 @@
 
 <body>
     <script>
+        let d
         let f
         let biggest = 0
         let bigarr = []
@@ -34,8 +35,18 @@
                 bigarr.sort(function (a, b) {
                     return a - b;
                 })
-                if(bigarr[bigarr.length-1]===f){
-                    console.log(arr1[index])
+                
+            }
+            for (let index2 = 0; index2 < arr1.length; index2++) {
+                d = 0
+
+                for (let l = 0; l < arr1[index2].comment.length; l++) {
+                    d += arr1[index2].comment[l].body.length
+
+
+                }
+                if(bigarr[bigarr.length-1]===d){
+                    console.log(arr1[index2])
                 }
             }
 
