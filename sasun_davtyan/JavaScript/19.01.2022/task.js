@@ -16,13 +16,14 @@ async function getPosts() {
 
 async function getPostsAndComennts() {
     const posts = await getPosts();
+    // console.log(posts)
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
         const commentUrl = (HOST + ENDPOINTS.comment).replace(":id", post.id);
         const comment = await fetch(commentUrl);
         const commentJson = await comment.json();
         post.comment = commentJson;
-        console.log(`Loaded ${i} posts...`)
+        // console.log(`Loaded ${i} posts...`)
     }
     return posts;
 }
@@ -47,9 +48,9 @@ async function findBigComment() {
         }
     }
     //const bigPost = posts.find((i) => i.id == id)
-    console.log(bigPost)
-    console.log(id, maxLength)
-    console.log(posts)
+    // console.log(bigPost)
+    // console.log(id, maxLength)
+    // console.log(posts)
 }
 
 findBigComment();
