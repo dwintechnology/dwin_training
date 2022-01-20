@@ -1,0 +1,29 @@
+.container{
+    max-width: 1440px;
+    margin: auto;
+   
+}
+body{
+    background-color: rgb(221, 112, 22);
+    padding: 0;
+    margin: 0;
+}
+.firstdivstyle{
+    flex: 20%;
+}
+
+#style{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;}
+    .div1style {
+        background-color: rgb(149, 221, 228);
+        width: 200px;
+        height: 200px;
+        margin-top: 50px;
+        font-size: 14px;
+    }
+    .dark-mode {
+        background-color: rgb(24, 25, 26);
+        color: rgb(41, 34, 34);
+      }
