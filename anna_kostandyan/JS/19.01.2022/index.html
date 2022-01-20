@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a;
+        let array=[ ];
+        async  function  getPosts ( )  {
+            let ftch = await fetch('https://jsonplaceholder.typicode.com/posts')
+            let  ftchjs  =  await  arr . json ( )
+            for (let i = 0; i < ftch.length; i++) {
+                let comm = await fetch(`https://jsonplaceholder.typicode.com/posts/${i + 1}/comments`)
+                let commjs = await commjs.json();
+                ftch[i].comment = commjs;
+            }
+            for (let j = 0; j < ftchjs.length; j++) {
+                a= 0;
+
+                for (let j = 0; j < ftchjs[k].comment.length; j++) {
+                    a += ftchjs[k].comment[j].body.length;
+
+
+                }
+                array . push ( a )
+                array.sort(function (x, y) {
+                    return  x  -  y ;
+                })
+                if ( array[ array . length - 1 ] === f ) {
+                    console.log(ftchjs[k])
+                }
+            }
+
+        }
+       
+    </script>
+</body>
+</html>

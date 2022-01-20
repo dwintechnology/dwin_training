@@ -7,7 +7,6 @@ const ENDPOINTS = {
 
 let postsList = [];
 
-
 async function getPosts() {
     const postsUrl = HOST + ENDPOINTS.posts;
     const ress = await fetch(postsUrl);
