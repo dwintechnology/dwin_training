@@ -1,0 +1,108 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F5EEDC;
+}
+
+.darkmodeBtnArea {
+    padding: 30px 10% 0 10%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 30px;
+}
+
+.darkmodeBtn {
+    width: 54px;
+    height: 30px;
+    border: 4px solid #DD4A48;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #DD4A48;
+    border-radius: 50%;
+    margin: 0 0 0 2px;
+    transition: 0.5s all ease;
+}
+
+.container {
+    padding: 10%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.divWH {
+    width: 30%;
+    border: 1px solid #DD4A48;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #C0D8C0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    display: none;
+}
+
+.buttonStyle {
+    width: 87%;
+    height: 37px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline !important;
+}
+
+.btn_active {
+    background-color: #DD4A48 !important;
+}
+
+.pagination {
+    width: 100%;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6%;
+}
+
+.pagination div {
+    width: 40px;
+    height: 40px;
+    background-color: #ECB390;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.divForTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.closeButton {
+    font-size: 46px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
