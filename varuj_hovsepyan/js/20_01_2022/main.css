@@ -1,7 +1,6 @@
 .container{
     max-width: 1440px;
     margin: auto;
-   background-color: black;
   
     
 }
@@ -12,15 +11,7 @@ body{
 }
 .bigposts{
     flex: 20%;
-
-}
-.bigposts1{
-    flex: 20%;
-
-}
-.bigposts2{
-    flex: 20%;
-
+    border: 2px,  solid, black;
 }
 #uf{
     display: flex;
@@ -28,32 +19,16 @@ body{
     flex-direction: row;
     
 }
-#uf1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    position: relative;
-    z-index: 12;
-    display: none;
-}
-#uf2{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    position: relative;
-    z-index: 12;
-    display: none;
-}
 .post {
     background-color: rgb(228, 149, 149);
     width: 200px;
     height: 200px;
     margin-top: 50px;
     font-size: 14px;
-    
+    cursor: move;
 }
 
 .dark-mode {
-    background-color: cornflowerblue;
+    background-color: rgb(82, 85, 90);
     color: rgb(255, 255, 255);
   }
