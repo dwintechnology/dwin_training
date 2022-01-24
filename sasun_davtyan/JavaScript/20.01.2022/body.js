@@ -21,7 +21,7 @@ async function getPosts() {
 
 for (let item of items) {
     item.addEventListener('click', function () {
-        showNotes(this);
+        showNotes(item);
     });
 };
 
@@ -94,3 +94,6 @@ SEARCH.addEventListener('input', async function (e) {
     showNotes(items[0], e.target.value)
 
 })
+
+
+
