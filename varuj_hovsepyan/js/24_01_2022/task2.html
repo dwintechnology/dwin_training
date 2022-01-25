@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class linkedList {
+            constructor() {
+                this.head = null
+                this.tail = null
+            }
+            append(data) {
+                const node = {
+                    data,
+                    next: null
+                }
+                if (this.tail) {
+                    this.tail.next = node
+                }
+                if (!this.head) {
+                    this.head = node
+                }
+                this.tail = node
+            }
+            prepend(data) {
+                const node = {
+                    data,
+                    next: this.head
+                }
+                this.head = node
+                if (!this.head) {
+                    this.tail = node
+                }
+            }
+            find(data) {
+                if (!this.head) {
+                    return false
+                }
+                let curr = this.head
+                while (curr) {
+                    if (curr.data === data) {
+                        return true
+                    }
+                    // }else if(curr.data !== data){
+                    //     return null
+                    // }
+                    curr = curr.next
+
+                }
+            }
+            print() {
+                let arr = []
+                let curr = this.head
+                while (curr) {
+                    arr.push(curr.data)
+                    curr = curr.next
+                }
+                return arr
+            }
+
+        }
+        let name = new linkedList();
+
+        name.append("barev")
+        name.append("barevner")
+        name.prepend("pushokfirst")
+
+    </script>
+</body>
+
+</html>
