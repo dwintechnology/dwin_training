@@ -57,9 +57,9 @@
                 if (this.root == null) {
                     return null;
                 }
-                if ((this.root.left == null) && (this.root.right == null)) {
-                    return this.root
-                }
+                // if ((this.root.left == null) && (this.root.right == null)) {
+                //     return this.root
+                // }
                 let rightBranch;
                 function foo(cor) {
 
@@ -73,7 +73,11 @@
                                 cor.right = cor.right.right; 
                                 return
                             }else{
-                                cor = null
+                                delete cor.left;
+                                delete cor.right;
+                                delete cor.value
+                                // let jjj = cor;
+                                // delete cor;
                                 return
                             }                           
                             
@@ -95,11 +99,9 @@
                         }
                         return foo2(cor)
                     }
-
                     if (value < cor.value) {
                         foo(cor.left)
                     }
-
                     if (value > cor.value) {
                         foo(cor.right)
                     }
