@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class TreeNode {
+            constructor(value,) {
+                this.left = null;
+                this.right = null;
+                this.value = value;
+            }
+        }
+
+
+        class tree {
+            constructor() {
+                this.root = null;
+            }
+
+            push(value) {
+                const newNode = new TreeNode(value);
+                if (this.root == null) {
+                    this.root = newNode;
+                    return
+                }
+                function foo(c) {
+                    if ((c.value < value) && (c.right == null)) {
+                        c.right = newNode
+                        return
+                    }
+
+                    if ((c.value > value) && (c.left == null)) {
+                        c.left = newNode;
+                        return
+                    }
+
+                    if (c.value > value) {
+                        foo(c.left)
+                        return
+                    }
+                    if (c.value < value) {
+                        foo(c.right)
+                        return
+                    }
+
+                }
+                foo(this.root);
+            }
+            del(value) {
+                if (this.root == null) {
+                    return null;
+                }
+                if ((this.root.left == null) && (this.root.right == null)) {
+                    return this.root
+                }
+                let rightBranch;
+                function foo(cor) {
+
+                    if (value == cor.value) {
+                        rightBranch = cor.right;
+                        if(cor.left !== null){
+                            cor.value = cor.left.value;
+                        }else{
+                            if(cor.right !== null){
+                                cor.value = cor.right.value;
+                                cor.right = cor.right.right; 
+                                return
+                            }else{
+                                cor = null
+                                return
+                            }                           
+                            
+                        }
+                       
+                        if (cor.right !== null) {
+                            cor.right = cor.left.right;
+                        }
+                        if(cor.left !== null){
+                            cor.left = cor.left.left;
+                        }
+                        
+                        function foo2(cor) {
+                            if (cor.right == null) {
+                                cor.right = rightBranch
+                                return
+                            }
+                            return foo2(cor.right)
+                        }
+                        return foo2(cor)
+                    }
+
+                    if (value < cor.value) {
+                        foo(cor.left)
+                    }
+
+                    if (value > cor.value) {
+                        foo(cor.right)
+                    }
+                }
+                return foo(this.root)
+            }
+        }
+        const e = new tree();
+    </script>
+</body>
+
+</html>
