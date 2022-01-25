@@ -1,34 +1,35 @@
 .container{
     max-width: 1440px;
     margin: auto;
-  
-    
 }
 body{
-    background-color: yellow;
+    background-color: crimson;
     padding: 0;
     margin: 0;
 }
-.bigposts{
+.posts{
     flex: 20%;
     border: 2px,  solid, black;
 }
-#uf{
+#stylediv{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     
 }
 .post {
-    background-color: rgb(228, 149, 149);
+    background-color: rgb(235, 225, 225);
     width: 200px;
     height: 200px;
     margin-top: 50px;
     font-size: 14px;
     cursor: move;
+    border-radius: 20px;
 }
-
 .dark-mode {
-    background-color: rgb(82, 85, 90);
+    background-color: rgb(20, 20, 20);
     color: rgb(255, 255, 255);
+  }
+  post{
+      margin-top: 30px;
   }

@@ -1,65 +1,106 @@
 let arr = []
 let arr1 = []
-async function u() {
-    let arr = await fetch('https://jsonplaceholder.typicode.com/posts')
-    let arr1 = await arr.json()
-    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    for (let index = 0; index < 20; index++) {
-        let postbig = document.createElement("div")
-        let post1 = document.createElement("div")
-        let post2 = document.createElement("div")
-        let post3 = document.createElement("div")
-        post1.className = "post"
-        postbig.className = "bigposts"
-        post2.innerHTML = arr1[index].title;
-        post3.innerHTML = arr1[index].body
-        postbig.appendChild(post1)
-        post1.appendChild(post2)
-        post1.appendChild(post3)
-        document.getElementById("uf").appendChild(postbig);
-    }
-    for (let index = 20; index < 40; index++) {
-        let postbig1 = document.createElement("div")
-        let post3 = document.createElement("div")
-        let post4 = document.createElement("div")
-        let post5 = document.createElement("div")
-        post3.className = "post"
-        postbig1.className = "bigposts"
-        post4.innerHTML = arr1[index].title;
-        post5.innerHTML = arr1[index].body
-        postbig1.appendChild(post3)
-        post3.appendChild(post4)
-        post3.appendChild(post5)
-        document.getElementById("uf1").appendChild(postbig1);
-    }
-    for (let index = 40; index < 60; index++) {
-        let postbig2 = document.createElement("div")
-        let post5 = document.createElement("div")
-        let post6 = document.createElement("div")
-        let post7 = document.createElement("div")
-        post5.className = "post"
-        postbig2.className = "bigposts"
-        post6.innerHTML = arr1[index].title;
-        post7.innerHTML = arr1[index].body
-        postbig2.appendChild(post5)
-        post5.appendChild(post6)
-        post5.appendChild(post7)
-        document.getElementById("uf2").appendChild(postbig2);
-    }
-    document.getElementById("myBtn2").addEventListener("click", function() {
-        myFunction2(document.getElementById("uf"),document.getElementById("uf1"));
-      });
-      document.getElementById("myBtn3").addEventListener("click", function() {
-        myFunction2(document.getElementById("uf1"),document.getElementById("uf2"));
-      });
-      function myFunction2(a,b) {
-        a.style.display = "none"
-        b.style.display = "flex"
+let arrtitle = []
+async function mu() {
+  arr = await fetch('https://jsonplaceholder.typicode.com/posts')
+  arr1 = await arr.json()
+  // for(let bu =0; bu < arr1.length; bu++){
+  //   let x = await arr1[bu]
+  //   arrtitle.push(x)
+  // }
+  let notesOnPage = 20;
+  let esim = document.querySelector('#es')
+  let h = Math.ceil(arr1.length / notesOnPage)
+  let div = document.querySelector('#uf')
+  let items = []
+  for (let i = 1; i <= h; i++) {
+    let btn = document.createElement('button')
+    btn.innerHTML = i
+    esim.appendChild(btn)
+    items.push(btn)
+  }
+  for (let item of items) {
+    item.addEventListener('click', function () {
+      this.classList.add('active')
+      let pageNum = + this.innerHTML;
+      let start = (pageNum - 1) * notesOnPage;
+      let end = start + notesOnPage
+      let notes = arr1.slice(start, end)
+      uf.innerHTML = ''
+      for (let note of notes) {
+        let div1 = document.createElement('div')
+        div1.className = 'bigposts'
+        uf.appendChild(div1)
+        juli(note.title, note.body, div1)
+
       }
+    })
+
+  }
+
+}
+function myFunction3(element) {
+  id = setTimeout(() => { element.style.display = "none" }, 5000)
+  document.getElementById("undo").style.display = "block"
+  setTimeout (() => {
+    document.getElementById("undo").style.display = "none"
+  }, 5000)
+}
+function myFunction4(id) {
+  clearTimeout(id)
+}
+function juli(te1, te2, tr) {
+  let pi = document.createElement('div')
+  let div2 = document.createElement('div')
+  let post = document.createElement('div')
+  let close_button1 = document.createElement('button')
+  close_button1.innerHTML = "X"
+  pi.className = 'post'
+  document.getElementById('undo').onclick = () => myFunction4(id)
+  close_button1.onclick = () => myFunction3(pi)
+  pi.appendChild(close_button1)
+  div2.innerHTML = te1
+  post.innerHTML = te2
+  pi.appendChild(div2)
+  pi.appendChild(post)
+  tr.appendChild(pi)
+  function handleDragStart(e) {
+    this.style.opacity = '0.4';
+  }
+
+  function handleDragEnd(e) {
+    this.style.opacity = '1';
+  }
+
+  let items2 = document.querySelectorAll('.post');
+  items2.forEach(function(item) {
+    item.addEventListener('dragstart', handleDragStart);
+    item.addEventListener('dragend', handleDragEnd);
+  });
 }
 function myFunction() {
-    let element = document.getElementById("container");
-    element.classList.toggle("dark-mode");
- }
+  let element = document.getElementById("container");
+  element.classList.toggle("dark-mode");
+}
+
+
+butt.addEventListener = ('keyup', (e) => {
+  
+
+})
+// butt.onclick = async function() {
+//   var val = document.getElementById('elem1').value;
  
-u()
+  
+//     if( arrtitle.indexOf(val) ){
+//       await document.getElementById('str').innerHTML(arrtitle)
+//     }else{
+//       console.log("chqta exo jan")
+//     }
+
+// }
+   
+  
+// }; 
+
+mu()
