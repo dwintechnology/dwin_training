@@ -4244,12 +4244,16 @@ let darkmodeBtn = document.getElementById('darkmodeBtn');
 let circle = document.getElementById('circle');
 let body = document.getElementById('body');
 let closebutton = document.getElementsByClassName('closeButton');
+let undo = document.getElementById('undo');
+let search = document.getElementById('darkmodeBtnAreaInput');
+let btnSearch = document.getElementById('darkmodeBtnArea');
+let divWH = document.getElementsByClassName('divWH');
 
 
 
 getPosts()
-    .then((item) => {
-        for (let index = 0; index < item.length; index++) {
+    .then((items) => {
+        for (let index = 0; index < items.length; index++) {
             let div = document.createElement('div');
             let pBody = document.createElement('p');
             let pTitle = document.createElement('p');
@@ -4259,14 +4263,13 @@ getPosts()
             delateCross.innerHTML = '×';
             div.classList.add("divInContainer");
             pTitle.style = 'border-bottom: 1px solid black;'
-            div.title = `${item[index].id}`
-            pBody.innerHTML = item[index].body;
-            pTitle.innerHTML = item[index].title;
+            div.title = `${items[index].id}`
+            pBody.innerHTML = items[index].body;
+            pTitle.innerHTML = items[index].title;
             pTitle.style = 'border-bottom: 1px solid #000; text-align: center;'
             div.appendChild(divOfTitle);
             divOfTitle.appendChild(pTitle);
             divOfTitle.appendChild(delateCross);
-            // div.appendChild(pTitle);
             div.appendChild(pBody);
             div.appendChild(button);
             container.insertBefore(div, container.firstChild);
@@ -4293,13 +4296,32 @@ getPosts()
                 i.classList.add('show');
             }
         }
-        debugger
-            for(let i of closebutton){
-                i.addEventListener("click", function () {
-                        i.parentNode.parentNode.classList.remove("show");
-                        i.parentNode.parentNode.classList.add('hide');
-                    });
-            }
+        for (let i of closebutton) {
+            i.addEventListener("click", function () {
+                i.parentNode.parentNode.style = 'opacity: 0.5;';
+                let sec = 5;
+                undo.firstChild.innerHTML = `UNDO ${sec}`;
+                undo.style = "display: inline;";
+
+                let secInterval = setInterval(() => {
+                    sec--
+                    undo.firstChild.innerHTML = `UNDO ${sec}`;
+                }, 1000);
+                let undoTimeout = setTimeout(() => {
+                    undo.style = "";  
+                    i.parentNode.parentNode.style = 'opacity: 1;';
+                    clearInterval(secInterval);
+                    i.parentNode.parentNode.classList.remove("show");
+                    i.parentNode.parentNode.classList.add('hide');
+                }, 5000)
+                undo.addEventListener("click", function () {
+                    clearTimeout(undoTimeout);
+                    clearInterval(secInterval);
+                    undo.style = "";
+                    i.parentNode.parentNode.style = 'opacity: 1;';
+                });
+            });
+        }
     });
 
 
@@ -4373,14 +4395,16 @@ darkmodeBtn.addEventListener("click", function () {
     circle.classList.toggle('active');
     if (circle.classList.contains('active')) {
         circle.style = "margin: 0 0 0 22px;";
-        body.style = "background-color: #041562;";
+        body.style = "background-color: rgb(1 5 25); color: #fff;";
+        undo.classList.add("undo-dm");
         for (let i of divInContaner) {
-            i.style = "background-color: #35589A;";
+            i.style = "background-color: rgb(12 41 97);";
         }
 
 
     }
     if (!circle.classList.contains('active')) {
+        undo.classList.remove("undo-dm");
         circle.style = "margin: 0 0 0 2px;";
         body.style = "";
         for (let i of divInContaner) {
@@ -4391,3 +4415,16 @@ darkmodeBtn.addEventListener("click", function () {
 });
 
 
+
+
+btnSearch.addEventListener('click', ()=>{
+// console.log(search.value)
+for(let i of divWH){
+    i.style = 'display: none !important;';
+    // console.log(i.firstElementChild.firstElementChild.textContent)
+    if(i.firstElementChild.firstElementChild.textContent.includes(search.value)){
+        i.style = 'display: inline;';
+    }
+}
+
+});
