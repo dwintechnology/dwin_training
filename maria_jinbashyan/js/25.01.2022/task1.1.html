@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+class Node {
+            constructor(value) {
+                this.left = null
+                this.right = null
+                this.value = value
+            }
+        }
+        class Binary {
+            constructor() {
+                this.root = null
+            }
+            push(value) {
+                if (!this.root) {
+                    const node = new Node(value)
+                    this.root = node
+                    return
+                }
+                function rec_push(current) {
+                    console.log(current)
+                    if (value > current.value) {
+                        if (current.right === null) {
+                            let newNode = new Node(value);
+                            current.right = newNode;
+                            return
+                        }
+                        rec_push(current.right);
+                        return;
+                    }
+                    if (current.left === null) {
+                        let newNode = new Node(value);
+                        current.left = newNode; return
+                    }
+                    rec_push(current.left);
+                    return;
+                }
+                rec_push(this.root)
+            }
+            delete(node,value) {
+            const deleteNode = (node,value)=>{
+                if (!node){
+                    return null;
+                }
+                if(value==node.value){
+                    if(!node.left && !node.right){
+                        return null;
+                    }
+                    if(!node.left){
+                        return node.right
+                    }
+                    if(!node.right){
+                        return node.left
+                    }
+                    let nodeRight = node.right;
+                    while(!nodeRight.left){
+                        nodeRight  = nodeRight.left;
+                    }
+                    node.value=nodeRight .value;
+                    node.right = deleteNode(node.right,nodeRight.value)
+                }
+                 else if(value<node.value){
+                     node.left=deleteNode(node.left, value)
+                     return node
+                 }else{ node.right=deleteNode(node.right, value)
+                     return node
+                 }
+            }
+            this.root = deleteNode(this.root,value)
+        }
+
+        }
+        let y = new Binary()
+
+
+
+
+
+    </script>
+</body>
+</html>
