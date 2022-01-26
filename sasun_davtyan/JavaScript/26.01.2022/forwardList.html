@@ -96,7 +96,18 @@
             }
 
             reverse() {
+                let temp = null;
+                let current = this.head;
+                while (current != null) {
+                    temp = current.prev;
+                    current.prev = current.next;
+                    current.next = temp;
+                    current = current.prev;
+                }
 
+                if (temp != null) {
+                    this.head = temp.prev;
+                }
             }
         }
         const forwardList = new ForwardList();
