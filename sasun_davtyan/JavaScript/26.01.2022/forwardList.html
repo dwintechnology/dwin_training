@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Node {
+            constructor(element) {
+                this.element = element;
+                this.next = null
+            }
+        }
+        class LinkedList {
+            constructor() {
+                this.head = null;
+                this.size = 0;
+            }
+            add(element) {
+                let node = new Node(element);
+                let current;
+                if (this.head == null)
+                    this.head = node;
+                else {
+                    current = this.head;
+                    while (current.next) {
+                        current = current.next;
+                    }
+                    current.next = node;
+                }
+                this.size++;
+            }
+
+            size_of_list() {
+                console.log(this.size);
+            }
+
+
+            printList() {
+                let curr = this.head;
+                let str = "";
+                while (curr) {
+                    str += curr.element + " ";
+                    curr = curr.next;
+                }
+                console.log(str);
+            }
+        }
+
+
+
+        class ForwardNode {
+            constructor(element) {
+                this.element = element;
+                this.next = null
+                this.prev = null
+            }
+        }
+
+        class ForwardList extends LinkedList {
+            constructor() {
+                super();
+                this.head = null;
+                this.tail = null;
+                this.size = 0;
+            }
+
+            addStart(element) {
+                let forwardNode = new ForwardNode(element);
+                if (this.head == null) {
+                    this.head = forwardNode;
+                    this.tail = forwardNode;
+                } else {
+                    forwardNode.next = this.head;
+                    this.head.prev = forwardNode;
+                    this.head = forwardNode;
+                }
+                this.size++;
+            }
+
+            addEnd(element) {
+                if (this.head == null) {
+                    addStart(element);
+                } else {
+                    let forwardNode = new ForwardNode(element);
+                    forwardNode.prev = this.tail;
+                    this.tail.next = forwardNode;
+                    this.tail = forwardNode;
+                    this.size++;
+                }
+            }
+
+            reverse() {
+
+            }
+        }
+        const forwardList = new ForwardList();
+
+    </script>
+</body>
+
+</html>
