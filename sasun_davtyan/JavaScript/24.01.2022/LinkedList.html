@@ -10,44 +10,47 @@
 
 <body>
     <script>
-
-
-        class linkedlistNode {
-            constructor(value, next = null) {
-                this.value = value;
-                this.next = next;
+            class Node {
+                constructor(element) {
+                    this.element = element;
+                    this.next = null
+                }
             }
-            //verdacnum e tox darcrac mer yntacik elememnty
-            toString() {
-                return `${this.value}`;
-            }
-        }
-        class Linkedlist {
-            constructor() {
-                //skizb verj 
-                this.head = null;
-                this.tail = null;
-            }
-            append(value) {
-                const newNode = new linkedlistNode(value);
-                if (!this.head || !this.tail) {
-                    this.head = newNode;
-                    this.tail = newNode;
-                    return this;
+            class LinkedList {
+                constructor() {
+                    this.head = null;
+                    this.size = 0;
+                }
+                add(element) {
+                    let node = new Node(element);
+                    let current;
+                    if (this.head == null)
+                        this.head = node;
+                    else {
+                        current = this.head;
+                        while (current.next) {
+                            current = current.next;
+                        }
+                        current.next = node;
+                    }
+                    this.size++;
                 }
 
-                // taily (verjy)= mer newNodin
-                this.tail.next = newNode;
-                this.tail = newNode;
-                //veradarcnum e mer yntacik cuckay
-                return this;
+                size_of_list() {
+                    console.log(this.size);
+                }
+
+
+                printList() {
+                    let curr = this.head;
+                    let str = "";
+                    while (curr) {
+                        str += curr.element + " ";
+                        curr = curr.next;
+                    }
+                    console.log(str);
+                }
             }
-        }
-
-        const list = new Linkedlist();
-        list.append("a").append("x").append("o");
-        console.log(JSON.stringify(list));
-
     </script>
 </body>
 

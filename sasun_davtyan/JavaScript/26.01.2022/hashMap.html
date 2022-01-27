@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class HashTable {
+            constructor() {
+                this.values = {};
+                this.length = 0;
+            }
+            toStr(key) {
+                return key.toString().length
+            };
+
+            add(key, value) {
+                const hash = this.toStr(key);
+                if (!this.values.hasOwnProperty(hash)) {
+                    this.values[hash] = {};
+                };
+                if (!this.values[hash].hasOwnProperty(key)) {
+                    this.length++;
+                };
+                this.values[hash][key] = value;
+            }
+            get(key) {
+                const hash = this.toStr(key);
+                if (this.values.hasOwnProperty(hash) && this.values[hash].hasOwnProperty(key)) {
+                    return this.values[hash][key];
+                } else {
+                    return null;
+                }
+            }
+            delete(key) {
+                const hash = this.toStr(key);
+                if (this.values.hasOwnProperty(hash) && this.values[hash].hasOwnProperty(key)) {
+                    delete this.values[hash][key];
+                }
+                return {
+                    hash: null,
+                    key: null,
+                }
+            }
+            has(key) {
+                const hash = this.toStr(key);
+                if (this.values.hasOwnProperty(hash) && this.values[hash].hasOwnProperty(key)) {
+                    return true;
+                };
+                return false;
+            }
+        }
+        const hashMap = new HashTable();
+        hashMap.add("ab", "300");
+        hashMap.add("ba", "100");
+        hashMap.add("xyz", "50");
+        console.log(hashMap.get("xyz"));
+    </script>
+</body>
+
+</html>
