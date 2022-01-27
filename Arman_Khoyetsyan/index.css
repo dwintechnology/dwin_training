@@ -1,0 +1,98 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 208, 147);
+    color: black
+}
+
+.darkModeButton {
+    margin-left: 92%;
+}
+
+.darkMode1 {
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+}
+
+.darkMode {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.postDiv {
+    width: 30%;
+    height: 10%;
+    border: 2px solid red;
+    margin-bottom: 2px;
+}
+
+#conterner {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.postDelButton {
+    cursor: pointer;
+    border: 2px solid blue;
+    width: 15px;
+    height: 15px;
+}
+
+.postDivTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#Undo {
+    position: fixed;
+    width: 300px;
+    height: 150px;
+    left: 50%;
+    bottom: 50%;
+    margin-bottom: -75px;
+    margin-left: -150px;
+    background-color: blueviolet;
+    display: none;
+}
+
+#Undo {
+    font-style: italic;
+    font-size: 75px;
+    text-align: center;
+}
+
+#pagination {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.active {
+    display: inline !important;
+}
+
+#pagination {
+    display: flex;
+    width: 80%;
+    height: 40px;
+    justify-content: center;
+}
+
+.paginetionButton {
+    cursor: pointer;
+    margin: 0 20px;
+    font-size: 30px;
+}
