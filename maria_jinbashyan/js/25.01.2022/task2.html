@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class HashMap {
+            constructor() {
+                this.arr = []
+            }
+            hashMap(str) {
+                let finalHash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    const charCode = str.charCodeAt(i);
+                    finalHash += charCode;
+                }
+                return finalHash;
+            }
+            set(key, value) {
+                let hash = this.hashMap(key);
+                if (!this.arr[hash]) {
+                    this.arr[hash] = [];
+                }
+                this.arr[hash].push([key, value]);
+            }
+            get(key) {
+                let index = this.hashMap(key);
+                if (!this.arr[index]) {
+                    return undefined;
+                }
+                for (let Val of this.arr[index]) {
+                    if (Val[0] === key) {
+                        return Val[1];
+                    }
+                }
+            }
+            delete(key) {
+                let index = this.hashMap(key);
+                if (!this.arr[index]) {
+                    return undefined
+                }
+                for (let i = 0; i < this.arr[index]; i++) {
+                    if (this.arr[index][i][0] === key) {
+                        this.arr[index].splice(i, i + 1)
+                    }
+                }
+
+            }
+        }
+        let hash = new HashMap()
+    </script>
+</body>
+
+</html>
