@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+
+<body>
+    <!-- TASk 4 -->
+    <!-- Write a function which will transform a nested object(e.g. e.1) to a one-level object(e.g. e.2). -->
+    <script>
+        let task4 = {
+            'a': {
+                'b': {
+                    'c': 12,
+                    'd': 'Hello World'
+                },
+                'e': 25
+            }
+        }
+        function task4func(arg) {
+            let obj = {}
+            let o= '';
+            let t = '_';
+            for (let x in arg){
+                console.log ([x])
+                if (typeof [x] == 'object'){
+                    console.log('object')
+                }
+                
+            }
+
+
+            return obj
+        }
+    </script>
+</body>
+
+</html>

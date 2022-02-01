@@ -13,21 +13,24 @@
         // Write a JavaScript program to compute the sum of an array of integers
         debugger
         arr = [1, 1.2, 3, 5.666, 8]
+        let b;
         function getTheSumOfIntegersFromAnArray(arr) {
+            if(arr.length === 0) return b
             if (Number.isInteger(arr[(arr.length - 1)])) {
-                let b;
+                
                 if (b == undefined) {
                     b = arr[(arr.length - 1)]
                 } 
-                // else {
-                //     b = b + arr[(arr.length - 1)];
-                // }
+                else {
+                    b = b + arr[(arr.length - 1)];
+                }
 
             }
             arr.pop()
             getTheSumOfIntegersFromAnArray(arr)
+            return b
         }
-        getTheSumOfIntegersFromAnArray(arr)
+       getTheSumOfIntegersFromAnArray(arr)
     </script>
 </body>
 

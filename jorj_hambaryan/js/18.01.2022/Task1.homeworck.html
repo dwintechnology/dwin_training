@@ -10,24 +10,23 @@
 
 <body>
     <script>
-        function getData(str) {
+        function isPositive(str) {
             try {
-
-                function isPositive(str) {
-                    try {
-                        if (isNaN(str)) {
-                            throw new Error('NotANumberError')
-                        }
-
-                        if (!isNaN(str)) {
-                            if (+str < 0) {
-                                throw new Error('NegativeNumber')
-                            }
-                        }
-                    } catch (err) {
-                        throw err;
-                    }
+                if (isNaN(str)) {
+                    throw new Error('NotANumberError')
                 }
+                if (+str < 0) {
+                    throw new Error('NegativeNumber')
+                }
+
+            } catch (err) {
+                throw err;
+            }
+        }
+
+
+        function getData(str) {
+            try {                
                 isPositive(str)
             } catch (err) {
                 if (err.message == 'NegativeNumber') {
@@ -39,9 +38,9 @@
             }
         }
         try {
-            getData('12a')
+            getData('-12')
         } catch (err) {
-            console.error(err) 
+            console.error(err)
         }
     </script>
 </body>
