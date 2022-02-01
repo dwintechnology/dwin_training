@@ -1,0 +1,10 @@
+.k nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.k nav input{
+    margin-left: 50px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
