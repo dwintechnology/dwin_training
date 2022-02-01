@@ -1,0 +1,21 @@
+.pos{
+    width:300px;
+         height:300px;
+          margin-left:50px;
+         background-color:rgb(119, 101, 101);
+         text-align: center;
+         margin-top: 100px;
+         border-radius: 2px;
+         display: block;
+         text-shadow: brown;
+         color: cornsilk;
+
+}
+.pos img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pos:hover {
+    transform: scale(1.2);
+   }
