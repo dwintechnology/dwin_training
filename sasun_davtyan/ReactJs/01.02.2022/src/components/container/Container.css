@@ -1,0 +1,21 @@
+.Container{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.Post{
+    background-color: rgb(155, 155, 155);
+    color: antiquewhite;
+  }
+
+  .Post>img{
+    width: 400px;
+    height: 400px;
+  }
+  .Post>img:hover{
+    width: 700px;
+    height: 700px;
+  }
