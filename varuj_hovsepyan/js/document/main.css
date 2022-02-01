@@ -1,0 +1,26 @@
+#container{
+    max-width: 1440px;
+    margin: auto;
+    background-color: yellow;
+    padding-top:150px ;
+    
+}
+#post{
+    display:flex;
+    justify-content: space-between;
+}
+.post{
+    border: 2px solid black;
+    width: 100px;
+    
+
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+#bttn_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 500px;
+}

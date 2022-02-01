@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="post" >
+            <p>body</p>
+        </div>
+    </div>
+    <script>
+        let arr = []
+        let arr1 = []
+
+        let c = document.getElementById("container")
+        let f = c.children[0]
+        f.innerHTML = "hello world"
+        async function u() {
+            let arr = await fetch('https://jsonplaceholder.typicode.com/posts')
+            let arr1 = await arr.json()
+            // f.innerHTML = arr1[0].body
+            for (let index = 0; index < arr1.length; index++) {
+                let post1 = document.createElement("div");
+                let post2 = document.createElement("div")
+                let post3 = document.createElement("div")
+                post1.className = "post"
+                // let post2 = document.getElementById("post1").appendChild(post1)
+                post2.innerHTML = arr1[index].body ;
+                post3.innerHTML = arr1[index].title
+                // post1.style.marginTop = "50px"
+                // post1.style.backgroundColor = "red";
+                // post1.style.width = "30%"
+                post1.appendChild(post2)
+
+                post1.appendChild(post3)
+                document.getElementById("post").appendChild(post1);
+            }
+            console.log(arr1)
+
+        }
+        u()
+
+
+        // let div = document.createElement('div');
+        // div.className = "alert";
+        // div.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+
+        // document.body.append(div);
+    </script>
+</body>
+
+</html>
