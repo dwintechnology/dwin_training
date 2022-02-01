@@ -1,0 +1,15 @@
+.f{
+    width:300px;
+         height:300px;
+          margin-left:50px;
+         background-color:red;
+         text-align: center;
+         margin-top: 100px;
+         
+}
+.f img{
+   padding: 10px 50px;
+}
+.f:hover {
+    transform: scale(1.2);
+   }
