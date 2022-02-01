@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            resolve('A');
+        })
+        let p2 = new Promise((resolve, reject) => {
+            resolve('B');
+        })
+        let p3 = new Promise((resolve, reject) => {
+            resolve("aa");
+        })
+        let prom = []
+        let b 
+        async function promiseAll(array) {
+            for (let index = 0; index < array.length; index++) {
+                try{
+                    b = await array[index]
+                    prom.push(b)
+                }catch(er){
+                    prom.length=0
+                    prom.push(er)
+                }
+                
+            }
+            return prom
+        }
+        console.log(promiseAll([p1, p2, p3]) )
+    </script>
+</body>
+
+</html>
