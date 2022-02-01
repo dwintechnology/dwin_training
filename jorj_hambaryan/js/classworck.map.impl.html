@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class map{
+            constructor(){
+                this.arr = []
+            }
+            hash(str){
+                return (str.length)
+            }
+            push(key, value){
+                let hashNum = this.hash(key);
+                let newObj = {};
+                newObj[key] = value
+                if(!this.arr[hashNum]){
+                    this.arr[hashNum] = [];
+                    this.arr[hashNum].push(newObj)
+                }else{
+                    this.arr[hashNum].push(newObj)
+                }
+            }
+            del(value){
+                let hashNum = this.hash(value);
+                for(let item of this.arr[hashNum]){
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>

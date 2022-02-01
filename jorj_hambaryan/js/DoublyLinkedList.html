@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Node {
+            constructor(value) {
+                this.value = value;
+                this.next = null;
+            }
+        }
+
+        class List {
+            constructor() {
+                this.head = null;
+            }
+
+            append(value) {
+                let newNode = new Node(value);
+
+                if (this.head == null) {
+                    this.head = newNode;
+                    return this
+                }
+                let currentValue = this.head;
+                while (currentValue.next !== null) {
+                    currentValue = currentValue.next
+                }
+
+                currentValue.next = newNode;
+            }
+            appendFromPosition(value, position) {
+                let newNode = new Node(value);
+                let currentValue = this.head;
+                let index = 1;
+                let nextValues;
+
+                while (index != position) {
+                    currentValue = currentValue.next;
+                    nextValues = currentValue.next;
+                    index++;
+                }
+
+                currentValue.next = newNode;
+                newNode.next = nextValues;
+                return this
+            }
+            removeFromPosition(position) {
+                let prevValue = this.head;
+                let nextValues;
+                let index = 1;
+
+                while (index != position) {
+                    prevValue = prevValue.next;
+                    index++
+                }
+
+                nextValues = prevValue.next.next;
+                prevValue.next = nextValues
+                return this
+            }
+            print() {
+                let arr = [];
+                let currentValue = this.head;
+
+                while (currentValue.next !== null) {
+                    arr.push(currentValue.value);
+                    currentValue = currentValue.next
+                }
+                return arr
+            }
+        }
+
+        let j = new List()
+
+
+        class DoubleLinkedListNode extends Node {
+            constructor(value) {
+                super(value);
+                this.previous = null;
+            }
+        }
+
+        class DoubleLinkedList extends List {
+            constructor() {
+                super()
+            }
+            append(value) {
+                let newNode = new DoubleLinkedListNode(value);
+
+                if (this.head == null) {
+                    this.head = newNode;
+                    return this
+                }
+
+                let currentValue = this.head;
+                while (currentValue.next !== null) {
+                    currentValue = currentValue.next
+                }
+
+                currentValue.next = newNode;
+                newNode.previous = currentValue;
+            }
+            appendFromPosition(value, position) {
+                let newNode = new DoubleLinkedListNode(value);
+                let currentValue = this.head;
+                let index = 1;
+                let nextValues;
+                if( this.head == null){
+                    this.head = newNode;
+                    return this
+                }
+                while (index != position) {
+                    currentValue = currentValue.next;
+                    nextValues = currentValue.next;
+                    index++;
+                }
+
+                currentValue.next = newNode;
+                newNode.previous = currentValue;
+                newNode.next = nextValues;
+                if(nextValues !== undefined){
+                    nextValues.previous = newNode;
+                }
+                
+                return this
+            }
+            removeFromPosition(position) {
+                let prevValue = this.head;
+                let nextValues;
+                let index = 1;
+                while (index != position) {
+                    prevValue = prevValue.next;
+                    index++
+                }
+
+                nextValues = prevValue.next.next;
+                prevValue.next = nextValues
+                nextValues.previous = prevValue;
+                return this
+            }
+            revers() {
+                let currentValue = this.head;
+                let prev;
+                do {
+                    prev = currentValue.previous;
+                    currentValue.previous = currentValue.next
+                    currentValue.next = prev;
+
+
+
+                    currentValue = currentValue.previous
+                } while (currentValue.next !== null)
+
+            }
+        }
+        let s = new DoubleLinkedList()
+    </script>
+</body>
+
+</html>
