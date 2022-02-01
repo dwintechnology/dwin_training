@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const user = {
+            name: "John",
+            birthday: "2022/01/25"
+        }
+
+        function FindOutHowOldThePersonIs(user) {
+            let userYear = new Date(user.birthday).getFullYear();
+            let nowYear = new Date().getFullYear();
+            let res = nowYear - userYear;
+
+            switch (true) {
+                case res <= 2 && res >= 0:
+                    //  return baby
+                    return 'baby';
+                    break;
+                case res <= 9 && res >= 3:
+                    //Инструкции, соответствующие value2
+                    return 'child'
+                    break;
+                case res <= 10 && res >= 12:
+                    //Инструкции, соответствующие значению valueN
+                    //statementsN
+                    return 'pre teen';
+                    break;
+                case res <= 13 && res >= 17:
+                    //Инструкции, соответствующие значению valueN
+                    //statementsN
+                    return 'teenager';
+                    break;
+                case res <= 18 && res >= 24:
+                    //Инструкции, соответствующие значению valueN
+                    //statementsN
+                    return 'young adult';
+                    break;
+                case res <= 25 && res >= 60:
+                    //Инструкции, соответствующие значению valueN
+                    //statementsN
+                    return 'adult';
+                    break;
+                default:
+                    //Здесь находятся инструкции, которые выполняются при отсутствии соответствующего значения
+                    //statements_def
+                    return 'elder'
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
