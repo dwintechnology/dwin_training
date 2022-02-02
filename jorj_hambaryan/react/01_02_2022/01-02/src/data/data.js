@@ -1,18 +1,18 @@
 let Data = [{
     title: 'Title 1',
-    header: 'Cart 1',
+    header: 'header 1',
 }, {
     title: 'Title 2',
-    header: 'Cart 2',
+    header: 'header 2',
 },{
     title: 'Title 3',
-    header: 'Cart 3',
+    header: 'header 3',
 },{
     title: 'Title 4',
-    header: 'Cart 4',
+    header: 'header 4',
 },{
     title: 'Title 5',
-    header: 'Cart 5',
+    header: 'header 5',
 }]
 
 export default {Data}
