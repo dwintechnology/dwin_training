@@ -12,6 +12,9 @@
     letter-spacing: 0px;
 }
 
+form textarea{
+    max-width: 99% !important;
+}
 
 .form button{
     height: 30px;
