@@ -1,0 +1,16 @@
+footer {
+   
+         
+         
+         text-align: center;
+         margin-top: 100px;
+         background-color: rgb(192, 163, 190);
+         
+}
+footer img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+   
+}

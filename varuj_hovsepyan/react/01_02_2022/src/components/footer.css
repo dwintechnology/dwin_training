@@ -1,0 +1,13 @@
+footer{
+    margin-top: 100px;
+    text-align: center;
+    background-color: black;
+    color: blue;
+}
+.footrDiv{
+    display: flex;
+    justify-content: center;
+}
+footer h2{
+    cursor: pointer;
+}
