@@ -1,12 +1,12 @@
 import './Footer.css';
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 
 function Footer() {
     const [color, setColor] = useState('#8fa1a0');
 
     return (
-        <div className="footer" style={{ backgroundColor: color }} onMouseOver={() => {
+        <div className="footer" style={{ backgroundColor: color }} onDoubleClick={() => {
             let randomColor = Math.floor(Math.random() * 16777215).toString(16);
             randomColor = "#" + randomColor;
             setColor(randomColor);
