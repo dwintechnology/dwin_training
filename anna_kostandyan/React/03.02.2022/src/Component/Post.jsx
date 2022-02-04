@@ -15,7 +15,7 @@ setPost(b)
 })
 let y = post.map((i)=>{
 return (
-<div style={{width:"300px", height:"auto", backgroundColor:"yellow", marginTop:"15px", textAlign:"center", borderRadius:"50px"}}>
+<div style={{width:"300px", height:"auto", backgroundColor:"yellow", marginTop:"20px", textAlign:"center", borderRadius:"50px"}}>
 <h1>Kanye West</h1>
 <h3>{i}</h3>
 </div>
@@ -23,7 +23,7 @@ return (
 })
 return (
 <>
-<h1>Are you here {state} seconds</h1>
+<h1>Already {state} seconds</h1>
 <div style={{display:"grid", gridTemplateColumns: "400px 400px 400px", marginLeft:"50px"}}>
 {y}
 </div>
