@@ -30,7 +30,7 @@ function Post (){
     return(
         <>
         <h1>
-            Duq aystex eq {count} varkyan!
+            Duq aystex eq {count} vayrkyan!
         </h1>
         <div style={{display:"grid",  gridTemplateColumns: "400px 400px 400px", marginLeft:"150px"}}>
             {mass}
