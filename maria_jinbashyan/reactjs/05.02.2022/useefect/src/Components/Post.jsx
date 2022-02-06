@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
  
 function Post (){
     let[state, setState]=useState([ ])
     let[count,setCount]=useState(0)
     useEffect(() => {
         setInterval(() => {
-          setCount(count++);
-        }, 1000);
+          setCount((prev)=>prev+1) }, 1000);
       }, []);
 
     useEffect(async()=>{
@@ -15,15 +15,13 @@ function Post (){
 
         setState(p)
      } )
-     let mass=state.map((num)=>{ 
+     let mass=state.map((num, index)=>{ 
         return(
-            <div style={{width:"300px", height:"auto", borderRadius:"50px" ,textAlign:"center", backgroundColor:"pink", marginTop:"15px"}}>
-                <h1>
-                    Kanye West 
-                </h1>
-                <h2>
-                    {num}
-                </h2>
+            <div key ={index} style={{width:"300px", height:"auto", borderRadius:"50px" ,textAlign:"center", backgroundColor:"pink", marginTop:"15px"}}>
+               <Link to={`/post/${index}`}>
+                  
+                  {num}
+              </Link>
             </div>
         )
     })
