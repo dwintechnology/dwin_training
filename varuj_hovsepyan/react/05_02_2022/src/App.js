@@ -10,6 +10,7 @@ import {
   BrowserRouter as Router, Route, Link, Routes
 } from 'react-router-dom';
 import Card from './Card';
+import Oops404 from './oops/oops404';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
       <Route path="/child" element={<Child/>}/>
       <Route path="/child/childimg" element={<Childimg/>}/>
       <Route path="kanye/:id" element={<Card />} />
+      <Route path="*" element={<Oops404/>}/>
     </Routes>
     </>
   );
