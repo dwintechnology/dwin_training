@@ -4,6 +4,8 @@ BrowserRouter as Router, Route, Link, Routes
 } from 'react-router-dom';
 import Text from './Component/Text';
 import Text1 from './Component/Text1';
+import Meow from './Component/Meow';
+import Errors from './Component/Errors';
 
 function App() {
 return (
@@ -17,6 +19,8 @@ return (
 <Route path="/post" element={<Post/>}/>
 <Route path="/text" element={<Text/>}/>
 <Route path="/text1" element={<Text1/>}/>
+<Route path="post/:id" element={<Meow/>}/>
+<Route path="*" element={<Errors/>}/>
 </Routes>
 </>
 );
