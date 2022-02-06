@@ -27,7 +27,7 @@ function Kanye(){
 
           return (
             <div key={id} style={{width:"300px", height:"auto", backgroundColor:"#ccc", marginTop:"15px", textAlign:"center", borderRadius:"50px", color: '#fff'}}>
-              <Link to={`/kanye/${id}`}>
+              <Link to={`/posts/${id}`}>
                   {/* <h1>Kanye West</h1> */}
                   {i}
               </Link>

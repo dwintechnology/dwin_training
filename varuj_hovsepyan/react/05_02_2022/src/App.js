@@ -18,7 +18,7 @@ function App() {
     <>
     <div style={{width:"100px", display:"flex", marginTop:"50px"}}>
     <button style={{marginLeft:"500px"}}>
-    <a href='/kanye' style={{textDecoration:"none", color:"red"}}>Kanye</a>
+    <a href='/posts' style={{textDecoration:"none", color:"red"}}>Kanye</a>
     </button>
     <button style={{marginLeft:"50px"}}>
     <a href='/' style={{textDecoration:"none", color:"blue"}}>Home</a>
@@ -32,12 +32,14 @@ function App() {
     
     </div>
     <Routes>
-      <Route path="/kanye" element={<Kanye/>}/>
+     
+      <Route path="/posts" element={<Kanye/>}/>
       <Route path="/" element={<Kanyim/>}/>
       <Route path="/kim" element={<Kim/>}/>
       <Route path="/child" element={<Child/>}/>
       <Route path="/child/childimg" element={<Childimg/>}/>
-      <Route path="kanye/:id" element={<Card />} />
+      <Route path="posts/:id" element={<Card />} />
+      
       <Route path="*" element={<Oops404/>}/>
     </Routes>
     </>
