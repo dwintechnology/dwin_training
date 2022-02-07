@@ -1,0 +1,16 @@
+.one{
+    background-color: rgb(99, 17, 17);
+    width: 90%;
+    height: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 5%; 
+    flex-direction: column;   
+}
+.headerBlock{
+    width: 80%;
+    margin: 0% 10%;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+}
