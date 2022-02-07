@@ -13,7 +13,7 @@ function Errors(){
             THAT PAGE DOES NOT EXIST OR IS UNAVAILABLE
         </h2>
         <button style={{backgroundColor:"blue", padding:"5px", textDecoration:"none"}}>
-        <Link style={{ textDecoration:"none", color:"white"}} to={"/post"}>
+        <Link style={{ textDecoration:"none", color:"white"}} to={"/"}>
             Go back to home
         </Link>
         </button>
