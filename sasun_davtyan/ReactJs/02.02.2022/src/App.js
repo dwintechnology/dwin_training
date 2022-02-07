@@ -3,28 +3,23 @@ import './App.css';
 import { Home } from './components/Home';
 import { Validate } from './components/input'
 import { Posts } from './components/Posts'
-
+import {SingalePage} from './components/singalePage'
+import {Error} from './components/Error'
 
 function App() {
   return (
     <div className="App">
-      <nav>
-        <ul className="ul">
-          <li>
-            <Link to="/" style={{ color: 'white',fontSize:"25px" }}>Home</Link>
-          </li>
-          <li>
-            <Link to="/about" style={{ color: 'white',fontSize:"25px" }}>About</Link>
-          </li>
-          <li>
-            <Link to="/posts" style={{ color: 'white' ,fontSize:"25px"}}>Posts</Link>
-          </li>
-        </ul>
+      <nav className="ul">
+            <Link to="/" style={{ color: 'white',fontSize:"25px",textDecoration: "none"}}>Home</Link>
+            <Link to="/about" style={{ color: 'white',fontSize:"25px",textDecoration: "none" }}>About</Link>
+            <Link to="/posts" style={{ color: 'white' ,fontSize:"25px",textDecoration: "none"}}>Posts</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Validate />} />
         <Route path="/posts" element={<Posts />} />
+        <Route path="/posts/:id/title" element={<SingalePage />} />
+        <Route path="*" element={<Error />}/>
       </Routes>
     </div>
   );
