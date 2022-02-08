@@ -1,0 +1,11 @@
+.four{
+    background-color: rgb(17, 199, 32);
+    width: 80%;
+    height: 520px;
+    margin-top: 2.5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
