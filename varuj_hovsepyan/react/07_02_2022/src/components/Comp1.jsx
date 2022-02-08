@@ -15,8 +15,8 @@ function Comp1(props){
             } >Sumbit</button>
         <button  onClick={
                 
-                    useEffect(()=>
-                    props.fu1(), [])
+                   ()=>
+                    props.fu1([])
                 
             }
         >Remove</button>
