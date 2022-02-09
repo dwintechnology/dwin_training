@@ -1,3 +1,3 @@
-let MenuButtonsText = ['Home', 'btn1', 'btn2', 'btn3']
+let MenuButtonsText = ['Home', 'Form', 'Posts', 'btn3']
 
 export {MenuButtonsText}

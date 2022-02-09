@@ -15,4 +15,4 @@ let Data = [{
     header: 'header 5',
 }]
 
-export default {Data}
+export default Data

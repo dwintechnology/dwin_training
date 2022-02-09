@@ -1,0 +1,34 @@
+
+.KanyeWestTwits {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    padding: 0 10%;
+}
+
+.kanyWestPosts{
+    background-color: #8fa1a0;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 30px;
+    text-align: center;
+}
+
+.kanyWestPosts h1{
+    letter-spacing: 6px;
+}
+
+.KanyeWestTwits div:first-child{
+    width: 100%;
+}
+
+.KanyeWestTwits div:first-child>h3{
+    width: 22px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}
