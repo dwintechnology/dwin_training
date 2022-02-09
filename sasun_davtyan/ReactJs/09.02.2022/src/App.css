@@ -1,0 +1,155 @@
+@import "react-slideshow-image/dist/styles.css";
+.App {
+  text-align: center;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ul{
+  margin-top: -10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  background-color: #5a5a5a;
+  height: 50px;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+.elements{
+  display: flex;
+  background-color: rgb(80, 80, 141);
+  height: 80px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  border-radius: 50px;
+  margin-left: 10%;
+}
+
+.link{
+  display: flex;
+  background-color: rgb(76, 76, 240);
+  height: 80px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  border-radius: 50px;
+  margin-left: 10%;
+  text-decoration: none;
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+
+
+.count>button{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  font-size: 50px;
+  
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(199, 233, 148, 1) 100%
+  );
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0 4rem 0;
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #21aeca;
+}
+
+.accordion-title:hover {
+  background-color: #3ab4cc;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  background-color: #39b9d2;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
+  .accordion {
+    width: 90%;
+  }
+}
