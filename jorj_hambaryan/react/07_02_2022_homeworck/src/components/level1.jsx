@@ -8,6 +8,8 @@ function Header(props) {
             <input type="text" ref={value} />
             <button style={{ height: '45px', width: '200px' }} onClick={() => {
                 props.setInputValue(value.current.value)
+                value.current.value = ''
+
             }}>SUBMIT</button>
             <button style={{ height: '45px', width: '200px' }} onClick={()=>{
                 props.setDel([]);

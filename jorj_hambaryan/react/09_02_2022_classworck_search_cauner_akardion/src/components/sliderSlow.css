@@ -1,0 +1,21 @@
+img{
+    min-width: 500px;
+}
+
+.sliderImgMain{
+    display: flex;
+    justify-content: start;
+    transition: all 1.5s cubic-bezier(0.22,-0.28, 0.44, 1.32);
+}
+
+.main{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.sliderSlowBody{
+    width: 100%;
+    display: flex;
+}
