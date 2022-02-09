@@ -1,0 +1,8 @@
+.footer{
+    width: 80%;
+    margin: 0% 10%;
+    background-color: azure;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+}

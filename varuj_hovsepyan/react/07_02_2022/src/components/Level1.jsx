@@ -6,11 +6,6 @@ function Level1(){
     let inValue 
     let [values, setValues] = useState()
     let [del, setDel] = useState()
-    
-        
-            function removeAll(){
-                del = []
-            }
   
         
    
@@ -20,8 +15,8 @@ function Level1(){
         
         <div style={{padding:"10px", border:"2px solid yellow"}}>
         <h1>LEVEL 1</h1>
-            <Comp1 fu={setValues} fu1={removeAll}/>
-            <Comp2 val={values} delete={setDel}/>
+            <Comp1 fu={setValues} fu1={setDel}/>
+            <Comp2 val={values} delete={del}/>
             
         </div>
         </>
