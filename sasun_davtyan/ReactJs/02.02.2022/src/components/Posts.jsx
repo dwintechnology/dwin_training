@@ -27,7 +27,7 @@ function Posts() {
         <div >
             <h1>{count}</h1>
             {
-                data.map((element, index) => {
+                data?.map((element, index) => {
 
                     return (
                         <div key={index} className="elements" >

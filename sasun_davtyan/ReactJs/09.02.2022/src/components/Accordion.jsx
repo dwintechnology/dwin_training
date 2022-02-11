@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 
-const Accordion = ({ title, content }) => {
-    const [isActive, setIsActive] = useState(false);
-
+const Accordion = ({ title, content, index, clickedIndex, setClickedIndex }) => {
+    const toggle = index => {
+        if (clickedIndex === index) {
+            return setClickedIndex(null);
+        }
+        setClickedIndex(index);
+    };
     return (
         <div className="accordion-item">
-            <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+            <div className="accordion-title" onClick={() => toggle(index)} key={index}>
                 <div>{title}</div>
-                <div>{isActive ? '-' : '+'}</div>
+                <div>{clickedIndex === index ? '-' : '+'}</div>
             </div>
-            {isActive && <div className="accordion-content">{content}</div>}
+            {clickedIndex === index && <div className="accordion-content">{content}</div>}
         </div>
     );
 };
