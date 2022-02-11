@@ -14,9 +14,9 @@ function Slider(){
 
     return(
         <div className='mainSlider'>
-            <button onClick={left}>→</button>
+            <button onClick={left}>←</button>
             <img src={arrImgPath[index]} alt="#" />
-            <button onClick={right}>←</button>
+            <button onClick={right}>→</button>
         </div>
     )
 }

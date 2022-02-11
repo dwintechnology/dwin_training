@@ -1,21 +1,77 @@
-img{
+img {
     min-width: 500px;
 }
 
-.sliderImgMain{
+.sliderImgMain {
     display: flex;
     justify-content: start;
-    transition: all 1.5s cubic-bezier(0.22,-0.28, 0.44, 1.32);
+    transition: all 1.5s cubic-bezier(0.22, -0.28, 0.44, 1.32);
 }
 
-.main{
+
+.main {
     width: 500px;
-    height: 500px;
+    height: 334px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.sliderSlowBody{
+.sliderSlowBody {
     width: 100%;
     display: flex;
 }
+
+.pagination {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 90px;
+    transition: all 1.5s cubic-bezier(0.22, -0.28, 0.44, 1.32);
+}
+
+.pagination div {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+
+
+@keyframes anim {
+    0% {
+       width: 15px;
+       background-color: 'rgb(64, 116, 169)' !important;
+    }
+
+
+    20% {
+        width: 20px;
+        background-color: 'rgb(64, 116, 169)' !important;
+    }
+
+
+    40% {
+        width: 30px;
+        background-color: 'rgb(64, 116, 169)' !important;
+    }
+
+    60% {
+        width: 40px;
+        background-color: 'rgb(64, 116, 169)' !important;
+    }
+
+    80% {
+        width: 50px;
+        background-color: 'rgb(64, 116, 169)' !important;
+    }
+
+    100% {
+        width: 15px;
+        background-color: 'rgb(105 105 105 / 15%)' !important;
+    }
+}
+
+.activate{
+    animation: anim 1.5s;
+  }

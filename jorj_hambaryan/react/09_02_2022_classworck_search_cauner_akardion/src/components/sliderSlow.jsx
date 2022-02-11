@@ -6,30 +6,90 @@ function SliderSlow() {
     const a = arrImgPath.map((el, i) => {
         return <img key={i} src={el} alt="#" />
     })
-    // const max = arrImgPath.length * 500
     const min = (arrImgPath.length * 500) * (-1);
-    const [ml, setml] = useState(0) 
+    const [ml, setml] = useState(0)
     const main = useRef()
-    useEffect(()=>{
-        main.current.style.marginLeft = `${ml}px`
-    },[ml])
-    function left(){
-        ((ml-500) > min) ? setml(ml - 500) : setml(ml)
+    useEffect(() => {
+        main.current.style.marginLeft = `${ml}px`;
+    }, [ml])
+    function left() {
+        ((ml - 500) > min) ? setml(ml - 500) : setml(ml)
+        //pagination
+        let index = paginationState.indexOf('#4074a9')
+        let newArr = [...paginationState];
+        if(index + 1 < arrImgPath.length){
+            newArr.fill('rgb(105 105 105 / 15%)')[index + 1] = '#4074a9'
+            setPaginationState(newArr)
+        }
     }
-    function right(){
-        ((ml+500) <= 0) ? setml(ml + 500) : setml(ml)
+    function right() {
+        ((ml + 500) <= 0) ? setml(ml + 500) : setml(ml)
+
+        //pagination
+        let index = paginationState.indexOf('#4074a9')
+        let newArr = [...paginationState];
+        if(index > 0){
+            newArr.fill('rgb(105 105 105 / 15%)')[index - 1] = '#4074a9'
+            setPaginationState(newArr)
+        }
     }
 
+    //Pagination
+    let pagArr = [];
+    pagArr.length = arrImgPath.length;
+    pagArr.fill('rgb(105 105 105 / 15%)');
+    pagArr[0] = '#4074a9';
+    const [paginationState, setPaginationState] = useState(pagArr);
+
+    let paganAnim = [];
+    paganAnim.length = arrImgPath.length;
+    paganAnim.fill('');
+    const [pagAnim, setPaganAnim] = useState(paganAnim);
+
+
+    const circles = paginationState.map((el, index) => {
+        return (
+            <div className={pagAnim[index]} onClick={(e)=>{
+                // PagAnim
+                if(Math.abs((ml / 500)) === index - 1){
+                    let a = [...paganAnim];
+                    a[index - 1 ] = 'activate';
+                    setPaganAnim(a)
+                }
+                else if(Math.abs((ml / 500)) === index + 1){
+                    let b = [...paganAnim];
+                    b[index + 1 ] = 'activate';
+                    setPaganAnim(b)
+                }
+                setTimeout(()=>{
+                    e.target.className = '';
+                    let newArr = [...paginationState];
+                    newArr.fill('rgb(105 105 105 / 15%)');
+                    newArr[index] = '#4074a9';
+                    setPaginationState(newArr)
+                },1200)
+                // PagAnim
+                setml(((index + 1 ) * -500)+500);  
+            }} style={{ backgroundColor: el ,cursor:"pointer"}} key={index}></div>
+            )
+    })
+    //Pagination
+
     return (
-        <div className='sliderSlowBody'>
-        <button onClick={left}>→</button>
-        <div className='main'>
-            <div ref={main}  className='sliderImgMain'>
-                {a}
-            </div>   
-        </div>
-        <button onClick={right}>←</button>
-        </div>
+        <>
+            <div className='sliderSlowBody'>
+                <button onClick={right}>←</button>
+                <div className='main'>
+                    <div ref={main} className='sliderImgMain'>
+                        {a}
+                    </div>
+                </div>
+                <button onClick={left}>→</button>
+            </div>
+            <div className='pagination'>
+                {circles}
+            </div>
+        </>
     )
 }
 
