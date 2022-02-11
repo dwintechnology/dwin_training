@@ -1,0 +1,17 @@
+.Header{
+    height: 37px;
+    padding: 0 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: #000000a6;
+}
+
+.Header a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+}

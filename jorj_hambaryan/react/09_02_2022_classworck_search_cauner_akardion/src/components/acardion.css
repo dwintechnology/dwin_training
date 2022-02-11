@@ -5,3 +5,26 @@
 .pasive{
     display: none !important;
 }
+
+.acardion{
+    background-color: rgb(89, 89, 89);
+    width: 800px;
+    margin: 0 auto;
+    color: white;
+}
+
+.acardion div{
+    border: 1px solid rgb(59, 59, 59);
+}
+.acardion div div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acardion div p{
+    background-color: rgb(119, 119, 119);
+    margin: 0;
+    padding: 0;
+}

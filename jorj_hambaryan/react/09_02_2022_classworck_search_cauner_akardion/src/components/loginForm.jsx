@@ -2,7 +2,9 @@ import { useRef, useState } from 'react'
 import './loginForm.css'
 
 function LoginForm() {
-
+    let [welcome, setWelcome] = useState(false)
+    
+    
     const form = useRef()
     const name = useRef()
     const email = useRef()
@@ -11,7 +13,6 @@ function LoginForm() {
     const trueEmail = 'jorj@mail';
     const truePassword = 'jorj';
 
-    let [welcome, setWelcome] = useState(false)
 
 
     function getDates() {

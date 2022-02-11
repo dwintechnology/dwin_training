@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function Search(){
 let arr = ['Hakob', 'Tigran', 'Araman', 'Sasun', 'Anna']
-const [value, setValue] = useState()
+let [value, setValue] = useState('')
 let arrFilter = arr?.filter((el)=>{
     el = el.toLowerCase()
     return el.includes(value?.toLowerCase())});
