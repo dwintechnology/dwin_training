@@ -78,7 +78,7 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  height: 350px;
+  height: 100vh;
 }
 
 .each-slide span {
@@ -87,3 +87,4 @@
   background: #efefef;
   text-align: center;
 }
+

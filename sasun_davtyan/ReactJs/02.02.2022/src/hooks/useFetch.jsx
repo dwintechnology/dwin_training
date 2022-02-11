@@ -1,26 +1,15 @@
-// import { useEffect, useState } from "react";
 
-//  const useFetch = (url) => {
-//     let [state, setState] = useState([]);
-//     useEffect(async() => {
-//         let temroraryJson = await fetch(url);
-//         let temroraryList = await temroraryJson.json();
-//         setState(temroraryList);
-//     }, [])
-//     return state;
-// }
-// export {useFetch}
 import React, { useState, useEffect } from 'react';
 
-const useFetch = (url, options) => {
+const useFetch = (url) => {
     const [status, setStatus] = useState([{
         loading: false,
         data: undefined,
         error: undefined,
     }])
-    function fetchNow(url, options) {
+    function fetchNow(url) {
         setStatus({ loading: true })
-        fetch(url, options)
+        fetch(url)
             .then((res) => res.json())
             .then((res) => {
                 // setTimeout(()=>{
@@ -34,7 +23,7 @@ const useFetch = (url, options) => {
     }
     useEffect(() => {
         if (url) {
-            fetchNow(url, options)
+            fetchNow(url)
         };
     }, [])
     return { ...status, fetchNow }
