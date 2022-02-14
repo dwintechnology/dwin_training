@@ -4,3 +4,12 @@ input{
 .input_st{
     display: block;
 }
+.allform{
+    background-color: aqua;
+    width: 500px;
+}
+@media screen and (max-width: 600px){
+    .allform{
+        background-color: red;    
+    }
+}

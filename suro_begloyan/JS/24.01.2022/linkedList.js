@@ -29,6 +29,13 @@ class LinkedList {
         return this;
     }
 }
-const list = new LinkedList();
-list.append('a').append('b').append('c');
-console.log(JSON.stringify(list));
+// const list = new LinkedList();
+// list.append('a').append('b').append('c');
+// console.log(JSON.stringify(list));
+
+class DoubleLinkedList extends LinkedList{
+    constructor() {
+        super();
+    }
+}
+const doubleList = new DoubleLinkedList();
