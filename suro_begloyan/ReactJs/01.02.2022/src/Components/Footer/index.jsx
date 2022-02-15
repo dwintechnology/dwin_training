@@ -23,6 +23,7 @@ function Footer() {
             Magni at sit expedita esse sed suscipit corporis fugiat, voluptatum rerum placeat a fuga alias quam facilis cum, molestiae impedit nam nobis rem omnis assumenda. Harum dolor fugiat quaerat tempore?
             </h3>
         </div>
+        
     );
 }
 
