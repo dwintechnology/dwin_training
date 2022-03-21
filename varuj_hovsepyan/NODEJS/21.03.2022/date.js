@@ -1,0 +1,58 @@
+const date = [{
+    "id": 1,
+    "first_name": "Mommy",
+    "last_name": "Brislawn",
+    "email": "mbrislawn0@github.io"
+}, {
+    "id": 2,
+    "first_name": "Louisa",
+    "last_name": "Dymocke",
+    "email": "ldymocke1@sina.com.cn"
+}, {
+    "id": 3,
+    "first_name": "Humberto",
+    "last_name": "Bartolommeo",
+    "email": "hbartolommeo2@ezinearticles.com"
+}, {
+    "id": 4,
+    "first_name": "Noak",
+    "last_name": "Callam",
+    "email": "ncallam3@woothemes.com"
+}, {
+    "id": 5,
+    "first_name": "Lazar",
+    "last_name": "Boulstridge",
+    "email": "lboulstridge4@lycos.com"
+}, {
+    "id": 6,
+    "first_name": "Gabriell",
+    "last_name": "Shepton",
+    "email": "gshepton5@plala.or.jp"
+}, {
+    "id": 7,
+    "first_name": "Baxy",
+    "last_name": "Manie",
+    "email": "bmanie6@house.gov"
+}, {
+    "id": 8,
+    "first_name": "Alberta",
+    "last_name": "Lambrick",
+    "email": "alambrick7@barnesandnoble.com"
+}, {
+    "id": 9,
+    "first_name": "Hewett",
+    "last_name": "Bradburne",
+    "email": "hbradburne8@ihg.com"
+}, {
+    "id": 10,
+    "first_name": "Jeanette",
+    "last_name": "Littlekit",
+    "email": "jlittlekit9@ted.com"
+}, {
+    "id": 11,
+    "first_name": "Ardis",
+    "last_name": "Grassick",
+    "email": "agrassicka@surveymonkey.com"
+}]
+
+module.exports = date
