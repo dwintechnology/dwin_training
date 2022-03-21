@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../Button';
 import { useFetch } from "../hooks/useFetch"
 function Kanye(){
     let [kan, setKan] = useState([])
@@ -36,6 +37,7 @@ function Kanye(){
       })
       return (
           <>
+          <Button/>
         <h1>Are you here {count} seconds</h1>
           <div style={{display:"grid", gridTemplateColumns: "400px 400px 400px", marginLeft:"50px"}}>
               

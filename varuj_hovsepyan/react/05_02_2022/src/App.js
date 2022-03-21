@@ -11,34 +11,22 @@ import {
 } from 'react-router-dom';
 import Card from './Card';
 import Oops404 from './oops/oops404';
+import Button from './Button';
 
 function App() {
   return (
 
     <>
-    <div style={{width:"100px", display:"flex", marginTop:"50px"}}>
-    <button style={{marginLeft:"500px"}}>
-    <a href='/posts' style={{textDecoration:"none", color:"red"}}>Kanye</a>
-    </button>
-    <button style={{marginLeft:"50px"}}>
-    <a href='/' style={{textDecoration:"none", color:"blue"}}>Home</a>
-    </button>
-    <button style={{marginLeft:"50px"}}>
-    <a href='/kim' style={{textDecoration:"none", color:"orange"}}>Kim</a>
-    </button>
-    <button style={{marginLeft:"50px"}}>
-    <a href='/child' style={{textDecoration:"none", color:"orange"}}>Children</a>
-    </button>
-    
-    </div>
+  
     <Routes>
      
-      <Route path="/posts" element={<Kanye/>}/>
+      <Route  path="/posts" element={<Kanye/>}/>
       <Route path="/" element={<Kanyim/>}/>
       <Route path="/kim" element={<Kim/>}/>
       <Route path="/child" element={<Child/>}/>
       <Route path="/child/childimg" element={<Childimg/>}/>
       <Route path="posts/:id" element={<Card />} />
+      <Route  path="/posts/valod" element={<Kanye/>}/>
       
       <Route path="*" element={<Oops404/>}/>
     </Routes>

@@ -104,10 +104,11 @@ const Demo = ({url}) => {
             loading,
           }
   }
+
   
   return (
     <div>
-      <Demo url="https://raw.githubusercontent.com/ajzbc/kanye.rest/master/quotes.json"/>
+      <Demo url="ttps://raw.githubusercontent.com/ajzbc/kanye.rest/master/quotes.json"/>
     </div>
   )
 }
