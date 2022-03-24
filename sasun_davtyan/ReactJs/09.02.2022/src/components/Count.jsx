@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { CheckBox } from './CheckBox/CheckBoxApp'
+import { CheckBox } from './CheckBox/CheckBoxApp'
 
 
 const names = ['apple ', 'pinapple ', 'samsung ', 'xiaomi ', 'banana ']
@@ -22,7 +22,7 @@ function Count(props) {
                 <button onClick={() => setcount(count + 1)} > +</button>
             </div>
             <div className="checkBox">
-                {/* <CheckBox /> */}
+                <CheckBox />
             </div>
 
             <div>
