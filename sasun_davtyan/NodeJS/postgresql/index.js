@@ -9,7 +9,7 @@ app.use("/user", (req, res, next) => {
     res.status(404).json({message: "User not found"})
     return
   }
-  next()
+  next();
 })
 app.use("/user", user)
 

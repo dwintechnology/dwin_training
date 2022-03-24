@@ -18,7 +18,13 @@ const db = {
     );
     return getTodo.rows[0];
   },
-
+  //getAll & showAll========================
+  async showAll(obj){
+    const getAllTodo = await pool.query(
+      "SELECT * FROM students "
+    );
+    return getAllTodo.rows;
+  },
   //upadate & put =======================
   async update(obj) {
     const { name, age } = obj.body;

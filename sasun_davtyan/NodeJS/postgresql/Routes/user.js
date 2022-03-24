@@ -20,6 +20,14 @@ router.get("/:id", async (req, res) => {
     console.error(error.message);
   }
 });
+router.get("/", async (req, res) => {
+  try {
+    res.json(await db.showAll(req));
+  } catch (error) {
+    res.status(400).send("Not found");
+    console.error(error.message);
+  }
+});
 //upadate & put =======================
 router.put("/:id", async (req, res) => {
   try {
